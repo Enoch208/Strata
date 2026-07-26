@@ -41,6 +41,7 @@ __pycache__/
 node_modules/
 .next/
 out/
+.vercel/
 *.tsbuildinfo
 
 # Scratch and media
