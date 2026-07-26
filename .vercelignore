@@ -1,0 +1,15 @@
+.env*
+.git
+.pytest_cache
+.venv
+ClaimTrail-PRD.md
+de.json
+docs
+frontend
+pipeline
+tests
+data/claim_events.json
+data/evaluation_cases.json
+data/evaluation_results.json
+data/evaluation_worksheet.json
+data/extraction_report.json

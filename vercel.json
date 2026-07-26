@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "{services/**,data/archive_manifest.json}",
+      "excludeFiles": "{frontend/**,pipeline/**,tests/**,docs/**,.venv/**}",
+      "maxDuration": 300
+    }
+  }
+}

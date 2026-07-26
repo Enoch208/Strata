@@ -5,7 +5,11 @@ from datetime import UTC, datetime
 from fastapi.testclient import TestClient
 
 from services.api.adapters.videodb_client import StreamReference
-from services.api.investigation_engine import InvestigationEngine
+from services.api.investigation_engine import (
+    InvestigationEngine,
+    _filter_low_relevance_hits,
+    _set_focused_variant_match,
+)
 from services.api.main import app
 from services.api.manifest import ArchiveManifest, load_manifest
 from services.api.routes.investigations import engine_dependency
@@ -92,6 +96,7 @@ class FakeAdapter:
                 "stayed consistent",
                 "context, limits",
                 "correcting, disputing",
+                "weather predictions related to hurricane",
             )
         ):
             return [FakeHit(WEATHER_RECORD, score=0.8)]
@@ -121,6 +126,7 @@ class ReusedSourceAdapter(FakeAdapter):
                 "stayed consistent",
                 "context, limits",
                 "correcting, disputing",
+                "weather predictions related to hurricane",
             )
         ):
             return super().semantic_search(query, **kwargs)
@@ -237,6 +243,42 @@ def test_uncovered_query_specific_terms_return_insufficient_evidence() -> None:
     assert "no relevant claim events" in (
         investigation.insufficient_evidence_reason or ""
     ).lower()
+
+
+def test_focused_query_facets_survive_cross_index_score_differences() -> None:
+    repair = FakeHit(
+        {
+            **LEAK_RECORD,
+            "event_id": "evt_repair",
+            "claim_type": "repair_plan",
+            "claim_text": "Teams removed and replaced the quick-disconnect seals.",
+            "subject": "Artemis I seal repair",
+        },
+        score=0.95,
+    )
+    cryogenic_test = FakeHit(
+        {
+            **WEATHER_RECORD,
+            "event_id": "evt_cryo_test",
+            "claim_type": "test_plan",
+            "claim_text": (
+                "Teams planned a cryogenic demonstration to test the repaired seals."
+            ),
+            "subject": "Artemis I cryogenic demonstration",
+        },
+        score=0.72,
+    )
+    _set_focused_variant_match(cryogenic_test)
+
+    kept = _filter_low_relevance_hits(
+        "How did NASA describe the seal repair and planned cryogenic test?",
+        [repair, cryogenic_test],
+    )
+
+    assert {hit.metadata["event_id"] for hit in kept} == {
+        "evt_repair",
+        "evt_cryo_test",
+    }
 
 
 def test_seeded_challenge_qualifies_with_an_unused_video() -> None:
