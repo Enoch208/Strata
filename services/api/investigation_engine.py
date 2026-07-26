@@ -80,11 +80,16 @@ _GENERIC_QUERY_TERMS = frozenset(
         "archive",
         "artemi",
         "claim",
+        "change",
         "conclusion",
+        "consistent",
         "did",
         "doe",
+        "early",
         "evidence",
+        "eventual",
         "explain",
+        "final",
         "find",
         "footage",
         "fully",
@@ -92,11 +97,16 @@ _GENERIC_QUERY_TERMS = frozenset(
         "launch",
         "nasa",
         "official",
+        "planned",
+        "report",
         "said",
         "say",
         "schedule",
         "show",
         "statement",
+        "status",
+        "successful",
+        "through",
         "trace",
         "video",
         "what",
@@ -741,6 +751,15 @@ def _filter_low_relevance_hits(query: str, hits: list[Any]) -> list[Any]:
     """Drop weak semantic matches and reject uncovered query-specific terms."""
     if not hits:
         return []
+    expected_types = _query_claim_types(query)
+    if expected_types:
+        typed = [
+            hit
+            for hit in hits
+            if _hit_claim_type(hit) in expected_types
+        ]
+        if typed:
+            hits = typed
     scored = [
         (_hit_number(hit, "search_score") or 0.0, hit)
         for hit in hits
@@ -761,6 +780,35 @@ def _filter_low_relevance_hits(query: str, hits: list[Any]) -> list[Any]:
         if len(discriminative & covered) < required:
             return []
     return kept
+
+
+def _query_claim_types(query: str) -> set[str]:
+    lowered = query.lower()
+    types: set[str] = set()
+    if any(term in lowered for term in ("launch date", "scheduled", "planned", "when")):
+        types.update(("launch_date", "status_update"))
+    if any(term in lowered for term in ("status", "successful", "lifted off", "liftoff", "ready")):
+        types.update(("status_update", "launch_date"))
+    if any(
+        term in lowered
+        for term in ("cause", "why", "explain", "leak", "rollback", "delay")
+    ):
+        types.update(("delay_reason", "status_update"))
+    if any(term in lowered for term in ("repair", "seal")):
+        types.update(("repair_plan", "test_plan", "status_update"))
+    if "test" in lowered:
+        types.add("test_plan")
+    if "termination" in lowered or "fts" in lowered:
+        types.update(("status_update", "repair_plan", "test_plan"))
+    return types
+
+
+def _hit_claim_type(hit: Any) -> str | None:
+    metadata = _hit_value(hit, "metadata")
+    if isinstance(metadata, dict):
+        value = metadata.get("claim_type")
+        return value if isinstance(value, str) else None
+    return None
 
 
 def _query_terms(text: str) -> set[str]:
