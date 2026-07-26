@@ -1,0 +1,51 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Spec, agent instructions, and internal working docs — never shipped
+ClaimTrail-PRD.md
+de.json
+docs/
+**/docs/
+**/AGENTS.md
+**/CLAUDE.md
+.ai/
+.claude/
+.codex/
+**/unslop-output/
+*pasted-text*.txt
+frontend/README.md
+
+# Unshipped frontend drafts and source media
+frontend/components/app-header.tsx
+frontend/components/archive-console.tsx
+frontend/components/hero.tsx
+frontend/public/file.svg
+frontend/public/globe.svg
+frontend/public/next.svg
+frontend/public/vercel.svg
+frontend/public/window.svg
+frontend/public/strata/*.png
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Scratch and media
+scratch/
+*.mp4
+*.mov
+*.wav
+.DS_Store
