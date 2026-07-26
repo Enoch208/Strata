@@ -1175,6 +1175,1267 @@
             "insufficient_evidence_reason": null,
             "error": null
           }
+        },
+        {
+          "case_id": "seal_repair_and_cryo_test",
+          "answer": "This answer rests on 2 timestamped moments across 1 source video, 2022-09-19. On 2022-09-19 the archive introduces: Teams are now preparing to test the seals and demonstrate updated loading procedures under the cryogenic or super cold conditions that the systems will experience on launch day. On 2022-09-19 the archive introduces: So the team has since worked through that and also proposed to test this new loading operation as well as to confirm the integrity of the seal under cryogenic conditions.",
+          "state": "complete",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 259.72,
+              "end": 269.88
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 965.35,
+              "end": 978.4
+            }
+          ],
+          "propositions": [
+            {
+              "text": "This answer rests on 2 timestamped moments across 1 source video, 2022-09-19.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-19 the archive introduces: Teams are now preparing to test the seals and demonstrate updated loading procedures under the cryogenic or super cold conditions that the systems will experience on launch day.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-19 the archive introduces: So the team has since worked through that and also proposed to test this new loading operation as well as to confirm the integrity of the seal under cryogenic conditions.",
+              "supported": null
+            }
+          ],
+          "investigation": {
+            "investigation_id": "inv_b653995f1fe1",
+            "archive_id": "artemis-i-2022",
+            "query": "How did NASA describe the seal repair and the planned cryogenic demonstration test?",
+            "state": "complete",
+            "created_at": "2026-07-26T20:48:45.763829Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_000",
+                "text": "This answer rests on 2 timestamped moments across 1 source video, 2022-09-19.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_01",
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_003_18"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_001",
+                "text": "On 2022-09-19 the archive introduces: Teams are now preparing to test the seals and demonstrate updated loading procedures under the cryogenic or super cold conditions that the systems will experience on launch day.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_01"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_002",
+                "text": "On 2022-09-19 the archive introduces: So the team has since worked through that and also proposed to test this new loading operation as well as to confirm the integrity of the seal under cryogenic conditions.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_003_18"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              }
+            ],
+            "findings": [
+              {
+                "finding_id": "finding_evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_01",
+                "label": "new_information",
+                "title": "New test plan about seal testing and loading procedures",
+                "summary": "On 2022-09-19 the archive introduces: Teams are now preparing to test the seals and demonstrate updated loading procedures under the cryogenic or super cold conditions that the systems will experience on launch day.",
+                "event_ids": [
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_01"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              },
+              {
+                "finding_id": "finding_evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_003_18",
+                "label": "new_information",
+                "title": "New test plan about testing new loading operation and seal integrity",
+                "summary": "On 2022-09-19 the archive introduces: So the team has since worked through that and also proposed to test this new loading operation as well as to confirm the integrity of the seal under cryogenic conditions.",
+                "event_ids": [
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_003_18"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              }
+            ],
+            "relations": [],
+            "events": [
+              {
+                "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_01",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+                "start": 259.72,
+                "end": 269.88,
+                "source_date": "2022-09-19",
+                "speaker_name": "Kathryn Hambleton",
+                "speaker_role": "NASA Office of Communications",
+                "subject": "seal testing and loading procedures",
+                "claim_type": "test_plan",
+                "claim_text": "Teams are now preparing to test the seals and demonstrate updated loading procedures under the cryogenic or super cold conditions that the systems will experience on launch day.",
+                "normalized_value": null,
+                "unit": null,
+                "status": "testing",
+                "reason": null,
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_f87ffd92612a"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              },
+              {
+                "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_003_18",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+                "start": 965.35,
+                "end": 978.4,
+                "source_date": "2022-09-19",
+                "speaker_name": "Mike Sarafin",
+                "speaker_role": "Artemis mission manager",
+                "subject": "testing new loading operation and seal integrity",
+                "claim_type": "test_plan",
+                "claim_text": "So the team has since worked through that and also proposed to test this new loading operation as well as to confirm the integrity of the seal under cryogenic conditions.",
+                "normalized_value": null,
+                "unit": null,
+                "status": "planned",
+                "reason": null,
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_f87ffd92612a"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              }
+            ],
+            "shots": [
+              {
+                "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_01",
+                "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+                "video_title": "Artemis I Pre-Demonstration Test Briefing",
+                "source_url": "https://www.youtube.com/watch?v=9g4op97LZ2E",
+                "source_date": "2022-09-19",
+                "start": 257.72,
+                "end": 271.88,
+                "stream_url": "https://play.videodb.io/v1/c4772163-4423-45a0-a749-e830e90afa54.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=GqbA59xdETQ",
+                "transcript_text": "Teams are now preparing to test the seals and demonstrate updated loading procedures under the cryogenic or super cold conditions that the systems will experience on launch day."
+              },
+              {
+                "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_003_18",
+                "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+                "video_title": "Artemis I Pre-Demonstration Test Briefing",
+                "source_url": "https://www.youtube.com/watch?v=9g4op97LZ2E",
+                "source_date": "2022-09-19",
+                "start": 963.35,
+                "end": 980.4,
+                "stream_url": "https://play.videodb.io/v1/976067f2-3696-403b-9bec-4d0b354850e9.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=_pboH4pWxMo",
+                "transcript_text": "So the team has since worked through that and also proposed to test this new loading operation as well as to confirm the integrity of the seal under cryogenic conditions."
+              }
+            ],
+            "challenge": null,
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": null,
+            "error": null
+          }
+        },
+        {
+          "case_id": "hurricane_ian_rollback",
+          "answer": "This answer rests on 1 timestamped moment across 1 source video, 2022-09-30. On 2022-09-30 the archive introduces: The next morning managers decided on the rollback due to weather predictions related to Hurricane Ian.",
+          "state": "complete",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+              "start": 131.72,
+              "end": 138.52
+            }
+          ],
+          "propositions": [
+            {
+              "text": "This answer rests on 1 timestamped moment across 1 source video, 2022-09-30.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-30 the archive introduces: The next morning managers decided on the rollback due to weather predictions related to Hurricane Ian.",
+              "supported": null
+            }
+          ],
+          "investigation": {
+            "investigation_id": "inv_d1b58516093d",
+            "archive_id": "artemis-i-2022",
+            "query": "What did the archive say about Hurricane Ian and the Artemis I rollback?",
+            "state": "complete",
+            "created_at": "2026-07-26T20:49:58.292980Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_000",
+                "text": "This answer rests on 1 timestamped moment across 1 source video, 2022-09-30.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_16"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_001",
+                "text": "On 2022-09-30 the archive introduces: The next morning managers decided on the rollback due to weather predictions related to Hurricane Ian.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_16"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              }
+            ],
+            "findings": [
+              {
+                "finding_id": "finding_evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_16",
+                "label": "new_information",
+                "title": "New delay reason about artemis i launch",
+                "summary": "On 2022-09-30 the archive introduces: The next morning managers decided on the rollback due to weather predictions related to Hurricane Ian.",
+                "event_ids": [
+                  "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_16"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              }
+            ],
+            "relations": [],
+            "events": [
+              {
+                "event_id": "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_16",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+                "start": 131.72,
+                "end": 138.52,
+                "source_date": "2022-09-30",
+                "speaker_name": null,
+                "speaker_role": "NASA narrator",
+                "subject": "Artemis I launch",
+                "claim_type": "delay_reason",
+                "claim_text": "The next morning managers decided on the rollback due to weather predictions related to Hurricane Ian.",
+                "normalized_value": "hurricane_ian",
+                "unit": null,
+                "status": "rolled_back",
+                "reason": "weather predictions related to Hurricane Ian",
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_0a9a5d39522b"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              }
+            ],
+            "shots": [
+              {
+                "event_id": "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_16",
+                "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+                "video_title": "The World's First-Ever Planetary Defense Test on This Week @NASA - September 30, 2022",
+                "source_url": "https://images.nasa.gov/details/The%20World%E2%80%99s%20First-Ever%20Planetary%20Defense%20Test%20on%20This%20Week%20@NASA%20%E2%80%93%20September%2030,%202022",
+                "source_date": "2022-09-30",
+                "start": 129.72,
+                "end": 140.52,
+                "stream_url": "https://play.videodb.io/v1/539422f6-1cd2-4c72-bb33-c946cadc6e19.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=re9AaoROPmE",
+                "transcript_text": "The next morning managers decided on the rollback due to weather predictions related to Hurricane Ian."
+              }
+            ],
+            "challenge": null,
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": null,
+            "error": null
+          }
+        },
+        {
+          "case_id": "final_launch_status",
+          "answer": "",
+          "state": "insufficient_evidence",
+          "surfaced_evidence": [],
+          "propositions": [],
+          "investigation": {
+            "investigation_id": "inv_271446f451f2",
+            "archive_id": "artemis-i-2022",
+            "query": "What final launch status did NASA report on November 16?",
+            "state": "insufficient_evidence",
+            "created_at": "2026-07-26T20:50:09.613231Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_001",
+                "text": "Not established by this archive.",
+                "supported_by_event_ids": [],
+                "support_status": "not_established",
+                "is_comparative": false,
+                "lock_reason": "The archive returned no relevant claim events."
+              }
+            ],
+            "findings": [],
+            "relations": [],
+            "events": [],
+            "shots": [],
+            "challenge": null,
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": "The archive returned no relevant claim events.",
+            "error": null
+          }
+        },
+        {
+          "case_id": "insufficient_sabotage_claim",
+          "answer": "",
+          "state": "insufficient_evidence",
+          "surfaced_evidence": [],
+          "propositions": [],
+          "investigation": {
+            "investigation_id": "inv_52b26b5a4928",
+            "archive_id": "artemis-i-2022",
+            "query": "Who did NASA identify as intentionally sabotaging the Artemis I launch schedule?",
+            "state": "insufficient_evidence",
+            "created_at": "2026-07-26T20:50:14.271370Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_001",
+                "text": "Not established by this archive.",
+                "supported_by_event_ids": [],
+                "support_status": "not_established",
+                "is_comparative": false,
+                "lock_reason": "The archive returned no relevant claim events."
+              }
+            ],
+            "findings": [],
+            "relations": [],
+            "events": [],
+            "shots": [],
+            "challenge": null,
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": "The archive returned no relevant claim events.",
+            "error": null
+          }
+        },
+        {
+          "case_id": "consistent_launch_when_ready",
+          "answer": "",
+          "state": "insufficient_evidence",
+          "surfaced_evidence": [],
+          "propositions": [],
+          "investigation": {
+            "investigation_id": "inv_e42de860d0e6",
+            "archive_id": "artemis-i-2022",
+            "query": "Did NASA consistently say it would launch only when the vehicle was ready?",
+            "state": "insufficient_evidence",
+            "created_at": "2026-07-26T20:50:17.594976Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_001",
+                "text": "Not established by this archive.",
+                "supported_by_event_ids": [],
+                "support_status": "not_established",
+                "is_comparative": false,
+                "lock_reason": "The archive returned no relevant claim events."
+              }
+            ],
+            "findings": [],
+            "relations": [],
+            "events": [],
+            "shots": [],
+            "challenge": null,
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": "The archive returned no relevant claim events.",
+            "error": null
+          }
+        },
+        {
+          "case_id": "pressurization_not_proven_cause",
+          "answer": "This answer rests on 2 timestamped moments across 2 source videos, 2022-09-03 to 2022-09-19. On 2022-09-03 the archive introduces: It's too early to tell exactly whether that was the cause of the hydrogen leak that we had today. On 2022-09-19 the archive introduces: There was clearly an indentation or a witness mark in that seal that showed us that there was a problem at that 8 inch quick disconnect seal that contributed to the hydrogen leak.",
+          "state": "complete",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 601.59,
+              "end": 607.55
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 944.07,
+              "end": 964.79
+            }
+          ],
+          "propositions": [
+            {
+              "text": "This answer rests on 2 timestamped moments across 2 source videos, 2022-09-03 to 2022-09-19.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-03 the archive introduces: It's too early to tell exactly whether that was the cause of the hydrogen leak that we had today.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-19 the archive introduces: There was clearly an indentation or a witness mark in that seal that showed us that there was a problem at that 8 inch quick disconnect seal that contributed to the hydrogen leak.",
+              "supported": null
+            }
+          ],
+          "investigation": {
+            "investigation_id": "inv_9b6b1bbbccfb",
+            "archive_id": "artemis-i-2022",
+            "query": "Did NASA conclusively determine that inadvertent hydrogen-line pressurization caused the September 3 leak?",
+            "state": "complete",
+            "created_at": "2026-07-26T20:50:19.715749Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_000",
+                "text": "This answer rests on 2 timestamped moments across 2 source videos, 2022-09-03 to 2022-09-19.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_002_09",
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_004_02"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_001",
+                "text": "On 2022-09-03 the archive introduces: It's too early to tell exactly whether that was the cause of the hydrogen leak that we had today.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_002_09"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_002",
+                "text": "On 2022-09-19 the archive introduces: There was clearly an indentation or a witness mark in that seal that showed us that there was a problem at that 8 inch quick disconnect seal that contributed to the hydrogen leak.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_004_02"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              }
+            ],
+            "findings": [
+              {
+                "finding_id": "finding_evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_002_09",
+                "label": "new_information",
+                "title": "New delay reason about cause of hydrogen leak",
+                "summary": "On 2022-09-03 the archive introduces: It's too early to tell exactly whether that was the cause of the hydrogen leak that we had today.",
+                "event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_002_09"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              },
+              {
+                "finding_id": "finding_evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_004_02",
+                "label": "new_information",
+                "title": "New other about 8 inch quick disconnect seal",
+                "summary": "On 2022-09-19 the archive introduces: There was clearly an indentation or a witness mark in that seal that showed us that there was a problem at that 8 inch quick disconnect seal that contributed to the hydrogen leak.",
+                "event_ids": [
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_004_02"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              }
+            ],
+            "relations": [],
+            "events": [
+              {
+                "event_id": "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_002_09",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+                "start": 601.59,
+                "end": 607.55,
+                "source_date": "2022-09-03",
+                "speaker_name": null,
+                "speaker_role": "mission manager for the Artemis program",
+                "subject": "cause of hydrogen leak",
+                "claim_type": "delay_reason",
+                "claim_text": "It's too early to tell exactly whether that was the cause of the hydrogen leak that we had today.",
+                "normalized_value": null,
+                "unit": null,
+                "status": "unknown",
+                "reason": "unknown",
+                "certainty": "uncertain",
+                "source_artifact_ids": [
+                  "an_15862e12a5ef"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              },
+              {
+                "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_004_02",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+                "start": 944.07,
+                "end": 964.79,
+                "source_date": "2022-09-19",
+                "speaker_name": null,
+                "speaker_role": null,
+                "subject": "8 inch quick disconnect seal",
+                "claim_type": "other",
+                "claim_text": "There was clearly an indentation or a witness mark in that seal that showed us that there was a problem at that 8 inch quick disconnect seal that contributed to the hydrogen leak.",
+                "normalized_value": "seal_indentation_contributed_to_hydrogen_leak",
+                "unit": null,
+                "status": "unknown",
+                "reason": "indentation/witness mark in 8 inch quick disconnect seal",
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_f87ffd92612a"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              }
+            ],
+            "shots": [
+              {
+                "event_id": "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_002_09",
+                "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+                "video_title": "Artemis I Launch Update: Post-Scrub News Conference",
+                "source_url": "https://images.nasa.gov/details/KSC-20220903-VP-MMS01-0001-Artemis_I_Post_Scrub_News_Conference-3312396",
+                "source_date": "2022-09-03",
+                "start": 599.59,
+                "end": 609.55,
+                "stream_url": "https://play.videodb.io/v1/91c08fe7-8064-49fa-99e3-2c541f7099c0.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=oi0fzJJ1c9k",
+                "transcript_text": "It's too early to tell exactly whether that was the cause of the hydrogen leak that we had today."
+              },
+              {
+                "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_004_02",
+                "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+                "video_title": "Artemis I Pre-Demonstration Test Briefing",
+                "source_url": "https://www.youtube.com/watch?v=9g4op97LZ2E",
+                "source_date": "2022-09-19",
+                "start": 942.07,
+                "end": 966.79,
+                "stream_url": "https://play.videodb.io/v1/86b86d6b-a3e1-46dd-b600-2a473d5171e9.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=10v7GP76xFo",
+                "transcript_text": "There was clearly an indentation or a witness mark in that seal that showed us that there was a problem at that 8 inch quick disconnect seal that contributed to the hydrogen leak."
+              }
+            ],
+            "challenge": null,
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": null,
+            "error": null
+          }
+        },
+        {
+          "case_id": "seeded_leak_only_challenge",
+          "answer": "This answer rests on 1 timestamped moment across 1 source video, 2022-09-03. On 2022-09-30 the archive introduces: On the night of September 26, the team at our Kennedy Space center began moving our Artemis I moon rocket from launch pad 39B back to the Vehicle Assembly Building or VAB. On 2022-09-30 the archive introduces: In addition to protecting the integrated rocket and spacecraft, they also wanted to give employees time to address the needs of their families.",
+          "state": "complete",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 77.27,
+              "end": 87.18
+            },
+            {
+              "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+              "start": 115.1,
+              "end": 126.52
+            },
+            {
+              "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+              "start": 138.92,
+              "end": 146.76
+            }
+          ],
+          "propositions": [
+            {
+              "text": "This answer rests on 1 timestamped moment across 1 source video, 2022-09-03.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-30 the archive introduces: On the night of September 26, the team at our Kennedy Space center began moving our Artemis I moon rocket from launch pad 39B back to the Vehicle Assembly Building or VAB.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-30 the archive introduces: In addition to protecting the integrated rocket and spacecraft, they also wanted to give employees time to address the needs of their families.",
+              "supported": null
+            }
+          ],
+          "investigation": {
+            "investigation_id": "inv_1f987c4b9457",
+            "archive_id": "artemis-i-2022",
+            "query": "Did the September 3 hydrogen leak fully explain why Artemis I launched in November? Trace the evidence.",
+            "state": "complete",
+            "created_at": "2026-07-26T20:50:30.749172Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_000",
+                "text": "This answer rests on 1 timestamped moment across 1 source video, 2022-09-03.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_001",
+                "text": "Not established by this archive.",
+                "supported_by_event_ids": [],
+                "support_status": "not_established",
+                "is_comparative": false,
+                "lock_reason": "comparative sentence cites 1 event(s); at least two are required"
+              },
+              {
+                "sentence_id": "sentence_003",
+                "text": "On 2022-09-30 the archive introduces: On the night of September 26, the team at our Kennedy Space center began moving our Artemis I moon rocket from launch pad 39B back to the Vehicle Assembly Building or VAB.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_14"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_004",
+                "text": "On 2022-09-30 the archive introduces: In addition to protecting the integrated rocket and spacecraft, they also wanted to give employees time to address the needs of their families.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_17"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              }
+            ],
+            "findings": [
+              {
+                "finding_id": "finding_evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00",
+                "label": "new_information",
+                "title": "New delay reason about artemis i launch",
+                "summary": "On 2022-09-03 the archive introduces: This morning, NASA waved off the Artemis 1 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage of the SLS rocket.",
+                "event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              },
+              {
+                "finding_id": "finding_evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_14",
+                "label": "new_information",
+                "title": "New status update about artemis i launch",
+                "summary": "On 2022-09-30 the archive introduces: On the night of September 26, the team at our Kennedy Space center began moving our Artemis I moon rocket from launch pad 39B back to the Vehicle Assembly Building or VAB.",
+                "event_ids": [
+                  "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_14"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              },
+              {
+                "finding_id": "finding_evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_17",
+                "label": "new_information",
+                "title": "New delay reason about additional reason for rollback",
+                "summary": "On 2022-09-30 the archive introduces: In addition to protecting the integrated rocket and spacecraft, they also wanted to give employees time to address the needs of their families.",
+                "event_ids": [
+                  "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_17"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              }
+            ],
+            "relations": [],
+            "events": [
+              {
+                "event_id": "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+                "start": 77.27,
+                "end": 87.18,
+                "source_date": "2022-09-03",
+                "speaker_name": "Jackie McGinnis",
+                "speaker_role": "NASA Press Secretary",
+                "subject": "Artemis I launch",
+                "claim_type": "delay_reason",
+                "claim_text": "This morning, NASA waved off the Artemis 1 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage of the SLS rocket.",
+                "normalized_value": "liquid_hydrogen_leak",
+                "unit": null,
+                "status": "scrubbed",
+                "reason": "liquid hydrogen leak while filling propellant into the core stage",
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_15862e12a5ef"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              },
+              {
+                "event_id": "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_14",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+                "start": 115.1,
+                "end": 126.52,
+                "source_date": "2022-09-30",
+                "speaker_name": null,
+                "speaker_role": "NASA narrator",
+                "subject": "Artemis I launch",
+                "claim_type": "status_update",
+                "claim_text": "On the night of September 26, the team at our Kennedy Space center began moving our Artemis I moon rocket from launch pad 39B back to the Vehicle Assembly Building or VAB.",
+                "normalized_value": "2022-09-26",
+                "unit": null,
+                "status": "rolled_back",
+                "reason": null,
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_0a9a5d39522b"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              },
+              {
+                "event_id": "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_17",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+                "start": 138.92,
+                "end": 146.76,
+                "source_date": "2022-09-30",
+                "speaker_name": null,
+                "speaker_role": "NASA narrator",
+                "subject": "additional reason for rollback",
+                "claim_type": "delay_reason",
+                "claim_text": "In addition to protecting the integrated rocket and spacecraft, they also wanted to give employees time to address the needs of their families.",
+                "normalized_value": "family_needs",
+                "unit": null,
+                "status": "rolled_back",
+                "reason": "to give employees time to address the needs of their families",
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_0a9a5d39522b"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              }
+            ],
+            "shots": [
+              {
+                "event_id": "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00",
+                "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+                "video_title": "Artemis I Launch Update: Post-Scrub News Conference",
+                "source_url": "https://images.nasa.gov/details/KSC-20220903-VP-MMS01-0001-Artemis_I_Post_Scrub_News_Conference-3312396",
+                "source_date": "2022-09-03",
+                "start": 75.27,
+                "end": 89.18,
+                "stream_url": "https://play.videodb.io/v1/89955935-f17a-44cd-9cc2-dbae4367594b.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=eRT1hPdU18c",
+                "transcript_text": "This morning, NASA waved off the Artemis 1 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage of the SLS rocket."
+              },
+              {
+                "event_id": "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_14",
+                "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+                "video_title": "The World's First-Ever Planetary Defense Test on This Week @NASA - September 30, 2022",
+                "source_url": "https://images.nasa.gov/details/The%20World%E2%80%99s%20First-Ever%20Planetary%20Defense%20Test%20on%20This%20Week%20@NASA%20%E2%80%93%20September%2030,%202022",
+                "source_date": "2022-09-30",
+                "start": 113.1,
+                "end": 128.51999999999998,
+                "stream_url": "https://play.videodb.io/v1/a093ebd6-625d-42e4-aea2-b2056e079f5e.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=Waj8MD94Loc",
+                "transcript_text": "Artemis I launch"
+              },
+              {
+                "event_id": "evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_17",
+                "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+                "video_title": "The World's First-Ever Planetary Defense Test on This Week @NASA - September 30, 2022",
+                "source_url": "https://images.nasa.gov/details/The%20World%E2%80%99s%20First-Ever%20Planetary%20Defense%20Test%20on%20This%20Week%20@NASA%20%E2%80%93%20September%2030,%202022",
+                "source_date": "2022-09-30",
+                "start": 136.92,
+                "end": 148.76,
+                "stream_url": "https://play.videodb.io/v1/b7f31205-4648-4d9b-ad20-4509bb2b17ac.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=-MBQFwzjdXE",
+                "transcript_text": "additional reason for rollback"
+              }
+            ],
+            "challenge": {
+              "challenge_id": "challenge_585f719b5460",
+              "schema_version": "challenge-result-v1",
+              "prompt": "Challenge this conclusion",
+              "counter_queries": [
+                "Footage giving a different or additional reason for Artemis I launch, not liquid hydrogen leak",
+                "Later footage that revised or updated the earlier account of Artemis I launch",
+                "Statements showing the plan for Artemis I launch stayed consistent over time",
+                "Footage adding context, limits or caveats to the explanation of Artemis I launch",
+                "Find a different or additional reason omitted by the current answer. Search for footage establishing: The team moved Artemis I back to the VAB on 26-27 Sep, and managers chose rollback because of Hurricane Ian weather predictions"
+              ],
+              "accepted_finding_ids": [
+                "finding_evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_14",
+                "finding_evt_m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6_000_17"
+              ],
+              "rejected_candidates": [
+                {
+                  "event_id": "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00",
+                  "reason": "already used as evidence in the initial answer"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_007_10",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_003_04",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_02",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_001_02",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_001_06",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_007_06",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_011_04",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_011_07",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_012_00",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_016_00",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_017_09",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_02",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_018_00",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_018_01",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_018_02",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbe-433d-7290-bd51-c3820d24b093_002_06",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbe-433d-7290-bd51-c3820d24b093_010_14",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                },
+                {
+                  "event_id": "evt_m-z-019f9fbe-433d-7290-bd51-c3820d24b093_010_15",
+                  "reason": "seeded challenge requires evidence from a source video unused by the initial answer and within the verified 30 September window"
+                }
+              ],
+              "initial_accepted_video_ids": [
+                "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570"
+              ],
+              "challenge_accepted_video_ids": [
+                "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6"
+              ],
+              "outcome": "qualified",
+              "impact_summary_sentence_ids": [
+                "sentence_003",
+                "sentence_004"
+              ],
+              "searched_at": "2026-07-26T20:52:15.609115Z",
+              "novel_accepted_video_ids": [
+                "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6"
+              ],
+              "found_counter_evidence": true
+            },
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": null,
+            "error": null
+          }
+        },
+        {
+          "case_id": "no_counterevidence_alien_claim",
+          "answer": "",
+          "state": "insufficient_evidence",
+          "surfaced_evidence": [],
+          "propositions": [],
+          "investigation": {
+            "investigation_id": "inv_09bfa1fa5da3",
+            "archive_id": "artemis-i-2022",
+            "query": "Which NASA official said alien interference delayed Artemis I?",
+            "state": "insufficient_evidence",
+            "created_at": "2026-07-26T20:52:15.613399Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_001",
+                "text": "Not established by this archive.",
+                "supported_by_event_ids": [],
+                "support_status": "not_established",
+                "is_comparative": false,
+                "lock_reason": "The archive returned no relevant claim events."
+              }
+            ],
+            "findings": [],
+            "relations": [],
+            "events": [],
+            "shots": [],
+            "challenge": null,
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": "The archive returned no relevant claim events.",
+            "error": null
+          }
+        },
+        {
+          "case_id": "source_lock_rejects_sole_weather_cause",
+          "answer": "",
+          "state": "insufficient_evidence",
+          "surfaced_evidence": [],
+          "propositions": [],
+          "investigation": {
+            "investigation_id": "inv_7b2392ecea83",
+            "archive_id": "artemis-i-2022",
+            "query": "Does the archive establish that Hurricane Ian was the sole cause of the eventual November launch?",
+            "state": "insufficient_evidence",
+            "created_at": "2026-07-26T20:52:49.239154Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_001",
+                "text": "Not established by this archive.",
+                "supported_by_event_ids": [],
+                "support_status": "not_established",
+                "is_comparative": false,
+                "lock_reason": "The archive returned no relevant claim events."
+              }
+            ],
+            "findings": [],
+            "relations": [],
+            "events": [],
+            "shots": [],
+            "challenge": null,
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": "The archive returned no relevant claim events.",
+            "error": null
+          }
+        },
+        {
+          "case_id": "flight_termination_rollback_constraint",
+          "answer": "This answer rests on 3 timestamped moments across 2 source videos, 2022-09-02 to 2022-09-08. On 2022-09-02 the archive introduces: So right now after 9 6, we'd roll back, retest. On 2022-09-02 the archive introduces: It's a relatively short retest of the flight termination system just to provide confidence to the range that the public will be safe. On 2022-09-08 the archive introduces: We did submit our waiver package to them to get our retest requirement out there after meeting with them several times.",
+          "state": "complete",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+              "start": 899.45,
+              "end": 903.45
+            },
+            {
+              "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+              "start": 903.37,
+              "end": 914.09
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 271.84,
+              "end": 281.4
+            }
+          ],
+          "propositions": [
+            {
+              "text": "This answer rests on 3 timestamped moments across 2 source videos, 2022-09-02 to 2022-09-08.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-02 the archive introduces: So right now after 9 6, we'd roll back, retest.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-02 the archive introduces: It's a relatively short retest of the flight termination system just to provide confidence to the range that the public will be safe.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-08 the archive introduces: We did submit our waiver package to them to get our retest requirement out there after meeting with them several times.",
+              "supported": null
+            }
+          ],
+          "investigation": {
+            "investigation_id": "inv_0d67acd6584f",
+            "archive_id": "artemis-i-2022",
+            "query": "How did flight-termination-system retest requirements affect the rollback and launch plan?",
+            "state": "complete",
+            "created_at": "2026-07-26T20:53:22.182917Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_000",
+                "text": "This answer rests on 3 timestamped moments across 2 source videos, 2022-09-02 to 2022-09-08.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_004_11",
+                  "evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_005_01",
+                  "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_03"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_001",
+                "text": "On 2022-09-02 the archive introduces: So right now after 9 6, we'd roll back, retest.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_004_11"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_002",
+                "text": "On 2022-09-02 the archive introduces: It's a relatively short retest of the flight termination system just to provide confidence to the range that the public will be safe.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_005_01"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_003",
+                "text": "On 2022-09-08 the archive introduces: We did submit our waiver package to them to get our retest requirement out there after meeting with them several times.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_03"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              }
+            ],
+            "findings": [
+              {
+                "finding_id": "finding_evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_004_11",
+                "label": "new_information",
+                "title": "New test plan about roll back schedule",
+                "summary": "On 2022-09-02 the archive introduces: So right now after 9 6, we'd roll back, retest.",
+                "event_ids": [
+                  "evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_004_11"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              },
+              {
+                "finding_id": "finding_evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_005_01",
+                "label": "new_information",
+                "title": "New test plan about flight termination system retest",
+                "summary": "On 2022-09-02 the archive introduces: It's a relatively short retest of the flight termination system just to provide confidence to the range that the public will be safe.",
+                "event_ids": [
+                  "evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_005_01"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              },
+              {
+                "finding_id": "finding_evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_03",
+                "label": "new_information",
+                "title": "New test plan about flight termination system retest waiver",
+                "summary": "On 2022-09-08 the archive introduces: We did submit our waiver package to them to get our retest requirement out there after meeting with them several times.",
+                "event_ids": [
+                  "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_03"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              }
+            ],
+            "relations": [],
+            "events": [
+              {
+                "event_id": "evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_004_11",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+                "start": 899.45,
+                "end": 903.45,
+                "source_date": "2022-09-02",
+                "speaker_name": null,
+                "speaker_role": "NASA mission official",
+                "subject": "roll back schedule",
+                "claim_type": "test_plan",
+                "claim_text": "So right now after 9 6, we'd roll back, retest.",
+                "normalized_value": "September 6",
+                "unit": null,
+                "status": "testing",
+                "reason": "to_retest_flight_termination_system",
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_768071e3bcde"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              },
+              {
+                "event_id": "evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_005_01",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+                "start": 903.37,
+                "end": 914.09,
+                "source_date": "2022-09-02",
+                "speaker_name": null,
+                "speaker_role": "NASA mission official",
+                "subject": "flight termination system retest",
+                "claim_type": "test_plan",
+                "claim_text": "It's a relatively short retest of the flight termination system just to provide confidence to the range that the public will be safe.",
+                "normalized_value": "short_retest",
+                "unit": null,
+                "status": "planned",
+                "reason": "provide_confidence_to_range_public_safety",
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_768071e3bcde"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              },
+              {
+                "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_03",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+                "start": 271.84,
+                "end": 281.4,
+                "source_date": "2022-09-08",
+                "speaker_name": "Jim Free",
+                "speaker_role": "Associate Administrator for the Exploration Systems Development Mission Directorate at NASA Headquarters",
+                "subject": "flight termination system retest waiver",
+                "claim_type": "test_plan",
+                "claim_text": "We did submit our waiver package to them to get our retest requirement out there after meeting with them several times.",
+                "normalized_value": "waiver_package_submitted",
+                "unit": null,
+                "status": "testing",
+                "reason": null,
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_2cc05fa0bd15"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              }
+            ],
+            "shots": [
+              {
+                "event_id": "evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_004_11",
+                "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+                "video_title": "Artemis I Countdown Status Briefing",
+                "source_url": "https://www.youtube.com/watch?v=Ig0Loa9uV_k",
+                "source_date": "2022-09-02",
+                "start": 897.45,
+                "end": 905.45,
+                "stream_url": "https://play.videodb.io/v1/8d2f0de6-360f-440b-a856-a5d9103ec69b.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=yjHhYdPfDlI",
+                "transcript_text": "to_retest_flight_termination_system"
+              },
+              {
+                "event_id": "evt_m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71_005_01",
+                "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+                "video_title": "Artemis I Countdown Status Briefing",
+                "source_url": "https://www.youtube.com/watch?v=Ig0Loa9uV_k",
+                "source_date": "2022-09-02",
+                "start": 901.37,
+                "end": 916.09,
+                "stream_url": "https://play.videodb.io/v1/8280912f-727d-45c2-9797-9f083495fc65.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=9CGAtEmS7Yc",
+                "transcript_text": "flight termination system retest"
+              },
+              {
+                "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_03",
+                "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+                "video_title": "Artemis I Launch Status Teleconference",
+                "source_url": "https://www.youtube.com/watch?v=ImxcxX6Ek1c",
+                "source_date": "2022-09-08",
+                "start": 269.84,
+                "end": 283.4,
+                "stream_url": "https://play.videodb.io/v1/9dc4a0f4-ec1b-41cc-86c5-3fd56578cad8.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=q8JTPqZzN9s",
+                "transcript_text": "flight termination system retest waiver"
+              }
+            ],
+            "challenge": null,
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": null,
+            "error": null
+          }
         }
       ]
     }
