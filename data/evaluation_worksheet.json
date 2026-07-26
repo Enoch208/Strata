@@ -1,0 +1,1186 @@
+{
+  "worksheet_version": "evaluation-worksheet-v1",
+  "arms": [
+    {
+      "arm": "naive",
+      "cases": [
+        {
+          "case_id": "launch_date_sequence",
+          "answer": "It was first scheduled for September 3 (2:17 p.m. ET), but the Sept. 3 attempt was scrubbed for an LH2 leak and the team missed launch period 25 (through Sept. 6). NASA planned repairs and sought later September opportunities (requested range dates of Sept. 23 and Sept. 27, targeted a cryo demo on Sept. 17 and planned to attempt launch as early as Sept. 27 with Oct. 2 as a backup), then rolled the vehicle back to the VAB ahead of Hurricane Ian around Sept. 26, and the mission ultimately launched successfully on Nov. 16.",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+              "start": 34.56,
+              "end": 40.92
+            },
+            {
+              "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+              "start": 186.01,
+              "end": 191.89
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 74.47,
+              "end": 87.18
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 260.28,
+              "end": 271.93
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 763.42,
+              "end": 776.38
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 318.11,
+              "end": 323.39
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 600.99,
+              "end": 604.31
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 996.0,
+              "end": 1008.02
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 1054.09,
+              "end": 1060.84
+            },
+            {
+              "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+              "start": 115.1,
+              "end": 131.72
+            },
+            {
+              "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+              "start": 103.49,
+              "end": 113.41
+            },
+            {
+              "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+              "start": 64.79,
+              "end": 66.87
+            }
+          ],
+          "propositions": [
+            {
+              "text": "On Sept. 2 NASA said the two-hour launch window would open Sept. 3 at 2:17 p.m. Eastern (planned earliest opportunity Sept. 3, 2:17 p.m. ET).",
+              "supported": null
+            },
+            {
+              "text": "The Sept. 3 launch attempt was waved off after teams encountered a liquid hydrogen leak while filling the core stage.",
+              "supported": null
+            },
+            {
+              "text": "NASA stated they would not launch in launch period 25 (which ended Sept. 6) after the scrub.",
+              "supported": null
+            },
+            {
+              "text": "NASA requested range support for possible late-September launch dates, specifically Sept. 23 and Sept. 27, and targeted a cryogenic demonstration for Sept. 17.",
+              "supported": null
+            },
+            {
+              "text": "Assuming the cryo demo met objectives, NASA planned to set up for a launch attempt as early as Tuesday, Sept. 27, with Oct. 2 as a backup.",
+              "supported": null
+            },
+            {
+              "text": "On the night of Sept. 26 NASA moved the Artemis I rocket back to the Vehicle Assembly Building ahead of Hurricane Ian (rollback to VAB).",
+              "supported": null
+            },
+            {
+              "text": "Artemis I ultimately launched successfully on Nov. 16.",
+              "supported": null
+            }
+          ]
+        },
+        {
+          "case_id": "september_3_hydrogen_leak",
+          "answer": "NASA said the September 3 scrub was caused by a large liquid-hydrogen leak in the propellant umbilical — a large leak at the 8-inch quick-disconnect during the transition from slow to fast fill — and noted an earlier inadvertent over‑pressurization of the hydrogen transfer line (to about 60 psi vs. planned ~20 psi) that may have affected the quick-disconnect seal; multiple attempts to stop the leak failed and the team scrubbed and safed the vehicle.",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 77.27,
+              "end": 87.18
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 561.3,
+              "end": 601.59
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 613.31,
+              "end": 629.67
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 636.31,
+              "end": 642.79
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 678.21,
+              "end": 688.06
+            }
+          ],
+          "propositions": [
+            {
+              "text": "NASA said teams encountered a liquid hydrogen leak while filling propellant into the SLS core stage, prompting the September 3 scrub.",
+              "supported": null
+            },
+            {
+              "text": "NASA said the leak was a large leak at the 8-inch quick-disconnect (tail service mast umbilical) and began when the flow moved from slow fill to fast fill.",
+              "supported": null
+            },
+            {
+              "text": "NASA said there was an inadvertent over-pressurization of the hydrogen transfer line earlier (planned ~20 psi, reached about 60 psi) which could have affected the quick-disconnect soft goods/seal.",
+              "supported": null
+            },
+            {
+              "text": "NASA said the operations team tried multiple times (three attempts) to resolve the leak but were unsuccessful.",
+              "supported": null
+            },
+            {
+              "text": "NASA said they declared the scrub (stood down) and proceeded to safe the vehicle and drain cryogens after the leak could not be resolved.",
+              "supported": null
+            }
+          ]
+        },
+        {
+          "case_id": "seal_repair_and_cryo_test",
+          "answer": "NASA said teams removed and replaced the soft goods/seals on the LH2 quick‑disconnects (notably the 8‑inch and the 4‑inch QDs) by demating the TSMU plates, inspecting the seals, and working under an environmental enclosure to perform the R&R and inspections (they found a small witness indentation on the 8‑inch seal). They planned a pad‑based cryogenic demonstration (target ~Sept. 17) to verify the repair under cryogenic conditions by tanking the core stage and ICPS with LH2/LO2, running a ‘kinder, gentler’ loading profile (slow, steady pressure ramp and thermal conditioning, controlled valve sequencing), exercising engine bleed/chilldown and a pre-press demonstration to verify valve timing, monitoring the LH2 tank for leaks (no terminal count and no range support required), then using the results to decide whether to stay at the pad or roll back.",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 757.65,
+              "end": 762.78
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 520.7,
+              "end": 534.22
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 517.58,
+              "end": 518.54
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 557.24,
+              "end": 571.48
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 585.31,
+              "end": 593.87
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 595.87,
+              "end": 600.83
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 617.75,
+              "end": 622.47
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 646.29,
+              "end": 653.53
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 247.96,
+              "end": 259.4
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 259.72,
+              "end": 269.88
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 353.03,
+              "end": 369.67
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 376.8,
+              "end": 386.4
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 543.55,
+              "end": 666.39
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 696.65,
+              "end": 733.02
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 655.67,
+              "end": 666.39
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 787.86,
+              "end": 801.54
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 732.36,
+              "end": 740.89
+            }
+          ],
+          "propositions": [
+            {
+              "text": "NASA removed and replaced the soft goods/seals on the 8‑inch fill/drain quick disconnect and the 4‑inch bleed quick disconnect at the tail service mast umbilical.",
+              "supported": null
+            },
+            {
+              "text": "To access those QDs teams demated the LH2 TSMU plate, inspected the seals, and conducted R&R under an environmental enclosure (described as a plastic tent with conditioned air).",
+              "supported": null
+            },
+            {
+              "text": "During inspection teams saw a witness mark/indentation on the 8‑inch seal consistent with a contributing factor to the leak.",
+              "supported": null
+            },
+            {
+              "text": "NASA planned a pad‑based cryogenic demonstration (target date around September 17) to verify the repaired seals under cryogenic conditions.",
+              "supported": null
+            },
+            {
+              "text": "The cryogenic demonstration plan included tanking both the core stage and the interim cryogenic propulsion stage with LH2 and LO2 to test the interface.",
+              "supported": null
+            },
+            {
+              "text": "The test would use a 'kinder, gentler' loading approach: slow, steady pressure ramps on the LH2 sphere, thermal conditioning of the interface, and controlled main fuel valve sequencing to reduce pressure and thermal transients.",
+              "supported": null
+            },
+            {
+              "text": "Planned activities for the demo included engine bleed/chilldown, a pre‑press demonstration to verify valve timing, and monitoring the core LH2 tank for leaks.",
+              "supported": null
+            },
+            {
+              "text": "NASA said the demo would be objective‑based, would not go into terminal count, would not require range support, and its results would inform whether to stay at the pad or roll back.",
+              "supported": null
+            },
+            {
+              "text": "After seal R&R they planned a retest/minimum integrated verification test (mini‑IVT) to confirm data flows and system behavior before the cryo demonstration.",
+              "supported": null
+            }
+          ]
+        },
+        {
+          "case_id": "hurricane_ian_rollback",
+          "answer": "The archive says Hurricane Ian intensified and made landfall in southwest Florida as a Category 4 storm, and NASA rolled the Artemis I Space Launch System and Orion from Pad 39B back into the Vehicle Assembly Building on the night of September 26 because of weather predictions related to Hurricane Ian; the rocket was secured in the VAB and managers also cited giving employees time to address family needs. NASA noted they typically need to decide about three days ahead to roll back for an approaching hurricane.",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+              "start": 95.02,
+              "end": 138.52
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 3233.65,
+              "end": 3245.21
+            }
+          ],
+          "propositions": [
+            {
+              "text": "Hurricane Ian intensified and made landfall in southwest Florida as a Category 4 storm with winds up to about 155 mph.",
+              "supported": null
+            },
+            {
+              "text": "On the night of September 26, teams began moving the Artemis I rocket from Launch Pad 39B back to the Vehicle Assembly Building (VAB).",
+              "supported": null
+            },
+            {
+              "text": "The Space Launch System rocket and the Orion spacecraft were secured inside the VAB.",
+              "supported": null
+            },
+            {
+              "text": "Managers decided to roll back because of weather predictions related to Hurricane Ian.",
+              "supported": null
+            },
+            {
+              "text": "The rollback decision also aimed to give employees time to address the needs of their families.",
+              "supported": null
+            },
+            {
+              "text": "NASA stated that, in the event of a hurricane, a decision to roll back to the VAB typically must be made about three days in advance.",
+              "supported": null
+            }
+          ]
+        },
+        {
+          "case_id": "final_launch_status",
+          "answer": "NASA reported that Artemis I successfully lifted off (liftoff at 1:47 a.m. ET) and that the Orion spacecraft was on its way to the Moon after completing the translunar injection burn.",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+              "start": 103.49,
+              "end": 113.41
+            },
+            {
+              "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+              "start": 64.79,
+              "end": 68.63
+            },
+            {
+              "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+              "start": 116.98,
+              "end": 124.5
+            }
+          ],
+          "propositions": [
+            {
+              "text": "Artemis I lifted off at 1:47 a.m. Eastern Time.",
+              "supported": null
+            },
+            {
+              "text": "The Orion spacecraft was on its way to the Moon.",
+              "supported": null
+            },
+            {
+              "text": "Orion completed the translunar injection burn to put it on its trajectory to the Moon.",
+              "supported": null
+            }
+          ]
+        },
+        {
+          "case_id": "insufficient_sabotage_claim",
+          "answer": "The archive contains no statement identifying any person or entity as intentionally sabotaging the Artemis I launch schedule.",
+          "surfaced_evidence": [],
+          "propositions": []
+        },
+        {
+          "case_id": "consistent_launch_when_ready",
+          "answer": "Yes — across multiple briefings NASA repeatedly stated it would not launch until the vehicle was ready.",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 167.79,
+              "end": 172.75
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 211.7,
+              "end": 215.3
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 871.68,
+              "end": 875.84
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 682.31,
+              "end": 685.51
+            }
+          ],
+          "propositions": [
+            {
+              "text": "On 2022-09-03 NASA Administrator Bill Nelson said, \"We do not launch until we think it's right.\"",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-03 NASA officials said \"we're not going to launch till we're ready.\"",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-03 Mike Sarafin said \"we're going to fly when we're ready.\"",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-08 NASA ground systems leadership said \"As always, we'll launch when we're ready.\"",
+              "supported": null
+            }
+          ]
+        },
+        {
+          "case_id": "pressurization_not_proven_cause",
+          "answer": "No. NASA did not conclusively determine that the inadvertent hydrogen‑line overpressurization was the cause of the September 3 leak; they said it was \"too early to tell\" and would run a fault‑tree analysis, and subsequent inspections found an indentation on the 8‑inch quick‑disconnect (possible FOD) and other factors under investigation.",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 561.3,
+              "end": 607.95
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 1096.47,
+              "end": 1108.15
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 479.62,
+              "end": 517.02
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 932.88,
+              "end": 942.96
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 2021.39,
+              "end": 2039.78
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 2086.64,
+              "end": 2097.68
+            }
+          ],
+          "propositions": [
+            {
+              "text": "On September 3 NASA reported an inadvertent pressurization of the hydrogen transfer line to about 60 psi during chill down (possible overpressurization).",
+              "supported": null
+            },
+            {
+              "text": "NASA said it was too early to tell whether that overpressurization caused the September 3 leak and that a fault‑tree analysis was required before concluding causation.",
+              "supported": null
+            },
+            {
+              "text": "NASA/ground teams removed and replaced the soft goods/seals on the 8‑inch quick‑disconnect and enclosed the work area on the pad for inspection and repair.",
+              "supported": null
+            },
+            {
+              "text": "Inspectors found a witness mark/indentation on the 8‑inch quick‑disconnect seal consistent with possible foreign‑object debris that could have contributed to the leak.",
+              "supported": null
+            },
+            {
+              "text": "Subsequent briefings reported the indentation measured just under 0.01 inches and that hydrogen concentrations during the large leak spiked to roughly 8% (above the 4% LCC limit).",
+              "supported": null
+            },
+            {
+              "text": "NASA implemented procedural and procedural/software mitigations (a 'kinder, gentler' loading approach) and continued investigation rather than declaring the overpressurization the definitive cause.",
+              "supported": null
+            }
+          ]
+        },
+        {
+          "case_id": "seeded_leak_only_challenge",
+          "answer": "No. The September 3 hydrogen leak caused the scrub and started the repair-and-test path that eliminated the early‑September launch opportunities, but other factors — the need to replace and cryo‑test the quick‑disconnect seals, range/FTS retest constraints, and a Hurricane Ian‑driven rollback (plus the multi‑week rollback/work timeline) — together explain why Artemis I did not fly until November.",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+              "start": 34.56,
+              "end": 40.92
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 77.27,
+              "end": 87.18
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 613.31,
+              "end": 629.67
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 678.21,
+              "end": 688.7
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 730.36,
+              "end": 770.86
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 866.18,
+              "end": 883.47
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 150.45,
+              "end": 166.05
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 310.59,
+              "end": 331.79
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 520.7,
+              "end": 534.22
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 600.99,
+              "end": 616.63
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 953.76,
+              "end": 967.2
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 247.96,
+              "end": 259.4
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 996.0,
+              "end": 1008.02
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 1008.9,
+              "end": 1013.98
+            },
+            {
+              "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+              "start": 115.1,
+              "end": 131.72
+            },
+            {
+              "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+              "start": 138.92,
+              "end": 146.76
+            },
+            {
+              "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+              "start": 103.49,
+              "end": 113.41
+            }
+          ],
+          "propositions": [
+            {
+              "text": "NASA planned an earliest launch opportunity beginning September 3 (Artemis I Countdown Status Briefing).",
+              "supported": null
+            },
+            {
+              "text": "The September 3 launch attempt was waved off after teams encountered a liquid hydrogen leak while filling propellant into the core stage (Post‑Scrub News Conference, 77.27–87.18).",
+              "supported": null
+            },
+            {
+              "text": "The leak was large at the 8‑inch quick disconnect, started on the transition to fast fill, and repeated despite troubleshooting efforts (Post‑Scrub News Conference, 613.31–629.67; 678.21–688.70).",
+              "supported": null
+            },
+            {
+              "text": "Mission managers concluded simple demate/remate had low confidence and that removal/replacement options would not preserve the ability to fly before the end of that launch period (Post‑Scrub News Conference, 730.36–770.86).",
+              "supported": null
+            },
+            {
+              "text": "The Eastern Range has FTS battery retest/replace requirements that constrain how long the vehicle can stay on pad without a rollback (Post‑Scrub News Conference, 866.18–883.47).",
+              "supported": null
+            },
+            {
+              "text": "NASA planned to replace the seals (8‑inch and 4‑inch) and to perform a cryogenic demonstration/test to verify the fixes (Sep 8 teleconference 150.45–166.05; Sep 19 briefing 247.96–259.40).",
+              "supported": null
+            },
+            {
+              "text": "NASA requested late‑September launch dates (e.g., Sept 23 and Sept 27) contingent on successful cryo testing and range decisions (Sep 8 teleconference 310.59–331.79; Sep 19 briefing 996.00–1013.98).",
+              "supported": null
+            },
+            {
+              "text": "Rollback and associated repair/inspection work would take several weeks (Sep 8 teleconference 953.76–967.20).",
+              "supported": null
+            },
+            {
+              "text": "The rocket was rolled back into the VAB on September 26 ahead of Hurricane Ian (This Week @NASA, Sep 30; 115.10–131.72 and 138.92–146.76).",
+              "supported": null
+            },
+            {
+              "text": "Artemis I ultimately launched in mid‑November (post‑launch news conference dated Nov 16 shows liftoff that morning, 103.49–113.41).",
+              "supported": null
+            }
+          ]
+        },
+        {
+          "case_id": "no_counterevidence_alien_claim",
+          "answer": "The provided archive contains no statement saying an alien interfered with or delayed Artemis I; no NASA official in these transcripts is quoted attributing the delay to aliens.",
+          "surfaced_evidence": [],
+          "propositions": []
+        },
+        {
+          "case_id": "source_lock_rejects_sole_weather_cause",
+          "answer": "No. The archive shows Hurricane Ian prompted a rollback, but it also documents hydrogen leaks, a large 8-inch quick‑disconnect leak requiring seal replacement and cryogenic testing, and Eastern Range FTS battery retest/waiver issues that contributed to delays — so Ian was not the sole cause of the November launch.",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+              "start": 115.1,
+              "end": 138.92
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 74.47,
+              "end": 90.3
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 613.31,
+              "end": 629.67
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 740.89,
+              "end": 801.54
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 1164.14,
+              "end": 1210.31
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 520.7,
+              "end": 616.63
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 932.88,
+              "end": 964.79
+            }
+          ],
+          "propositions": [
+            {
+              "text": "Managers moved the Artemis I rocket from Launch Pad 39B back into the Vehicle Assembly Building because of Hurricane Ian (weather predictions related to the storm).",
+              "supported": null
+            },
+            {
+              "text": "NASA waved off the September 3 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage.",
+              "supported": null
+            },
+            {
+              "text": "A large hydrogen leak occurred at the 8-inch quick disconnect when transitioning from slow fill to fast fill, and it was characterized as a large leak that could not be resolved on pad that day.",
+              "supported": null
+            },
+            {
+              "text": "The team decided to remove and replace the soft goods/seals on the quick disconnect and to perform cryogenic testing (at the pad or in the VAB) to verify the repair.",
+              "supported": null
+            },
+            {
+              "text": "NASA sought options with the Eastern Range because the flight termination system (FTS) batteries have retest/replace requirements; without a range waiver NASA would have to roll back to the VAB to meet FTS test/replacement rules.",
+              "supported": null
+            },
+            {
+              "text": "NASA planned a cryogenic demonstration and schedule options in mid‑September to address the leak and verify procedures, indicating technical work and testing were required before further launch attempts.",
+              "supported": null
+            },
+            {
+              "text": "Because the archive documents both the Hurricane Ian rollback and separate technical and range/test issues that required repair, testing, or rollback, the archive does not establish that Hurricane Ian was the sole cause of the eventual November launch.",
+              "supported": null
+            }
+          ]
+        },
+        {
+          "case_id": "flight_termination_rollback_constraint",
+          "answer": "The Eastern Range’s flight‑termination‑system (FTS) retest interval became the pacing constraint: without a Range waiver extending the time between required FTS retests NASA would have to roll the SLS back to the Vehicle Assembly Building (VAB) to retest/replace the FTS batteries rather than remain on the pad. NASA therefore submitted a waiver and planned contingency late‑September dates (e.g., Sept. 23 and 27) and a cryo demonstration at the pad so it could either stay and attempt a late‑September launch if the Range approved the extension, or roll back and retest in the VAB if not.",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+              "start": 866.18,
+              "end": 883.47
+            },
+            {
+              "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+              "start": 885.15,
+              "end": 899.45
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 1165.38,
+              "end": 1196.99
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 3019.54,
+              "end": 3032.02
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 271.84,
+              "end": 281.4
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 318.11,
+              "end": 323.39
+            },
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 787.86,
+              "end": 801.54
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 669.03,
+              "end": 677.83
+            }
+          ],
+          "propositions": [
+            {
+              "text": "The Range imposes periodic retest requirements on the flight‑termination system that can force a rollback if not extended.",
+              "supported": null
+            },
+            {
+              "text": "NASA determined the FTS retest interval was the pacing function that could require rolling back after the current launch period.",
+              "supported": null
+            },
+            {
+              "text": "Without a Range waiver extending the retest interval, NASA would need to roll SLS back to the VAB to retest or replace FTS batteries.",
+              "supported": null
+            },
+            {
+              "text": "NASA submitted a waiver package to the Range seeking an extension of the FTS retest requirement.",
+              "supported": null
+            },
+            {
+              "text": "NASA planned contingency cryogenic demonstrations and proposed late‑September launch dates (e.g., Sept. 23 and Sept. 27) contingent on Range approval to avoid rollback.",
+              "supported": null
+            },
+            {
+              "text": "NASA evaluated doing repairs at the pad (with environmental/enclosure tradeoffs) versus rolling back to the VAB to perform retest/repair.",
+              "supported": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "arm": "claimtrail",
+      "cases": [
+        {
+          "case_id": "launch_date_sequence",
+          "answer": "This answer rests on 3 timestamped moments across 3 source videos, 2022-09-03 to 2022-09-19. On 2022-09-03 the archive introduces: We are still planning Artemis II in 2024 and Artemis III in 25. On 2022-09-08 the archive introduces: After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines. On 2022-09-19 the archive introduces: Artemis I is a flight test to launch NASA's Space Launch System rocket to send an uncrewed Orion spacecraft around the moon and thoroughly test the spacecraft systems before missions with crew.",
+          "state": "complete",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 2574.3,
+              "end": 2581.1
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 150.45,
+              "end": 166.05
+            },
+            {
+              "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+              "start": 271.3,
+              "end": 282.18
+            }
+          ],
+          "propositions": [
+            {
+              "text": "This answer rests on 3 timestamped moments across 3 source videos, 2022-09-03 to 2022-09-19.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-03 the archive introduces: We are still planning Artemis II in 2024 and Artemis III in 25.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-08 the archive introduces: After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines.",
+              "supported": null
+            },
+            {
+              "text": "On 2022-09-19 the archive introduces: Artemis I is a flight test to launch NASA's Space Launch System rocket to send an uncrewed Orion spacecraft around the moon and thoroughly test the spacecraft systems before missions with crew.",
+              "supported": null
+            }
+          ],
+          "investigation": {
+            "investigation_id": "inv_01ca3d092e9b",
+            "archive_id": "artemis-i-2022",
+            "query": "How did the planned Artemis I launch date change from early September through the successful launch?",
+            "state": "complete",
+            "created_at": "2026-07-26T20:47:25.031222Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_000",
+                "text": "This answer rests on 3 timestamped moments across 3 source videos, 2022-09-03 to 2022-09-19.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_011_04",
+                  "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00",
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_02"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_001",
+                "text": "On 2022-09-03 the archive introduces: We are still planning Artemis II in 2024 and Artemis III in 25.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_011_04"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_002",
+                "text": "On 2022-09-08 the archive introduces: After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_003",
+                "text": "On 2022-09-19 the archive introduces: Artemis I is a flight test to launch NASA's Space Launch System rocket to send an uncrewed Orion spacecraft around the moon and thoroughly test the spacecraft systems before missions with crew.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_02"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              }
+            ],
+            "findings": [
+              {
+                "finding_id": "finding_evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_011_04",
+                "label": "new_information",
+                "title": "New launch date about artemis ii and iii schedule",
+                "summary": "On 2022-09-03 the archive introduces: We are still planning Artemis II in 2024 and Artemis III in 25.",
+                "event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_011_04"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              },
+              {
+                "finding_id": "finding_evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00",
+                "label": "new_information",
+                "title": "New delay reason about artemis i launch",
+                "summary": "On 2022-09-08 the archive introduces: After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines.",
+                "event_ids": [
+                  "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              },
+              {
+                "finding_id": "finding_evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_02",
+                "label": "new_information",
+                "title": "New other about artemis i launch",
+                "summary": "On 2022-09-19 the archive introduces: Artemis I is a flight test to launch NASA's Space Launch System rocket to send an uncrewed Orion spacecraft around the moon and thoroughly test the spacecraft systems before missions with crew.",
+                "event_ids": [
+                  "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_02"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              }
+            ],
+            "relations": [],
+            "events": [
+              {
+                "event_id": "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_011_04",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+                "start": 2574.3,
+                "end": 2581.1,
+                "source_date": "2022-09-03",
+                "speaker_name": null,
+                "speaker_role": "NASA mission official",
+                "subject": "Artemis II and III schedule",
+                "claim_type": "launch_date",
+                "claim_text": "We are still planning Artemis II in 2024 and Artemis III in 25.",
+                "normalized_value": "2024;2025",
+                "unit": null,
+                "status": "planned",
+                "reason": null,
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_15862e12a5ef"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              },
+              {
+                "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+                "start": 150.45,
+                "end": 166.05,
+                "source_date": "2022-09-08",
+                "speaker_name": "Kathryn Hambleton",
+                "speaker_role": "NASA Office of Communications",
+                "subject": "Artemis I launch",
+                "claim_type": "delay_reason",
+                "claim_text": "After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines.",
+                "normalized_value": "2022-09-03",
+                "unit": null,
+                "status": "delayed",
+                "reason": "leak in one of the fuel lines",
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_2cc05fa0bd15"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              },
+              {
+                "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_02",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+                "start": 271.3,
+                "end": 282.18,
+                "source_date": "2022-09-19",
+                "speaker_name": "Kathryn Hambleton",
+                "speaker_role": "NASA Office of Communications",
+                "subject": "Artemis I launch",
+                "claim_type": "other",
+                "claim_text": "Artemis I is a flight test to launch NASA's Space Launch System rocket to send an uncrewed Orion spacecraft around the moon and thoroughly test the spacecraft systems before missions with crew.",
+                "normalized_value": null,
+                "unit": null,
+                "status": "planned",
+                "reason": null,
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_f87ffd92612a"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              }
+            ],
+            "shots": [
+              {
+                "event_id": "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_011_04",
+                "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+                "video_title": "Artemis I Launch Update: Post-Scrub News Conference",
+                "source_url": "https://images.nasa.gov/details/KSC-20220903-VP-MMS01-0001-Artemis_I_Post_Scrub_News_Conference-3312396",
+                "source_date": "2022-09-03",
+                "start": 2572.3,
+                "end": 2583.1,
+                "stream_url": "https://play.videodb.io/v1/d9d3655e-5312-4155-baae-9689fb2eb819.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=TOXnNs4ZQCo",
+                "transcript_text": "Artemis II and III schedule"
+              },
+              {
+                "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00",
+                "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+                "video_title": "Artemis I Launch Status Teleconference",
+                "source_url": "https://www.youtube.com/watch?v=ImxcxX6Ek1c",
+                "source_date": "2022-09-08",
+                "start": 148.45,
+                "end": 168.05,
+                "stream_url": "https://play.videodb.io/v1/ce77e237-ad3c-4114-9b6e-c1013883a928.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=12XrYq_v1Jg",
+                "transcript_text": "After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines."
+              },
+              {
+                "event_id": "evt_m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4_000_02",
+                "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+                "video_title": "Artemis I Pre-Demonstration Test Briefing",
+                "source_url": "https://www.youtube.com/watch?v=9g4op97LZ2E",
+                "source_date": "2022-09-19",
+                "start": 269.3,
+                "end": 284.18,
+                "stream_url": "https://play.videodb.io/v1/e6802e6b-d5d3-43d3-a1bc-57bab27f29e6.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=bvsfg0WyCkI",
+                "transcript_text": "Artemis I is a flight test to launch NASA's Space Launch System rocket to send an uncrewed Orion spacecraft around the moon and thoroughly test the spacecraft systems before missions with crew."
+              }
+            ],
+            "challenge": null,
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": null,
+            "error": null
+          }
+        },
+        {
+          "case_id": "september_3_hydrogen_leak",
+          "answer": "This answer rests on 2 timestamped moments across 2 source videos, 2022-09-03 to 2022-09-08. The 2022-09-03 source states This morning, NASA waved off the Artemis 1 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage of the SLS rocket, while the 2022-09-08 source adds After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines.",
+          "state": "complete",
+          "surfaced_evidence": [
+            {
+              "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+              "start": 77.27,
+              "end": 87.18
+            },
+            {
+              "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+              "start": 150.45,
+              "end": 166.05
+            }
+          ],
+          "propositions": [
+            {
+              "text": "This answer rests on 2 timestamped moments across 2 source videos, 2022-09-03 to 2022-09-08.",
+              "supported": null
+            },
+            {
+              "text": "The 2022-09-03 source states This morning, NASA waved off the Artemis 1 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage of the SLS rocket, while the 2022-09-08 source adds After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines.",
+              "supported": null
+            }
+          ],
+          "investigation": {
+            "investigation_id": "inv_8f7b66264ebe",
+            "archive_id": "artemis-i-2022",
+            "query": "What did NASA say caused the September 3 Artemis I scrub?",
+            "state": "complete",
+            "created_at": "2026-07-26T20:48:05.912041Z",
+            "summary_sentences": [
+              {
+                "sentence_id": "sentence_000",
+                "text": "This answer rests on 2 timestamped moments across 2 source videos, 2022-09-03 to 2022-09-08.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00",
+                  "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00"
+                ],
+                "support_status": "supported",
+                "is_comparative": false,
+                "lock_reason": null
+              },
+              {
+                "sentence_id": "sentence_001",
+                "text": "The 2022-09-03 source states This morning, NASA waved off the Artemis 1 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage of the SLS rocket, while the 2022-09-08 source adds After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines.",
+                "supported_by_event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00",
+                  "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00"
+                ],
+                "support_status": "supported",
+                "is_comparative": true,
+                "lock_reason": null
+              }
+            ],
+            "findings": [
+              {
+                "finding_id": "finding_evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00__evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00",
+                "label": "potential_tension",
+                "title": "A later source adds context to the reason for artemis i launch",
+                "summary": "The 2022-09-03 source states This morning, NASA waved off the Artemis 1 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage of the SLS rocket, while the 2022-09-08 source adds After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines.",
+                "event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00",
+                  "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00"
+                ],
+                "confidence": "medium",
+                "review_reason": null
+              }
+            ],
+            "relations": [
+              {
+                "relation_id": "rel_evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00__evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00",
+                "schema_version": "claim-relation-v1",
+                "from_event_id": "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00",
+                "to_event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00",
+                "relation_type": "contextualizes",
+                "explanation": "The 2022-09-03 source states This morning, NASA waved off the Artemis 1 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage of the SLS rocket, while the 2022-09-08 source adds After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines.",
+                "supporting_event_ids": [
+                  "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00",
+                  "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00"
+                ],
+                "confidence": "medium",
+                "review_required": false
+              }
+            ],
+            "events": [
+              {
+                "event_id": "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+                "start": 77.27,
+                "end": 87.18,
+                "source_date": "2022-09-03",
+                "speaker_name": "Jackie McGinnis",
+                "speaker_role": "NASA Press Secretary",
+                "subject": "Artemis I launch",
+                "claim_type": "delay_reason",
+                "claim_text": "This morning, NASA waved off the Artemis 1 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage of the SLS rocket.",
+                "normalized_value": "liquid_hydrogen_leak",
+                "unit": null,
+                "status": "scrubbed",
+                "reason": "liquid hydrogen leak while filling propellant into the core stage",
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_15862e12a5ef"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              },
+              {
+                "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00",
+                "schema_version": "claim-event-v1",
+                "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+                "start": 150.45,
+                "end": 166.05,
+                "source_date": "2022-09-08",
+                "speaker_name": "Kathryn Hambleton",
+                "speaker_role": "NASA Office of Communications",
+                "subject": "Artemis I launch",
+                "claim_type": "delay_reason",
+                "claim_text": "After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines.",
+                "normalized_value": "2022-09-03",
+                "unit": null,
+                "status": "delayed",
+                "reason": "leak in one of the fuel lines",
+                "certainty": "explicit",
+                "source_artifact_ids": [
+                  "an_2cc05fa0bd15"
+                ],
+                "extraction_model": "pro",
+                "source_organization": "NASA"
+              }
+            ],
+            "shots": [
+              {
+                "event_id": "evt_m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570_000_00",
+                "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+                "video_title": "Artemis I Launch Update: Post-Scrub News Conference",
+                "source_url": "https://images.nasa.gov/details/KSC-20220903-VP-MMS01-0001-Artemis_I_Post_Scrub_News_Conference-3312396",
+                "source_date": "2022-09-03",
+                "start": 75.27,
+                "end": 89.18,
+                "stream_url": "https://play.videodb.io/v1/ad85d73b-fd31-44e6-af6f-809939f9b6f1.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=ju_RA2qDVBw",
+                "transcript_text": "This morning, NASA waved off the Artemis 1 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage of the SLS rocket."
+              },
+              {
+                "event_id": "evt_m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1_000_00",
+                "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+                "video_title": "Artemis I Launch Status Teleconference",
+                "source_url": "https://www.youtube.com/watch?v=ImxcxX6Ek1c",
+                "source_date": "2022-09-08",
+                "start": 148.45,
+                "end": 168.05,
+                "stream_url": "https://play.videodb.io/v1/9ca65913-7320-4fdb-bc84-6d1c0f2dfcab.m3u8",
+                "player_url": "https://player.videodb.io/watch?v=wW3SsHR6PgM",
+                "transcript_text": "After standing down on the September 3rd Artemis I launch attempt due to a leak in one of the fuel lines."
+              }
+            ],
+            "challenge": null,
+            "reel": {
+              "stream_url": null,
+              "player_url": null,
+              "event_ids": [],
+              "duration_seconds": null,
+              "error": null
+            },
+            "insufficient_evidence_reason": null,
+            "error": null
+          }
+        }
+      ]
+    }
+  ],
+  "model": "pro",
+  "temperature": 0.0,
+  "max_answer_tokens": 600,
+  "transcript_revision": "archive-manifest-v1"
+}

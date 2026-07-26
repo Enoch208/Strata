@@ -1,0 +1,268 @@
+[
+  {
+    "case_id": "launch_date_sequence",
+    "question": "How did the planned Artemis I launch date change from early September through the successful launch?",
+    "expected_evidence": [
+      {
+        "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+        "start": 34.56,
+        "end": 40.92
+      },
+      {
+        "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+        "start": 996.0,
+        "end": 1008.02
+      },
+      {
+        "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+        "start": 103.49,
+        "end": 113.41
+      }
+    ],
+    "expected_min_events": 3,
+    "allowed_labels": [
+      "confirmed_change",
+      "new_information",
+      "consistent_statement"
+    ],
+    "disallowed_unsupported_claims": [
+      "Every schedule change had the same cause."
+    ]
+  },
+  {
+    "case_id": "september_3_hydrogen_leak",
+    "question": "What did NASA say caused the September 3 Artemis I scrub?",
+    "expected_evidence": [
+      {
+        "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+        "start": 77.27,
+        "end": 87.18
+      },
+      {
+        "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+        "start": 607.95,
+        "end": 619.79
+      }
+    ],
+    "expected_min_events": 1,
+    "allowed_labels": [
+      "new_information",
+      "consistent_statement"
+    ],
+    "disallowed_unsupported_claims": [
+      "NASA proved the exact root cause of the leak that day."
+    ]
+  },
+  {
+    "case_id": "seal_repair_and_cryo_test",
+    "question": "How did NASA describe the seal repair and the planned cryogenic demonstration test?",
+    "expected_evidence": [
+      {
+        "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+        "start": 469.22,
+        "end": 495.52
+      },
+      {
+        "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+        "start": 247.96,
+        "end": 269.88
+      }
+    ],
+    "expected_min_events": 2,
+    "allowed_labels": [
+      "new_information",
+      "consistent_statement",
+      "potential_tension"
+    ],
+    "disallowed_unsupported_claims": [
+      "The test guaranteed a successful launch."
+    ]
+  },
+  {
+    "case_id": "hurricane_ian_rollback",
+    "question": "What did the archive say about Hurricane Ian and the Artemis I rollback?",
+    "expected_evidence": [
+      {
+        "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+        "start": 115.1,
+        "end": 138.52
+      }
+    ],
+    "expected_min_events": 1,
+    "allowed_labels": [
+      "new_information"
+    ],
+    "disallowed_unsupported_claims": [
+      "Hurricane Ian was the sole cause of the November launch date."
+    ]
+  },
+  {
+    "case_id": "final_launch_status",
+    "question": "What final launch status did NASA report on November 16?",
+    "expected_evidence": [
+      {
+        "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+        "start": 103.49,
+        "end": 124.5
+      }
+    ],
+    "expected_min_events": 1,
+    "allowed_labels": [
+      "new_information",
+      "confirmed_change"
+    ],
+    "disallowed_unsupported_claims": [
+      "Every mission objective was complete at launch."
+    ]
+  },
+  {
+    "case_id": "insufficient_sabotage_claim",
+    "question": "Who did NASA identify as intentionally sabotaging the Artemis I launch schedule?",
+    "expected_evidence": [],
+    "expected_min_events": 0,
+    "allowed_labels": [
+      "insufficient_evidence"
+    ],
+    "disallowed_unsupported_claims": [
+      "NASA identified a saboteur.",
+      "The archive proves intent."
+    ]
+  },
+  {
+    "case_id": "consistent_launch_when_ready",
+    "question": "Did NASA consistently say it would launch only when the vehicle was ready?",
+    "expected_evidence": [
+      {
+        "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+        "start": 167.79,
+        "end": 172.75
+      },
+      {
+        "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+        "start": 3715.21,
+        "end": 3733.06
+      }
+    ],
+    "expected_min_events": 2,
+    "allowed_labels": [
+      "consistent_statement",
+      "new_information"
+    ],
+    "disallowed_unsupported_claims": [
+      "NASA promised a specific launch date regardless of readiness."
+    ]
+  },
+  {
+    "case_id": "pressurization_not_proven_cause",
+    "question": "Did NASA conclusively determine that inadvertent hydrogen-line pressurization caused the September 3 leak?",
+    "expected_evidence": [
+      {
+        "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+        "start": 561.3,
+        "end": 607.55
+      },
+      {
+        "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+        "start": 2166.88,
+        "end": 2176.56
+      }
+    ],
+    "expected_min_events": 1,
+    "allowed_labels": [
+      "new_information",
+      "consistent_statement",
+      "needs_review",
+      "insufficient_evidence"
+    ],
+    "disallowed_unsupported_claims": [
+      "The archive proves pressurization caused the leak."
+    ]
+  },
+  {
+    "case_id": "seeded_leak_only_challenge",
+    "question": "Did the September 3 hydrogen leak fully explain why Artemis I launched in November? Trace the evidence.",
+    "expected_evidence": [
+      {
+        "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+        "start": 77.27,
+        "end": 87.18
+      },
+      {
+        "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+        "start": 115.1,
+        "end": 138.52
+      }
+    ],
+    "expected_min_events": 2,
+    "allowed_labels": [
+      "new_information",
+      "potential_tension"
+    ],
+    "disallowed_unsupported_claims": [
+      "The hydrogen leak fully caused the move to November.",
+      "Hurricane Ian alone caused every delay."
+    ],
+    "run_challenge": true,
+    "require_novel_challenge_source": true
+  },
+  {
+    "case_id": "no_counterevidence_alien_claim",
+    "question": "Which NASA official said alien interference delayed Artemis I?",
+    "expected_evidence": [],
+    "expected_min_events": 0,
+    "allowed_labels": [
+      "insufficient_evidence"
+    ],
+    "disallowed_unsupported_claims": [
+      "Alien interference delayed Artemis I."
+    ],
+    "run_challenge": true
+  },
+  {
+    "case_id": "source_lock_rejects_sole_weather_cause",
+    "question": "Does the archive establish that Hurricane Ian was the sole cause of the eventual November launch?",
+    "expected_evidence": [
+      {
+        "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+        "start": 115.1,
+        "end": 138.52
+      }
+    ],
+    "expected_min_events": 1,
+    "allowed_labels": [
+      "new_information",
+      "potential_tension",
+      "insufficient_evidence"
+    ],
+    "disallowed_unsupported_claims": [
+      "Hurricane Ian was the sole cause of the November launch."
+    ],
+    "require_source_lock_rejection": true
+  },
+  {
+    "case_id": "flight_termination_rollback_constraint",
+    "question": "How did flight-termination-system retest requirements affect the rollback and launch plan?",
+    "expected_evidence": [
+      {
+        "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+        "start": 866.18,
+        "end": 914.09
+      },
+      {
+        "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+        "start": 271.84,
+        "end": 309.87
+      }
+    ],
+    "expected_min_events": 2,
+    "allowed_labels": [
+      "new_information",
+      "consistent_statement",
+      "confirmed_change",
+      "potential_tension"
+    ],
+    "disallowed_unsupported_claims": [
+      "The range had permanently waived every retest requirement."
+    ]
+  }
+]

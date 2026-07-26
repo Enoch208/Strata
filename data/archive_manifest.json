@@ -1,0 +1,193 @@
+{
+  "manifest_version": "archive-manifest-v1",
+  "archive_id": "artemis-i-2022",
+  "title": "Artemis I Launch Archive",
+  "acknowledgement": "Source footage courtesy of NASA. NASA does not endorse this project.",
+  "collection_id": "c-86dd380d-76c7-408c-acf4-22bca2f9be7e",
+  "videos": [
+    {
+      "slug": "sep02-countdown-status-briefing",
+      "title": "Artemis I Countdown Status Briefing",
+      "source_organization": "NASA",
+      "source_url": "https://www.youtube.com/watch?v=Ig0Loa9uV_k",
+      "ingest_url": null,
+      "source_media_id": "Ig0Loa9uV_k",
+      "source_date": "2022-09-02",
+      "purpose": "Early launch status and expectations",
+      "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+      "duration_seconds": 1609.0,
+      "index_status": "ready",
+      "understanding_id": "und_9c5ae4ed654b401d",
+      "artifact_ids": {
+        "speech": "an_768071e3bcde",
+        "onscreen_text": "an_ac2b733c322b",
+        "scene_context": "an_dcf11ba9f252"
+      },
+      "index_ids": {
+        "speech": "59cbbf1752b148a3",
+        "onscreen_text": "1785f146ee6d4725",
+        "scene_context": "f4e983314ce84202",
+        "claim_events_v1": "248225295ad74ba7",
+        "timeline_findings_v1": "67a6fc27a391484b"
+      }
+    },
+    {
+      "slug": "sep03-post-scrub-news-conference",
+      "title": "Artemis I Launch Update: Post-Scrub News Conference",
+      "source_organization": "NASA",
+      "source_url": "https://images.nasa.gov/details/KSC-20220903-VP-MMS01-0001-Artemis_I_Post_Scrub_News_Conference-3312396",
+      "ingest_url": "https://images-assets.nasa.gov/video/KSC-20220903-VP-MMS01-0001-Artemis_I_Post_Scrub_News_Conference-3312396/KSC-20220903-VP-MMS01-0001-Artemis_I_Post_Scrub_News_Conference-3312396~small.mp4",
+      "source_media_id": "KSC-20220903-VP-MMS01-0001-Artemis_I_Post_Scrub_News_Conference-3312396",
+      "source_date": "2022-09-03",
+      "purpose": "Hydrogen leak and scrub explanation",
+      "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+      "duration_seconds": 3617.0,
+      "index_status": "ready",
+      "understanding_id": "und_709b143cb9f841b8",
+      "artifact_ids": {
+        "speech": "an_15862e12a5ef",
+        "scene_context": "an_9afa6f042abc",
+        "onscreen_text": "an_e0fe75d4f2c7"
+      },
+      "index_ids": {
+        "onscreen_text": "aa6d050b757340e7",
+        "scene_context": "253620ad9d8c4131",
+        "speech": "b7c9a6e2ca744d7e",
+        "claim_events_v1": "3053549984774624",
+        "timeline_findings_v1": "5042158467fb439c"
+      }
+    },
+    {
+      "slug": "sep08-launch-status-teleconference",
+      "title": "Artemis I Launch Status Teleconference",
+      "source_organization": "NASA",
+      "source_url": "https://www.youtube.com/watch?v=ImxcxX6Ek1c",
+      "ingest_url": null,
+      "source_media_id": "ImxcxX6Ek1c",
+      "source_date": "2022-09-08",
+      "purpose": "Revised repair and scheduling plan",
+      "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+      "duration_seconds": 3695.0,
+      "index_status": "ready",
+      "understanding_id": "und_d3e0f63831634da0",
+      "artifact_ids": {
+        "speech": "an_2cc05fa0bd15",
+        "scene_context": "an_872d20aa2bac",
+        "onscreen_text": "an_c7403cb800b2"
+      },
+      "index_ids": {
+        "scene_context": "2cb718f51c0b426d",
+        "onscreen_text": "9edaa7ddea91464a",
+        "speech": "e04919d433674a66",
+        "claim_events_v1": "55f61c78e38641cd",
+        "timeline_findings_v1": "236d07e0aae84b3f"
+      }
+    },
+    {
+      "slug": "sep19-pre-demonstration-test-briefing",
+      "title": "Artemis I Pre-Demonstration Test Briefing",
+      "source_organization": "NASA",
+      "source_url": "https://www.youtube.com/watch?v=9g4op97LZ2E",
+      "ingest_url": null,
+      "source_media_id": "9g4op97LZ2E",
+      "source_date": "2022-09-19",
+      "purpose": "Tanking demonstration and readiness",
+      "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+      "duration_seconds": 3852.0,
+      "index_status": "ready",
+      "understanding_id": "und_1d461b20df734d61",
+      "artifact_ids": {
+        "onscreen_text": "an_2aafe62543d0",
+        "scene_context": "an_2d37fde35950",
+        "speech": "an_f87ffd92612a"
+      },
+      "index_ids": {
+        "onscreen_text": "e311ae9509494b80",
+        "scene_context": "eb9b9eedf9014369",
+        "speech": "1c9e9843d17e47f7",
+        "claim_events_v1": "07f072075e414a6f",
+        "timeline_findings_v1": "c05e7c444f3048a9"
+      }
+    },
+    {
+      "slug": "sep30-this-week-at-nasa-rollback",
+      "title": "The World's First-Ever Planetary Defense Test on This Week @NASA - September 30, 2022",
+      "source_organization": "NASA",
+      "source_url": "https://images.nasa.gov/details/The%20World%E2%80%99s%20First-Ever%20Planetary%20Defense%20Test%20on%20This%20Week%20@NASA%20%E2%80%93%20September%2030,%202022",
+      "ingest_url": "https://images-assets.nasa.gov/video/The%20World%E2%80%99s%20First-Ever%20Planetary%20Defense%20Test%20on%20This%20Week%20%40NASA%20%E2%80%93%20September%2030%2C%202022/The%20World%E2%80%99s%20First-Ever%20Planetary%20Defense%20Test%20on%20This%20Week%20%40NASA%20%E2%80%93%20September%2030%2C%202022~small.mp4",
+      "source_media_id": "The World’s First-Ever Planetary Defense Test on This Week @NASA – September 30, 2022",
+      "source_date": "2022-09-30",
+      "purpose": "Captioned account of the 26-27 Sep weather-related rollback",
+      "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+      "duration_seconds": 227.0,
+      "index_status": "ready",
+      "understanding_id": "und_0d1779de5f994dd4",
+      "artifact_ids": {
+        "speech": "an_0a9a5d39522b",
+        "scene_context": "an_61d8a15f24aa",
+        "onscreen_text": "an_9199746f170c"
+      },
+      "index_ids": {
+        "onscreen_text": "ab203daadc884732",
+        "scene_context": "3661895bcb88483e",
+        "speech": "2517729f2c50498d",
+        "claim_events_v1": "d6e56ff565f5435f",
+        "timeline_findings_v1": "b6a0ca1f606146dd"
+      }
+    },
+    {
+      "slug": "nov16-post-launch-news-conference",
+      "title": "Artemis I Post-Launch News Conference",
+      "source_organization": "NASA",
+      "source_url": "https://www.youtube.com/watch?v=YGt-ilMv5U0",
+      "ingest_url": null,
+      "source_media_id": "YGt-ilMv5U0",
+      "source_date": "2022-11-16",
+      "purpose": "Successful launch and final context",
+      "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+      "duration_seconds": 3904.0,
+      "index_status": "ready",
+      "understanding_id": "und_5a67c13078514dab",
+      "artifact_ids": {
+        "speech": "an_86c084ea62ab",
+        "onscreen_text": "an_a37a91cb5415",
+        "scene_context": "an_b13485de93d6"
+      },
+      "index_ids": {
+        "speech": "4514d6f3e8a4484c",
+        "onscreen_text": "a6273c17e31a4ca1",
+        "scene_context": "c890c32778b5491c",
+        "claim_events_v1": "5691fbd382724bd5",
+        "timeline_findings_v1": "5d5462c48f244231"
+      }
+    }
+  ],
+  "verified_windows": [
+    {
+      "pass": "initial",
+      "video_slug": "sep03-post-scrub-news-conference",
+      "start": 86.0,
+      "end": 101.0,
+      "establishes": "NASA waived off the 3 Sep attempt after a liquid-hydrogen leak during propellant loading",
+      "does_not_establish": "That the leak, by itself, explains the eventual November launch date",
+      "verified_against": "NASA first-party timed caption track",
+      "verified_on": "2026-07-26"
+    },
+    {
+      "pass": "challenge",
+      "video_slug": "sep30-this-week-at-nasa-rollback",
+      "start": 115.0,
+      "end": 139.0,
+      "establishes": "The team moved Artemis I back to the VAB on 26-27 Sep, and managers chose rollback because of Hurricane Ian weather predictions",
+      "does_not_establish": "That Hurricane Ian was the sole cause of every delay through November",
+      "verified_against": "NASA first-party timed caption track",
+      "verified_on": "2026-07-26"
+    }
+  ],
+  "index_names": {
+    "claim_events": "claim_events_v1",
+    "timeline_findings": "timeline_findings_v1"
+  },
+  "index_version": "sha256:bf33197ce1eae82b",
+  "stats_snapshot": null
+}

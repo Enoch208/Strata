@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "sep02-countdown-status-briefing",
+    "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+    "chunks": 9,
+    "raw_records": 146,
+    "accepted": 146,
+    "deduped": 146,
+    "rejections": [],
+    "error": null
+  },
+  {
+    "slug": "sep03-post-scrub-news-conference",
+    "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+    "chunks": 16,
+    "raw_records": 253,
+    "accepted": 253,
+    "deduped": 251,
+    "rejections": [],
+    "error": null
+  },
+  {
+    "slug": "sep08-launch-status-teleconference",
+    "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+    "chunks": 18,
+    "raw_records": 232,
+    "accepted": 232,
+    "deduped": 232,
+    "rejections": [],
+    "error": null
+  },
+  {
+    "slug": "sep19-pre-demonstration-test-briefing",
+    "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+    "chunks": 19,
+    "raw_records": 262,
+    "accepted": 262,
+    "deduped": 260,
+    "rejections": [],
+    "error": null
+  },
+  {
+    "slug": "sep30-this-week-at-nasa-rollback",
+    "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+    "chunks": 1,
+    "raw_records": 26,
+    "accepted": 26,
+    "deduped": 26,
+    "rejections": [],
+    "error": null
+  },
+  {
+    "slug": "nov16-post-launch-news-conference",
+    "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+    "chunks": 17,
+    "raw_records": 216,
+    "accepted": 216,
+    "deduped": 215,
+    "rejections": [],
+    "error": null
+  }
+]
