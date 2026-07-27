@@ -108,7 +108,7 @@ def _evaluation_result_check(path: Path) -> Check:
         for item in payload
         if isinstance(item, dict) and isinstance(item.get("arm"), str)
     } if isinstance(payload, list) else set()
-    passed = arms == {"naive", "claimtrail"}
+    passed = arms == {"naive", "strata"}
     return Check("two-arm real evaluation", passed, f"arms present: {sorted(arms)}")
 
 

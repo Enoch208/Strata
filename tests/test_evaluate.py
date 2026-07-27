@@ -56,7 +56,7 @@ def test_baseline_prompt_forbids_outside_knowledge_and_invented_times() -> None:
 def test_metrics_report_numerators_denominators_and_percentages() -> None:
     cases = [case("one"), case("two", "vid_b")]
     arm = ArmAdjudication(
-        arm="claimtrail",
+        arm="strata",
         model="locked-model",
         transcript_revision="revision-1",
         temperature=0,

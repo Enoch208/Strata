@@ -41,7 +41,7 @@ def _evaluation() -> tuple[int, list[EvaluationArmProof]]:
     results = json.loads(RESULTS_PATH.read_text(encoding="utf-8"))
     labels = {
         "naive": "All transcripts → LLM",
-        "claimtrail": "Strata",
+        "strata": "Strata",
     }
     arms: list[EvaluationArmProof] = []
     for result in results:

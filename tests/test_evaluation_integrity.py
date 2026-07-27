@@ -5,7 +5,7 @@ from types import SimpleNamespace
 import pytest
 
 from pipeline.evaluate import EvaluationCase
-from pipeline.run_evaluation import _validate_claimtrail_case
+from pipeline.run_evaluation import _validate_strata_case
 
 
 def test_required_challenge_novelty_fails_when_source_difference_is_empty() -> None:
@@ -27,7 +27,7 @@ def test_required_challenge_novelty_fails_when_source_difference_is_empty() -> N
     )
 
     with pytest.raises(RuntimeError, match="difference is empty"):
-        _validate_claimtrail_case(case, investigation)
+        _validate_strata_case(case, investigation)
 
 
 def test_required_challenge_novelty_passes_for_a_new_source() -> None:
@@ -48,4 +48,4 @@ def test_required_challenge_novelty_passes_for_a_new_source() -> None:
         ),
     )
 
-    _validate_claimtrail_case(case, investigation)
+    _validate_strata_case(case, investigation)

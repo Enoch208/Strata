@@ -642,7 +642,7 @@
       ]
     },
     {
-      "arm": "claimtrail",
+      "arm": "strata",
       "cases": [
         {
           "case_id": "launch_date_sequence",

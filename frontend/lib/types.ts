@@ -217,7 +217,7 @@ export interface MetricProof {
 }
 
 export interface EvaluationArmProof {
-  arm: "naive" | "claimtrail";
+  arm: "naive" | "strata";
   label: string;
   retrieval_recall: MetricProof;
   unsupported_claims: MetricProof;

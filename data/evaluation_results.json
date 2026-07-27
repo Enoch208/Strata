@@ -629,10 +629,20 @@
           }
         ]
       }
-    ]
+    ],
+    "metrics": {
+      "relevant_event_recall": {
+        "numerator": 14,
+        "denominator": 18
+      },
+      "unsupported_claim_rate": {
+        "numerator": 0,
+        "denominator": 57
+      }
+    }
   },
   {
-    "arm": "claimtrail",
+    "arm": "strata",
     "model": "pro",
     "transcript_revision": "archive-manifest-v1",
     "temperature": 0.0,
@@ -1031,6 +1041,16 @@
           }
         ]
       }
-    ]
+    ],
+    "metrics": {
+      "relevant_event_recall": {
+        "numerator": 12,
+        "denominator": 18
+      },
+      "unsupported_claim_rate": {
+        "numerator": 0,
+        "denominator": 37
+      }
+    }
   }
 ]

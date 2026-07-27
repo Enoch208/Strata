@@ -127,7 +127,7 @@ def _worksheet_propositions(values: list[str]) -> list[dict[str, Any]]:
     return [{"text": value, "supported": None} for value in values if value.strip()]
 
 
-def _validate_claimtrail_case(
+def _validate_strata_case(
     case: EvaluationCase,
     investigation: Any,
 ) -> None:
@@ -166,7 +166,7 @@ def run(
     payload["temperature"] = settings.extraction_temperature
     payload["max_answer_tokens"] = 600
     payload["transcript_revision"] = manifest.manifest_version
-    selected = selected_arms or {"naive", "claimtrail"}
+    selected = selected_arms or {"naive", "strata"}
     restart = restart_arms or set()
     payload["arms"] = [
         arm for arm in payload["arms"] if arm.get("arm") not in restart
@@ -204,24 +204,24 @@ def run(
             naive["cases"].append(item)
             _save(payload)
 
-    if "claimtrail" in selected:
-        claimtrail = _arm(payload, "claimtrail")
-        completed_claimtrail = {item["case_id"] for item in claimtrail["cases"]}
+    if "strata" in selected:
+        strata = _arm(payload, "strata")
+        completed_strata = {item["case_id"] for item in strata["cases"]}
         engine = InvestigationEngine()
         for case in cases:
-            if case.case_id in completed_claimtrail:
+            if case.case_id in completed_strata:
                 continue
-            logger.info("claimtrail %s", case.case_id)
+            logger.info("strata %s", case.case_id)
             investigation = engine.create(case.question, manifest.archive_id)
             if case.run_challenge and investigation.state is InvestigationState.complete:
                 engine.challenge(investigation.investigation_id)
-            _validate_claimtrail_case(case, investigation)
+            _validate_strata_case(case, investigation)
             displayable = [
                 sentence.text
                 for sentence in investigation.summary_sentences
                 if sentence.is_displayable
             ]
-            claimtrail["cases"].append(
+            strata["cases"].append(
                 {
                     "case_id": case.case_id,
                     "answer": " ".join(displayable),
@@ -250,13 +250,13 @@ def main() -> int:
     parser.add_argument(
         "--arm",
         action="append",
-        choices=("naive", "claimtrail"),
+        choices=("naive", "strata"),
         help="Run only this arm (repeatable).",
     )
     parser.add_argument(
         "--restart-arm",
         action="append",
-        choices=("naive", "claimtrail"),
+        choices=("naive", "strata"),
         default=[],
         help="Discard and rerun this generated worksheet arm.",
     )
