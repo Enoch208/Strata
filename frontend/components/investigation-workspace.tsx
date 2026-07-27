@@ -118,6 +118,7 @@ export function InvestigationWorkspace({
         busy={challengeBusy}
         sentences={investigation.summary_sentences}
         findings={investigation.findings}
+        events={investigation.events}
         shots={investigation.shots}
         error={challengeError}
         onRetry={onChallenge}

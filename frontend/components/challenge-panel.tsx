@@ -1,5 +1,6 @@
 import type {
   ChallengeResult,
+  ClaimEvent,
   Finding,
   Shot,
   SourcedSentence,
@@ -12,6 +13,7 @@ type Props = {
   busy: boolean;
   sentences: SourcedSentence[];
   findings: Finding[];
+  events: ClaimEvent[];
   shots: Shot[];
   error: string | null;
   onRetry: () => void;
@@ -22,6 +24,7 @@ export function ChallengePanel({
   busy,
   sentences,
   findings,
+  events,
   shots,
   error,
   onRetry,
@@ -150,18 +153,11 @@ export function ChallengePanel({
               ))}
             </div>
             {novelShots.map((shot) => (
-              <a
+              <NovelSourceLink
                 key={shot.event_id}
-                href={shot.player_url ?? shot.stream_url ?? shot.source_url}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-3 flex items-center justify-between rounded-lg border border-emerald-300/15 bg-black/20 px-3 py-2 text-[10px] text-emerald-100/70"
-              >
-                <span>
-                  {formatDate(shot.source_date)} · {shot.video_title}
-                </span>
-                <strong>{formatWindow(shot.start, shot.end)}</strong>
-              </a>
+                shot={shot}
+                event={events.find((event) => event.event_id === shot.event_id)}
+              />
             ))}
           </div>
         </>
@@ -218,6 +214,30 @@ export function ChallengePanel({
         </p>
       </div>
     </section>
+  );
+}
+
+function NovelSourceLink({
+  shot,
+  event,
+}: {
+  shot: Shot;
+  event: ClaimEvent | undefined;
+}) {
+  return (
+    <a
+      href={shot.player_url ?? shot.stream_url ?? shot.source_url}
+      target="_blank"
+      rel="noreferrer"
+      className="mt-3 flex items-center justify-between rounded-lg border border-emerald-300/15 bg-black/20 px-3 py-2 text-[10px] text-emerald-100/70"
+    >
+      <span>
+        {formatDate(shot.source_date)} · {shot.video_title}
+      </span>
+      <strong>
+        Exact evidence {formatWindow(event?.start ?? shot.start, event?.end ?? shot.end)}
+      </strong>
+    </a>
   );
 }
 
