@@ -12,6 +12,7 @@ import logging
 import re
 from collections.abc import Callable
 from datetime import UTC, datetime
+from hashlib import sha256
 from threading import RLock
 from typing import Any
 from uuid import uuid4
@@ -139,8 +140,28 @@ class InvestigationConflictError(RuntimeError):
     """Raised when an action is invalid for the investigation's current state."""
 
 
+def investigation_id_for(archive_id: str, query: str) -> str:
+    """Derive a stable investigation ID from the question itself.
+
+    The ID is a pure function of `(archive_id, query)`, so the same question
+    always yields the same ID. That makes an investigation reconstructible from
+    its query alone, which is what lets a follow-up request survive losing the
+    process that first answered it — see `InvestigationEngine.ensure`.
+    """
+    digest = sha256(f"{archive_id}\x1f{query.strip()}".encode()).hexdigest()
+    return f"inv_{digest[:12]}"
+
+
 class InvestigationEngine:
-    """Synchronous MVP engine with process-local investigation persistence."""
+    """Synchronous MVP engine with process-local investigation persistence.
+
+    Investigations are held in process memory, which a single long-lived server
+    keeps for its lifetime. Under serverless hosting a follow-up request may
+    land on a different instance, so `ensure` can deterministically re-run an
+    investigation from its query rather than reporting it missing. The re-run is
+    a genuine pipeline execution against the live index — never a replayed or
+    cached answer.
+    """
 
     def __init__(
         self,
@@ -155,11 +176,43 @@ class InvestigationEngine:
             lambda manifest: VideoDBAdapter(collection_id=manifest.collection_id)
         )
         self._clock = clock or (lambda: datetime.now(UTC))
-        self._id_factory = id_factory or (
-            lambda prefix: f"{prefix}_{uuid4().hex[:12]}"
-        )
+        self._id_factory = id_factory or (lambda prefix: f"{prefix}_{uuid4().hex[:12]}")
+        # Investigation IDs are derived from the query so a follow-up can rebuild
+        # them, but an injected factory still wins so tests can pin every ID.
+        self._derive_investigation_id = id_factory is None
         self._investigations: dict[str, Investigation] = {}
         self._lock = RLock()
+
+    def ensure(
+        self,
+        investigation_id: str,
+        *,
+        query: str | None,
+        archive_id: str | None,
+    ) -> Investigation:
+        """Return a stored investigation, re-running it from its query if absent.
+
+        Raises `InvestigationNotFoundError` when the investigation is not held
+        locally and no query was supplied to rebuild it from — an honest miss
+        rather than an empty result.
+        """
+        try:
+            return self.get(investigation_id)
+        except InvestigationNotFoundError:
+            if not query or not archive_id:
+                raise
+
+        expected_id = investigation_id_for(archive_id, query)
+        if expected_id != investigation_id:
+            # The query does not correspond to this ID, so rebuilding it would
+            # answer a different question under the requested identity.
+            raise InvestigationNotFoundError(investigation_id)
+
+        logger.info(
+            "rebuilding investigation %s from its query after a store miss",
+            investigation_id,
+        )
+        return self.create(query, archive_id)
 
     def create(self, query: str, archive_id: str) -> Investigation:
         """Run the first-pass investigation and persist its complete trace."""
@@ -168,7 +221,11 @@ class InvestigationEngine:
             raise ValueError(f"archive {archive_id!r} does not exist")
 
         investigation = Investigation(
-            investigation_id=self._id_factory("inv"),
+            investigation_id=(
+                investigation_id_for(archive_id, query)
+                if self._derive_investigation_id
+                else self._id_factory("inv")
+            ),
             archive_id=archive_id,
             query=query.strip(),
             state=InvestigationState.searching,
@@ -839,14 +896,14 @@ def _boost_focused_variant_hits(hits: list[Any]) -> None:
 
 
 def _is_focused_variant_match(hit: Any) -> bool:
-    return bool(_hit_value(hit, "_claimtrail_focused_match"))
+    return bool(_hit_value(hit, "_strata_focused_match"))
 
 
 def _set_focused_variant_match(hit: Any) -> None:
     if isinstance(hit, dict):
-        hit["_claimtrail_focused_match"] = True
+        hit["_strata_focused_match"] = True
     else:
-        setattr(hit, "_claimtrail_focused_match", True)
+        setattr(hit, "_strata_focused_match", True)
 
 
 def _expand_query(query: str) -> str:

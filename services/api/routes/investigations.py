@@ -27,9 +27,22 @@ class CreateInvestigationRequest(BaseModel):
     archive_id: str = Field(min_length=1)
 
 
-class ChallengeRequest(BaseModel):
+class FollowUpRequest(BaseModel):
+    """Shared fields letting a follow-up survive losing the process that answered it.
+
+    Investigation IDs are derived from `(archive_id, query)`, so resending the
+    original question lets the engine re-run it deterministically when this
+    instance has no record of it. Both fields are optional: omitting them keeps
+    the stricter behaviour of a 404 on an unknown ID.
+    """
+
     model_config = ConfigDict(extra="forbid")
 
+    query: str | None = Field(default=None, min_length=1, max_length=2000)
+    archive_id: str | None = Field(default=None, min_length=1)
+
+
+class ChallengeRequest(FollowUpRequest):
     instruction: str = Field(
         default="Challenge this conclusion",
         min_length=1,
@@ -37,9 +50,7 @@ class ChallengeRequest(BaseModel):
     )
 
 
-class ReelRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
+class ReelRequest(FollowUpRequest):
     event_ids: list[str] = Field(min_length=1, max_length=50)
 
 
@@ -66,10 +77,12 @@ def create_investigation(
 @router.get("/{investigation_id}", response_model=Investigation)
 def get_investigation(
     investigation_id: str,
+    query: str | None = None,
+    archive_id: str | None = None,
     engine: InvestigationEngine = Depends(engine_dependency),
 ) -> Investigation:
     try:
-        return engine.get(investigation_id)
+        return engine.ensure(investigation_id, query=query, archive_id=archive_id)
     except InvestigationNotFoundError as error:
         raise HTTPException(
             status_code=404,
@@ -84,6 +97,9 @@ def challenge_investigation(
     engine: InvestigationEngine = Depends(engine_dependency),
 ) -> ChallengeResult:
     try:
+        engine.ensure(
+            investigation_id, query=request.query, archive_id=request.archive_id
+        )
         return engine.challenge(investigation_id, request.instruction)
     except InvestigationNotFoundError as error:
         raise HTTPException(
@@ -109,6 +125,9 @@ def generate_reel(
     engine: InvestigationEngine = Depends(engine_dependency),
 ) -> ReelRef:
     try:
+        engine.ensure(
+            investigation_id, query=request.query, archive_id=request.archive_id
+        )
         return engine.generate_reel(investigation_id, request.event_ids)
     except InvestigationNotFoundError as error:
         raise HTTPException(
@@ -120,9 +139,12 @@ def generate_reel(
 @router.get("/{investigation_id}/packet")
 def get_packet(
     investigation_id: str,
+    query: str | None = None,
+    archive_id: str | None = None,
     engine: InvestigationEngine = Depends(engine_dependency),
 ) -> Response:
     try:
+        engine.ensure(investigation_id, query=query, archive_id=archive_id)
         packet = engine.packet(investigation_id)
     except InvestigationNotFoundError as error:
         raise HTTPException(
