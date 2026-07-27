@@ -1,0 +1,186 @@
+{
+  "coverage_version": "coverage-metrics-v1",
+  "base_url": "https://strata-api-eight.vercel.app",
+  "case_count": 12,
+  "arms": {
+    "naive": {
+      "basis": "structural",
+      "note": "A single all-transcripts prompt returns prose with no clips, no per-sentence event mapping, and no second retrieval pass. These zeros follow from the arm's design; they are not an observed run.",
+      "playable_citation_coverage": {
+        "numerator": 0,
+        "denominator": 0
+      },
+      "auditable_sentence_mapping": {
+        "numerator": 0,
+        "denominator": 0
+      },
+      "challenge_source_novelty": {
+        "numerator": 0,
+        "denominator": 0
+      }
+    },
+    "strata": {
+      "basis": "measured",
+      "playable_citation_coverage": {
+        "numerator": 31,
+        "denominator": 31
+      },
+      "auditable_sentence_mapping": {
+        "numerator": 36,
+        "denominator": 36
+      },
+      "challenge_source_novelty": {
+        "numerator": 1,
+        "denominator": 1
+      }
+    }
+  },
+  "observations": [
+    {
+      "case_id": "launch_date_sequence",
+      "state": "complete",
+      "findings": 5,
+      "findings_with_playable_evidence": 5,
+      "displayed_sentences": 6,
+      "displayed_sentences_with_events": 6,
+      "challenge_ran": false,
+      "challenge_found_novel_source": false,
+      "novel_video_ids": [],
+      "error": null
+    },
+    {
+      "case_id": "september_3_hydrogen_leak",
+      "state": "complete",
+      "findings": 1,
+      "findings_with_playable_evidence": 1,
+      "displayed_sentences": 1,
+      "displayed_sentences_with_events": 1,
+      "challenge_ran": false,
+      "challenge_found_novel_source": false,
+      "novel_video_ids": [],
+      "error": null
+    },
+    {
+      "case_id": "seal_repair_and_cryo_test",
+      "state": "complete",
+      "findings": 4,
+      "findings_with_playable_evidence": 4,
+      "displayed_sentences": 3,
+      "displayed_sentences_with_events": 3,
+      "challenge_ran": false,
+      "challenge_found_novel_source": false,
+      "novel_video_ids": [],
+      "error": null
+    },
+    {
+      "case_id": "hurricane_ian_rollback",
+      "state": "complete",
+      "findings": 3,
+      "findings_with_playable_evidence": 3,
+      "displayed_sentences": 4,
+      "displayed_sentences_with_events": 4,
+      "challenge_ran": false,
+      "challenge_found_novel_source": false,
+      "novel_video_ids": [],
+      "error": null
+    },
+    {
+      "case_id": "final_launch_status",
+      "state": "complete",
+      "findings": 4,
+      "findings_with_playable_evidence": 4,
+      "displayed_sentences": 5,
+      "displayed_sentences_with_events": 5,
+      "challenge_ran": false,
+      "challenge_found_novel_source": false,
+      "novel_video_ids": [],
+      "error": null
+    },
+    {
+      "case_id": "insufficient_sabotage_claim",
+      "state": "insufficient_evidence",
+      "findings": 0,
+      "findings_with_playable_evidence": 0,
+      "displayed_sentences": 0,
+      "displayed_sentences_with_events": 0,
+      "challenge_ran": false,
+      "challenge_found_novel_source": false,
+      "novel_video_ids": [],
+      "error": null
+    },
+    {
+      "case_id": "consistent_launch_when_ready",
+      "state": "complete",
+      "findings": 4,
+      "findings_with_playable_evidence": 4,
+      "displayed_sentences": 5,
+      "displayed_sentences_with_events": 5,
+      "challenge_ran": false,
+      "challenge_found_novel_source": false,
+      "novel_video_ids": [],
+      "error": null
+    },
+    {
+      "case_id": "pressurization_not_proven_cause",
+      "state": "complete",
+      "findings": 2,
+      "findings_with_playable_evidence": 2,
+      "displayed_sentences": 2,
+      "displayed_sentences_with_events": 2,
+      "challenge_ran": false,
+      "challenge_found_novel_source": false,
+      "novel_video_ids": [],
+      "error": null
+    },
+    {
+      "case_id": "seeded_leak_only_challenge",
+      "state": "complete",
+      "findings": 1,
+      "findings_with_playable_evidence": 1,
+      "displayed_sentences": 1,
+      "displayed_sentences_with_events": 1,
+      "challenge_ran": true,
+      "challenge_found_novel_source": true,
+      "novel_video_ids": [
+        "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6"
+      ],
+      "error": null
+    },
+    {
+      "case_id": "no_counterevidence_alien_claim",
+      "state": "insufficient_evidence",
+      "findings": 0,
+      "findings_with_playable_evidence": 0,
+      "displayed_sentences": 0,
+      "displayed_sentences_with_events": 0,
+      "challenge_ran": false,
+      "challenge_found_novel_source": false,
+      "novel_video_ids": [],
+      "error": "challenge failed: HTTP Error 409: Conflict"
+    },
+    {
+      "case_id": "source_lock_rejects_sole_weather_cause",
+      "state": "complete",
+      "findings": 4,
+      "findings_with_playable_evidence": 4,
+      "displayed_sentences": 5,
+      "displayed_sentences_with_events": 5,
+      "challenge_ran": false,
+      "challenge_found_novel_source": false,
+      "novel_video_ids": [],
+      "error": null
+    },
+    {
+      "case_id": "flight_termination_rollback_constraint",
+      "state": "complete",
+      "findings": 3,
+      "findings_with_playable_evidence": 3,
+      "displayed_sentences": 4,
+      "displayed_sentences_with_events": 4,
+      "challenge_ran": false,
+      "challenge_found_novel_source": false,
+      "novel_video_ids": [],
+      "error": null
+    }
+  ]
+}
