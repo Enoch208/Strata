@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "fastapi",
   "functions": {
     "api/index.py": {
       "includeFiles": "{services/**,data/archive_manifest.json}",
