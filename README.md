@@ -6,7 +6,7 @@
 
 [![Live](https://img.shields.io/badge/live-strata--amber--one.vercel.app-2563eb?logo=vercel&logoColor=white)](https://strata-amber-one.vercel.app)
 [![API](https://img.shields.io/badge/API-healthy-10b981?logo=fastapi&logoColor=white)](https://strata-api-eight.vercel.app/api/health)
-[![Tests](https://img.shields.io/badge/tests-216%20passing-10b981)](#verification)
+[![Tests](https://img.shields.io/badge/tests-237%20passing-10b981)](#verification)
 [![Readiness](https://img.shields.io/badge/readiness-7%2F7%20checks-10b981)](#proof--what-is-live)
 [![Next.js](https://img.shields.io/badge/Next.js-16.2-111827?logo=nextdotjs)](frontend)
 [![VideoDB](https://img.shields.io/badge/media-VideoDB-2563eb)](https://videodb.io)
@@ -53,6 +53,21 @@ https://github.com/user-attachments/assets/778dedf7-2aad-4319-b051-e24045c79b5b
 
 **Public fallback — no GitHub sign-in required:** https://www.youtube.com/watch?v=P3bLK-vaF7s
 
+### 🧵 Launch thread
+
+The build announcement, with the same three-minute walkthrough:
+**[@dreyethh on X ↗](https://x.com/dreyethh/status/2081620393370980587)**
+
+> I built 𝐒𝐓𝐑𝐀𝐓𝐀, an intelligent investigation workspace that makes large video archives searchable, traceable and easier to trust for the [@videodb_io](https://x.com/videodb_io) hackathon
+>
+> The idea started from a problem we kept noticing with ai research tools: they can give confident answers without clearly showing the evidence behind them
+>
+> Even when sources are provided, you still have to open several long videos, search through transcripts and manually compare what different people said over time
+>
+> Strata works differently: users ask a natural language question, and it searches across multiple videos to build a chronological, source backed answer. Every conclusion is connected to the exact video, speaker, transcript and timestamp that supports it. Users can inspect how claims changed over time, challenge the initial conclusion to uncover counter-evidence and compile selected moments into a playable evidence reel
+>
+> For our demo, we indexed NASA briefings around the Artemis I launch. A user can ask why the mission was delayed, and 𝐒𝐓𝐑𝐀𝐓𝐀 traces the story across the hydrogen leak, operational decisions, weather concerns and the eventual launch.
+
 ![Strata investigation workspace showing the indexed Artemis I archive](assets/investigation-workspace.png)
 
 Try the headline investigation:
@@ -71,8 +86,12 @@ That question demonstrates the complete product loop:
 
 - **Real archive:** six official NASA videos, 16,904 seconds of footage, and 1,130 extracted claim events.
 - **Agentic loop:** retrieve, compare, source-lock, challenge with unused footage, and compile a playable reel.
-- **Measured result:** 66.7% relevant-event recall versus 77.8% for the naive baseline, with zero unsupported claims in both freshly adjudicated arms.
-- **Verified delivery:** 216 backend tests, a passing Next.js production build, and 7/7 submission-readiness checks.
+- **Every displayed finding is checkable:** across the frozen 12-question set, 31/31 findings resolve to a playable timestamped clip and 36/36 displayed sentences carry the event IDs supporting them.
+- **The challenge reaches new footage:** the seeded counter-evidence pass accepted a source video the first answer never used, and returned **Qualified** rather than overturning the original.
+- **Verified delivery:** 237 backend tests, a passing Next.js production build, and 7/7 submission-readiness checks.
+
+Full two-arm retrieval-recall and unsupported-claim numbers, including where Strata
+scores below the naive baseline, are in [Evaluation](#evaluation).
 
 | Live surface | URL |
 | --- | --- |
@@ -98,7 +117,7 @@ This repository does not substitute canned investigation responses when live dat
 - **The reel is generated.** VideoDB's editor compiles selected source windows into a chronological playable stream.
 - **The challenge is a second pass.** It runs new counter-queries, boosts unused videos, and applies the same evidence gate as the first answer.
 - **The evaluation is frozen and adjudicated.** Twelve questions compare a naive all-transcripts prompt with Strata's indexed retrieval, diff, gate, and source-lock pipeline.
-- **The repository is verified.** `216` backend tests pass, the frontend lints and builds, and all `7/7` submission-readiness checks pass.
+- **The repository is verified.** `237` backend tests pass, the frontend lints and builds, and all `7/7` submission-readiness checks pass.
 
 Run the readiness gate yourself:
 
@@ -383,21 +402,51 @@ Strata includes a frozen, two-arm comparative evaluation rather than relying onl
 - **Model configuration:** VideoDB `pro`, temperature `0.0`, and a 600-token answer limit for both arms.
 - **Scoring:** relevant-event recall from overlapping gold windows and unsupported-claim rate from manually adjudicated atomic propositions.
 
-### Results
+### Results — retrieval
 
 | System | Relevant-event retrieval recall ↑ | Unsupported-claim rate ↓ |
 | --- | ---: | ---: |
 | Naive: all transcripts → one prompt | 14 / 18 (**77.8%**) | 0 / 57 (**0.0%**) |
 | Strata: indexed retrieval + diff + source lock | 12 / 18 (**66.7%**) | 0 / 37 (**0.0%**) |
 
-The all-transcripts baseline recovered two more gold windows in this fresh run.
-Strata reports that result without qualification: its added value in the current
-build is not a recall win, but playable citations, deterministic temporal
-comparison, a separately audited challenge retrieval pass, source novelty, and
-sentence-level source locking. Both arms preserved a zero unsupported-claim
-rate in the adjudicated run.
+**The all-transcripts baseline recovered two more gold windows than Strata in this
+run.** That result is published as measured. Feeding six full transcripts to a
+long-context model is a strong retrieval baseline, and on raw recall it beat this
+build.
 
-These figures are generated from the committed frozen cases and [`data/evaluation_results.json`](data/evaluation_results.json); they are not estimates.
+Both arms reached a zero unsupported-claim rate, so that column does not separate
+them either. What it does show is that Strata's source lock did not cost it
+fluency or coverage of the claims it did make.
+
+### Results — evidence quality
+
+Recall measures how much an answer surfaces. It does not measure whether a reader
+can check it. These are the properties Strata is built for, measured across the
+same 12 frozen questions:
+
+| System | Playable citation coverage ↑ | Auditable sentence mapping ↑ | Challenge source novelty ↑ | Temporal-change accuracy |
+| --- | ---: | ---: | ---: | ---: |
+| Naive: all transcripts → one prompt | 0% † | 0% † | 0% † | not scored |
+| Strata | 31 / 31 (**100%**) | 36 / 36 (**100%**) | 1 / 1 (**100%**) | not scored |
+
+- **Playable citation coverage** — displayed findings whose every supporting event resolves to a playable timestamped clip.
+- **Auditable sentence mapping** — displayed factual sentences that expose the event IDs supporting them.
+- **Challenge source novelty** — challenge runs that accepted evidence from a source video absent from the first pass. The denominator is 1, not 2: the other challenge case returns insufficient evidence on the first pass, so there is no conclusion to challenge.
+- **Temporal-change accuracy** — **not scored.** Grading whether each `confirmed_change` / `correction` / `potential_tension` label is correct needs a manual adjudication pass that has not been done. No number is published in place of one.
+
+† The naive arm's zeros are **structural, not measured**: a single all-transcripts
+prompt returns prose with no clips, no per-sentence event mapping, and no second
+retrieval pass. They are recorded in
+[`data/coverage_metrics.json`](data/coverage_metrics.json) as `basis: structural`
+so they are never mistaken for an observed run.
+
+Read together, the two tables say what this build actually is: on this case set it
+retrieves somewhat less than a full-transcript dump, and everything it does
+retrieve is playable, attributable sentence by sentence, and challengeable.
+
+These figures come from the committed frozen cases,
+[`data/evaluation_results.json`](data/evaluation_results.json), and
+[`data/coverage_metrics.json`](data/coverage_metrics.json). They are not estimates.
 
 Reproduce the published score:
 
@@ -416,6 +465,12 @@ Every atomic proposition in `data/evaluation_worksheet.json` must then be checke
 ```bash
 ./.venv/bin/python -m pipeline.finalize_evaluation
 ./.venv/bin/python -m pipeline.evaluate data/evaluation_results.json
+```
+
+Re-measure the evidence-quality table against a running API:
+
+```bash
+./.venv/bin/python -m pipeline.coverage_metrics --base-url https://strata-api-eight.vercel.app
 ```
 
 ---
@@ -542,7 +597,7 @@ Strata/
 │   ├── claim_events.json             # extracted typed evidence
 │   ├── evaluation_cases.json         # 12 frozen questions
 │   └── evaluation_results.json       # adjudicated two-arm results
-├── tests/                            # 216 backend tests
+├── tests/                            # 237 backend tests
 ├── assets/                           # README production screenshots
 ├── requirements.txt
 └── README.md
@@ -660,7 +715,7 @@ The understand stage can fall back to bounded, timestamped records from the real
 
 The verified repository state is:
 
-- `216` backend tests passing;
+- `237` backend tests passing;
 - frontend ESLint passing;
 - Next.js production build passing across all seven routes;
 - `7/7` readiness checks passing;

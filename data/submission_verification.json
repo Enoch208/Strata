@@ -1,5 +1,5 @@
 {
-  "tests_passed": 216,
+  "tests_passed": 237,
   "generated_at": "2026-07-27T03:46:22+01:00",
   "command": "./.venv/bin/pytest -q"
 }
