@@ -4,7 +4,7 @@
 
 &nbsp;
 
-[![Live](https://img.shields.io/badge/live-strata--ana.vercel.app-2563eb?logo=vercel&logoColor=white)](https://strata-ana.vercel.app)
+[![Live](https://img.shields.io/badge/live-strata--amber--one.vercel.app-2563eb?logo=vercel&logoColor=white)](https://strata-amber-one.vercel.app)
 [![API](https://img.shields.io/badge/API-healthy-10b981?logo=fastapi&logoColor=white)](https://strata-api-eight.vercel.app/api/health)
 [![Tests](https://img.shields.io/badge/tests-212%20passing-10b981)](#verification)
 [![Readiness](https://img.shields.io/badge/readiness-7%2F7%20checks-10b981)](#proof--what-is-live)
@@ -15,8 +15,9 @@
 
 Strata is a source-locked investigation workspace for archived video. It searches across hours of footage, reconstructs how a claim or explanation changed over time, challenges its own first conclusion, and compiles the accepted moments into a playable evidence reel. Every factual sentence remains attached to the video, speaker, transcript, date, and timestamps that support it.
 
-**[Explore Strata ↗](https://strata-ana.vercel.app)** &nbsp;·&nbsp;
-**[Open the investigation workspace ↗](https://strata-ana.vercel.app/investigate)** &nbsp;·&nbsp;
+**[Watch the demo ↗](https://www.youtube.com/watch?v=P3bLK-vaF7s)** &nbsp;·&nbsp;
+**[Explore Strata ↗](https://strata-amber-one.vercel.app)** &nbsp;·&nbsp;
+**[Open the investigation workspace ↗](https://strata-amber-one.vercel.app/investigate)** &nbsp;·&nbsp;
 **[Inspect the API ↗](https://strata-api-eight.vercel.app/docs)** &nbsp;·&nbsp;
 **[Run it locally ↗](#run-it-locally)**
 
@@ -46,6 +47,12 @@ The current archive follows NASA's 2022 Artemis I launch campaign: six official 
 
 ## Demo
 
+### Three-minute walkthrough
+
+https://github.com/user-attachments/assets/778dedf7-2aad-4319-b051-e24045c79b5b
+
+**Public fallback — no GitHub sign-in required:** https://www.youtube.com/watch?v=P3bLK-vaF7s
+
 ![Strata investigation workspace showing the indexed Artemis I archive](assets/investigation-workspace.png)
 
 Try the seeded investigation:
@@ -60,14 +67,21 @@ That question demonstrates the complete product loop:
 4. **Compile the evidence** — turn accepted moments into a chronological, playable VideoDB reel.
 5. **Export the packet** — download the query, findings, citations, challenge audit, shots, and reel metadata as JSON.
 
+### Judge snapshot
+
+- **Real archive:** six official NASA videos, 16,904 seconds of footage, and 1,130 extracted claim events.
+- **Agentic loop:** retrieve, compare, source-lock, challenge with unused footage, and compile a playable reel.
+- **Measured result:** 94.4% relevant-event recall versus 83.3% for the naive baseline, with zero unsupported claims in both adjudicated arms.
+- **Verified delivery:** 212 backend tests, a passing Next.js production build, and 7/7 submission-readiness checks.
+
 | Live surface | URL |
 | --- | --- |
-| Landing page | [strata-ana.vercel.app](https://strata-ana.vercel.app) |
-| Investigation workspace | [strata-ana.vercel.app/investigate](https://strata-ana.vercel.app/investigate) |
-| Archive sources | [strata-ana.vercel.app/investigate/sources](https://strata-ana.vercel.app/investigate/sources) |
-| Evidence view | [strata-ana.vercel.app/investigate/evidence](https://strata-ana.vercel.app/investigate/evidence) |
-| Evidence reels | [strata-ana.vercel.app/investigate/reels](https://strata-ana.vercel.app/investigate/reels) |
-| Evidence policy | [strata-ana.vercel.app/investigate/policy](https://strata-ana.vercel.app/investigate/policy) |
+| Landing page | [strata-amber-one.vercel.app](https://strata-amber-one.vercel.app) |
+| Investigation workspace | [strata-amber-one.vercel.app/investigate](https://strata-amber-one.vercel.app/investigate) |
+| Archive sources | [strata-amber-one.vercel.app/investigate/sources](https://strata-amber-one.vercel.app/investigate/sources) |
+| Evidence view | [strata-amber-one.vercel.app/investigate/evidence](https://strata-amber-one.vercel.app/investigate/evidence) |
+| Evidence reels | [strata-amber-one.vercel.app/investigate/reels](https://strata-amber-one.vercel.app/investigate/reels) |
+| Evidence policy | [strata-amber-one.vercel.app/investigate/policy](https://strata-amber-one.vercel.app/investigate/policy) |
 | FastAPI docs | [strata-api-eight.vercel.app/docs](https://strata-api-eight.vercel.app/docs) |
 | API health | [strata-api-eight.vercel.app/api/health](https://strata-api-eight.vercel.app/api/health) |
 
@@ -677,7 +691,7 @@ The production system uses two Vercel projects:
 
 | Project | Responsibility | Production URL |
 | --- | --- | --- |
-| `strata-ana` | Next.js frontend | [strata-ana.vercel.app](https://strata-ana.vercel.app) |
+| `strata` | Next.js frontend | [strata-amber-one.vercel.app](https://strata-amber-one.vercel.app) |
 | `strata-api` | FastAPI investigation service | [strata-api-eight.vercel.app](https://strata-api-eight.vercel.app) |
 
 Production and preview environments use:
@@ -727,6 +741,6 @@ Not:
 
 **The archive is the source of truth. Strata makes the trail inspectable.**
 
-[Launch Strata ↗](https://strata-ana.vercel.app)
+[Launch Strata ↗](https://strata-amber-one.vercel.app)
 
 </div>
