@@ -72,15 +72,50 @@ class CaseAdjudication(BaseModel):
     propositions: list[AtomicProposition] = Field(default_factory=list)
 
 
+class Metric(BaseModel):
+    """A published metric, kept as numerator and denominator.
+
+    The percentage is derived rather than stored so a published figure can
+    always be traced back to the counts it came from.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    numerator: int = Field(ge=0)
+    denominator: int = Field(ge=0)
+
+    @property
+    def percentage(self) -> float | None:
+        if self.denominator == 0:
+            return None
+        return self.numerator / self.denominator * 100.0
+
+    def render(self) -> str:
+        """`14 / 18 (77.8%)`, the form used in the README table."""
+        if self.percentage is None:
+            return f"{self.numerator} / {self.denominator} (n/a)"
+        return f"{self.numerator} / {self.denominator} ({self.percentage:.1f}%)"
+
+
+class ArmMetrics(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    relevant_event_recall: Metric
+    unsupported_claim_rate: Metric
+
+
 class ArmAdjudication(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    arm: str = Field(pattern=r"^(naive|claimtrail)$")
+    arm: str = Field(pattern=r"^(naive|strata)$")
     model: str = Field(min_length=1)
     transcript_revision: str = Field(min_length=1)
     temperature: float
     max_answer_tokens: int = Field(gt=0)
     cases: list[CaseAdjudication]
+    #: Populated by `finalize_evaluation` so the published artifact carries the
+    #: numbers the README quotes, rather than only the raw adjudication.
+    metrics: ArmMetrics | None = None
 
 
 @dataclass(frozen=True)
@@ -92,24 +127,6 @@ class LockedEvaluationConfig:
     manifest_version: str
     temperature: float = 0.0
     max_answer_tokens: int = 600
-
-
-@dataclass(frozen=True)
-class Metric:
-    numerator: int
-    denominator: int
-
-    @property
-    def percentage(self) -> float | None:
-        if self.denominator == 0:
-            return None
-        return self.numerator / self.denominator * 100.0
-
-
-@dataclass(frozen=True)
-class ArmMetrics:
-    relevant_event_recall: Metric
-    unsupported_claim_rate: Metric
 
 
 @dataclass(frozen=True)
@@ -195,8 +212,8 @@ def score_arm(
         )
 
     return ArmMetrics(
-        relevant_event_recall=Metric(found, gold),
-        unsupported_claim_rate=Metric(unsupported, factual),
+        relevant_event_recall=Metric(numerator=found, denominator=gold),
+        unsupported_claim_rate=Metric(numerator=unsupported, denominator=factual),
     )
 
 
@@ -209,8 +226,8 @@ def main() -> int:
     cases = load_cases(args.cases)
     raw = json.loads(args.adjudication.read_text(encoding="utf-8"))
     arms = [ArmAdjudication.model_validate(item) for item in raw]
-    if {arm.arm for arm in arms} != {"naive", "claimtrail"}:
-        raise ValueError("adjudication must contain exactly the naive and claimtrail arms")
+    if {arm.arm for arm in arms} != {"naive", "strata"}:
+        raise ValueError("adjudication must contain exactly the naive and strata arms")
 
     for arm in arms:
         metrics = score_arm(cases, arm)

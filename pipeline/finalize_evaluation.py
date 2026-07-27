@@ -55,10 +55,12 @@ def run() -> int:
             )
         )
 
-    if {arm.arm for arm in arms} != {"naive", "claimtrail"}:
-        raise ValueError("worksheet must contain naive and claimtrail arms")
+    if {arm.arm for arm in arms} != {"naive", "strata"}:
+        raise ValueError("worksheet must contain naive and strata arms")
     for arm in arms:
-        score_arm(cases, arm)
+        # score_arm returns the metrics; they must be attached to the arm or the
+        # published results file carries an adjudication with no numbers in it.
+        arm.metrics = score_arm(cases, arm)
     RESULTS_PATH.write_text(
         json.dumps([arm.model_dump(mode="json") for arm in arms], indent=2) + "\n",
         encoding="utf-8",
