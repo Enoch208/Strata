@@ -49,3 +49,5 @@ scratch/
 *.mov
 *.wav
 .DS_Store
+.vercel
+.env*

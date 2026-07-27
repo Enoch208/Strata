@@ -3,7 +3,7 @@
   "framework": "fastapi",
   "functions": {
     "api/index.py": {
-      "includeFiles": "{services/**,data/archive_manifest.json}",
+      "includeFiles": "{services/**,data/archive_manifest.json,data/evaluation_cases.json,data/evaluation_results.json,data/submission_verification.json}",
       "excludeFiles": "{frontend/**,pipeline/**,tests/**,docs/**,.venv/**}",
       "maxDuration": 300
     }
