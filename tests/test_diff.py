@@ -130,7 +130,7 @@ class TestDeterministicDiff:
 
         result = compare_events(events)
 
-        assert result.findings[0].label is FindingLabel.potential_tension
+        assert result.findings[0].label is FindingLabel.new_information
         assert result.relations[0].relation_type is RelationType.contextualizes
 
     def test_single_event_group_is_new_information(self) -> None:

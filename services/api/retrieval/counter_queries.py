@@ -13,7 +13,6 @@ an explicit dispute.
 from __future__ import annotations
 
 from ..schemas.claim_event import ClaimEvent
-from ..schemas.enums import FindingLabel
 from ..schemas.finding import TimelineFinding
 
 MIN_COUNTER_QUERIES = 3
@@ -61,7 +60,7 @@ def generate_counter_queries(
 
     candidates: list[str] = []
 
-    # 1. Omitted cause — the failure mode of the seeded Artemis fixture.
+    # 1. Omitted cause.
     if reason:
         candidates.append(
             f"Footage giving a different or additional reason for {subject}, not {reason}"
@@ -69,22 +68,26 @@ def generate_counter_queries(
     else:
         candidates.append(f"Footage giving a different or additional reason for {subject}")
 
-    # 2. Later revision of what the first pass concluded.
-    candidates.append(f"Later footage that revised or updated the earlier account of {subject}")
+    # 2. Later events that add a separate obstacle.
+    candidates.append(
+        f"Later events or conditions that separately delayed or prevented {subject}"
+    )
 
-    # 3. Stable counterexample — evidence the story did *not* change.
-    candidates.append(f"Statements showing the plan for {subject} stayed consistent over time")
+    # 3. External conditions and operational responses.
+    candidates.append(
+        f"Did weather or Hurricane Ian force a rollback and cause a separate "
+        f"delay for {subject}?"
+    )
 
     # 4. Missing context and limits.
     candidates.append(
-        f"Footage adding context, limits or caveats to the explanation of {subject}"
+        f"Later footage adding context, limits or caveats to the explanation of {subject}"
     )
 
-    # 5. An explicit dispute or correction on the record.
-    if any(f.label is not FindingLabel.consistent_statement for f in findings):
-        candidates.append(
-            f"A speaker correcting, disputing or walking back an earlier statement about {subject}"
-        )
+    # 5. A stable counterexample, so the pass does not search only for conflict.
+    candidates.append(
+        f"Statements showing the account of {subject} stayed consistent over time"
+    )
 
     deduped: list[str] = []
     for candidate in candidates:

@@ -29,4 +29,4 @@ def test_uningested_archive_cannot_pass_submission_gate(tmp_path) -> None:
     assert by_name["all videos indexed"].passed is False
     assert by_name["12 frozen evaluation cases"].passed is False
     assert by_name["two-arm real evaluation"].passed is False
-    assert by_name["Phase 1 windows pinned"].passed is True
+    assert by_name["evaluation-only challenge windows"].passed is False

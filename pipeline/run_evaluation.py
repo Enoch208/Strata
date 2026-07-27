@@ -24,6 +24,7 @@ from services.api.manifest import load_manifest
 from services.api.schemas.packet import InvestigationState
 
 from .evaluate import (
+    EvaluationCase,
     EvidenceUnit,
     TranscriptDocument,
     build_baseline_prompt,
@@ -126,6 +127,29 @@ def _worksheet_propositions(values: list[str]) -> list[dict[str, Any]]:
     return [{"text": value, "supported": None} for value in values if value.strip()]
 
 
+def _validate_claimtrail_case(
+    case: EvaluationCase,
+    investigation: Any,
+) -> None:
+    """Fail the run when a frozen structural requirement is not satisfied."""
+    if len(investigation.events) < case.expected_min_events:
+        raise RuntimeError(
+            f"{case.case_id}: found {len(investigation.events)} events, "
+            f"requires at least {case.expected_min_events}"
+        )
+    if case.require_novel_challenge_source:
+        challenge = investigation.challenge
+        if challenge is None:
+            raise RuntimeError(f"{case.case_id}: required challenge did not run")
+        initial = set(challenge.initial_accepted_video_ids)
+        challenge_ids = set(challenge.challenge_accepted_video_ids)
+        if not challenge_ids - initial:
+            raise RuntimeError(
+                f"{case.case_id}: challenge_video_ids - initial_video_ids "
+                "difference is empty"
+            )
+
+
 def run(
     selected_arms: set[str] | None = None,
     *,
@@ -191,6 +215,7 @@ def run(
             investigation = engine.create(case.question, manifest.archive_id)
             if case.run_challenge and investigation.state is InvestigationState.complete:
                 engine.challenge(investigation.investigation_id)
+            _validate_claimtrail_case(case, investigation)
             displayable = [
                 sentence.text
                 for sentence in investigation.summary_sentences

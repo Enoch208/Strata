@@ -171,6 +171,7 @@ export interface ChallengeResult {
   challenge_id: string;
   schema_version: string;
   prompt: string;
+  initial_queries: string[];
   counter_queries: string[];
   accepted_finding_ids: string[];
   rejected_candidates: RejectedCandidate[];
@@ -197,6 +198,7 @@ export interface Investigation {
   query: string;
   state: InvestigationState;
   created_at: string;
+  initial_queries: string[];
   summary_sentences: SourcedSentence[];
   findings: Finding[];
   relations: Relation[];
@@ -206,4 +208,35 @@ export interface Investigation {
   reel: ReelRef;
   insufficient_evidence_reason: string | null;
   error: string | null;
+}
+
+export interface MetricProof {
+  numerator: number;
+  denominator: number;
+  percentage: number | null;
+}
+
+export interface EvaluationArmProof {
+  arm: "naive" | "claimtrail";
+  label: string;
+  retrieval_recall: MetricProof;
+  unsupported_claims: MetricProof;
+}
+
+export interface SubmissionProof {
+  distinct_video_ids: number;
+  index_proof: {
+    spoken_word_ready: boolean;
+    ocr_ready: boolean;
+    visual_ready: boolean;
+    claim_event_ready: boolean;
+    timeline_finding_ready: boolean;
+  };
+  evaluation_cases: number;
+  evaluation: EvaluationArmProof[];
+  verification: {
+    tests_passed: number;
+    generated_at: string | null;
+    command: string | null;
+  };
 }

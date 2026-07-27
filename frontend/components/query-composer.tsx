@@ -2,8 +2,8 @@ import { useState } from "react";
 import { PrimaryButton } from "./button";
 import { Icon } from "./icon";
 
-export const SEEDED_QUERY =
-  "Did the September 3 hydrogen leak fully explain why Artemis I launched in November? Trace the evidence.";
+export const HEADLINE_QUERY =
+  "Why was Artemis I’s September 3 launch attempt scrubbed?";
 
 type Props = {
   disabled: boolean;
@@ -12,7 +12,7 @@ type Props = {
 };
 
 export function QueryComposer({ disabled, busy, onSubmit }: Props) {
-  const [query, setQuery] = useState(SEEDED_QUERY);
+  const [query, setQuery] = useState(HEADLINE_QUERY);
 
   function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();

@@ -1,6 +1,10 @@
 "use client";
 
-import type { Archive, InvestigationState } from "@/lib/types";
+import type {
+  Archive,
+  InvestigationState,
+  SubmissionProof,
+} from "@/lib/types";
 import { formatDate, progressCopy } from "@/lib/format";
 import { Icon } from "./icon";
 import { useInvestigateContext } from "./investigate-context";
@@ -8,6 +12,7 @@ import { InvestigationWorkspace } from "./investigation-workspace";
 import { isProgressState } from "./investigation-progress";
 import { QueryComposer } from "./query-composer";
 import { StatePanel } from "./state-panel";
+import { SubmissionProofPanel } from "./submission-proof-panel";
 
 const progressStages = ["searching", "retrieving", "comparing", "building"] as const;
 
@@ -25,6 +30,7 @@ export function StrataApp() {
       {!hasCompletedInvestigation ? (
         <DashboardHome
           archive={archiveState.archive}
+          proof={archiveState.proof}
           error={archiveState.error}
           ready={canInvestigate}
           busy={isProgressState(work.progress)}
@@ -41,6 +47,8 @@ export function StrataApp() {
           <InvestigationWorkspace
             key={work.investigation.investigation_id}
             investigation={work.investigation}
+            archive={archiveState.archive}
+            proof={archiveState.proof}
             challengeBusy={work.challengeBusy}
             challengeError={work.challengeError}
             reelState={work.reelState}
@@ -82,12 +90,14 @@ export function StrataApp() {
 
 function DashboardHome({
   archive,
+  proof,
   error,
   ready,
   busy,
   onInvestigate,
 }: {
   archive: Archive | null;
+  proof: SubmissionProof | null;
   error: string | null;
   ready: boolean;
   busy: boolean;
@@ -227,6 +237,8 @@ function DashboardHome({
               </div>
             </article>
           </div>
+
+          <SubmissionProofPanel archive={archive} proof={proof} />
         </section>
 
         <aside className="investigate-intelligence-column">

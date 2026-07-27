@@ -12,6 +12,7 @@ from pathlib import Path
 
 from services.api.config import EVALUATION_CASES_PATH, REPO_ROOT, get_settings
 from services.api.manifest import ArchiveManifest, load_manifest
+from pipeline.evaluate import load_cases
 
 EVALUATION_RESULTS_PATH = REPO_ROOT / "data" / "evaluation_results.json"
 README_PATH = REPO_ROOT / "README.md"
@@ -34,7 +35,20 @@ def readiness_checks(
 ) -> list[Check]:
     video_ids = [video.video_id for video in manifest.videos if video.video_id]
     ready = [video for video in manifest.videos if video.is_ready]
-    windows = {window.pass_name: window for window in manifest.verified_windows}
+    try:
+        evaluation_cases = load_cases(evaluation_cases_path)
+        challenge_cases = [
+            case
+            for case in evaluation_cases
+            if case.require_novel_challenge_source
+        ]
+        evaluation_windows_ready = bool(challenge_cases) and all(
+            len(case.expected_evidence) >= 2
+            and len({unit.video_id for unit in case.expected_evidence}) >= 2
+            for case in challenge_cases
+        )
+    except (OSError, ValueError):
+        evaluation_windows_ready = False
 
     return [
         Check(
@@ -53,15 +67,9 @@ def readiness_checks(
             f"{len(ready)}/6 ready with {len(set(video_ids))} distinct VideoDB IDs",
         ),
         Check(
-            "Phase 1 windows pinned",
-            (
-                "initial" in windows
-                and (windows["initial"].start, windows["initial"].end) == (86.0, 101.0)
-                and "challenge" in windows
-                and (windows["challenge"].start, windows["challenge"].end)
-                == (115.0, 139.0)
-            ),
-            "expected 3 Sep and 30 Sep windows are present",
+            "evaluation-only challenge windows",
+            evaluation_windows_ready,
+            "novel-source gold windows exist only in the frozen evaluation set",
         ),
         _json_count_check(
             "12 frozen evaluation cases",

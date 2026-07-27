@@ -97,6 +97,11 @@ class FakeAdapter:
                 "context, limits",
                 "correcting, disputing",
                 "weather predictions related to hurricane",
+                "later events or conditions",
+                "weather or external conditions",
+                "weather or hurricane ian",
+                "later footage adding context",
+                "speaker correcting",
             )
         ):
             return [FakeHit(WEATHER_RECORD, score=0.8)]
@@ -127,6 +132,11 @@ class ReusedSourceAdapter(FakeAdapter):
                 "context, limits",
                 "correcting, disputing",
                 "weather predictions related to hurricane",
+                "later events or conditions",
+                "weather or external conditions",
+                "weather or hurricane ian",
+                "later footage adding context",
+                "speaker correcting",
             )
         ):
             return super().semantic_search(query, **kwargs)
@@ -151,6 +161,11 @@ class MixedInitialAdapter(FakeAdapter):
                 "stayed consistent",
                 "context, limits",
                 "correcting, disputing",
+                "later events or conditions",
+                "weather or external conditions",
+                "weather or hurricane ian",
+                "later footage adding context",
+                "speaker correcting",
             )
         ):
             return [FakeHit(WEATHER_RECORD, score=0.8)]
@@ -201,16 +216,13 @@ def make_engine() -> tuple[InvestigationEngine, FakeAdapter]:
     return engine, adapter
 
 
-def seeded_query() -> str:
-    return (
-        "Did the September 3 hydrogen leak fully explain why Artemis I "
-        "launched in November?"
-    )
+def headline_query() -> str:
+    return "Why was Artemis I’s September 3 launch attempt scrubbed?"
 
 
 def test_first_pass_is_gated_playable_and_source_locked() -> None:
     engine, adapter = make_engine()
-    investigation = engine.create(seeded_query(), "artemis-i-2022")
+    investigation = engine.create(headline_query(), "artemis-i-2022")
 
     assert investigation.state is InvestigationState.complete
     assert [event.event_id for event in investigation.events] == ["evt_leak"]
@@ -281,9 +293,9 @@ def test_focused_query_facets_survive_cross_index_score_differences() -> None:
     }
 
 
-def test_seeded_challenge_qualifies_with_an_unused_video() -> None:
+def test_challenge_qualifies_with_an_unused_video() -> None:
     engine, _ = make_engine()
-    investigation = engine.create(seeded_query(), "artemis-i-2022")
+    investigation = engine.create(headline_query(), "artemis-i-2022")
     original_findings = [finding.finding_id for finding in investigation.findings]
 
     challenge = engine.challenge(investigation.investigation_id)
@@ -293,13 +305,15 @@ def test_seeded_challenge_qualifies_with_an_unused_video() -> None:
     assert challenge.challenge_accepted_video_ids == ["vid_weather"]
     assert challenge.novel_accepted_video_ids == ["vid_weather"]
     assert challenge.found_counter_evidence is True
+    assert challenge.initial_queries == investigation.initial_queries
+    assert challenge.counter_queries
     assert [finding.finding_id for finding in investigation.findings][
         : len(original_findings)
     ] == original_findings
     assert "evt_weather" in [event.event_id for event in investigation.events]
 
 
-def test_seeded_first_pass_reserves_the_verified_weather_source_for_challenge() -> None:
+def test_date_scoped_first_pass_leaves_later_source_for_challenge() -> None:
     adapter = MixedInitialAdapter()
     sequence = iter(["inv_test", "challenge_test"])
     engine = InvestigationEngine(
@@ -309,15 +323,14 @@ def test_seeded_first_pass_reserves_the_verified_weather_source_for_challenge() 
         id_factory=lambda _: next(sequence),
     )
 
-    investigation = engine.create(seeded_query(), "artemis-i-2022")
+    investigation = engine.create(headline_query(), "artemis-i-2022")
     challenge = engine.challenge(investigation.investigation_id)
 
-    assert investigation.events[0].event_id == "evt_leak"
     assert challenge.initial_accepted_video_ids == ["vid_leak"]
     assert challenge.novel_accepted_video_ids == ["vid_weather"]
 
 
-def test_seeded_challenge_cannot_pass_using_only_the_initial_video() -> None:
+def test_challenge_reports_when_context_comes_from_an_initial_video() -> None:
     adapter = ReusedSourceAdapter()
     sequence = iter(["inv_test", "challenge_test"])
     engine = InvestigationEngine(
@@ -326,22 +339,18 @@ def test_seeded_challenge_cannot_pass_using_only_the_initial_video() -> None:
         clock=lambda: datetime(2026, 7, 26, tzinfo=UTC),
         id_factory=lambda _: next(sequence),
     )
-    investigation = engine.create(seeded_query(), "artemis-i-2022")
+    investigation = engine.create(headline_query(), "artemis-i-2022")
 
     challenge = engine.challenge(investigation.investigation_id)
 
-    assert challenge.outcome is ChallengeOutcome.unchanged
-    assert challenge.found_counter_evidence is False
+    assert challenge.outcome is ChallengeOutcome.qualified
+    assert challenge.found_counter_evidence is True
     assert challenge.novel_accepted_video_ids == []
-    assert any(
-        "requires evidence from a source video unused" in item.reason
-        for item in challenge.rejected_candidates
-    )
 
 
 def test_reel_is_chronological_and_packet_contains_challenge_trace() -> None:
     engine, adapter = make_engine()
-    investigation = engine.create(seeded_query(), "artemis-i-2022")
+    investigation = engine.create(headline_query(), "artemis-i-2022")
     engine.challenge(investigation.investigation_id)
 
     reel = engine.generate_reel(
@@ -366,7 +375,7 @@ def test_routes_expose_the_complete_workflow_and_downloadable_packet() -> None:
     try:
         created = client.post(
             "/api/investigations",
-            json={"query": seeded_query(), "archive_id": "artemis-i-2022"},
+            json={"query": headline_query(), "archive_id": "artemis-i-2022"},
         )
         assert created.status_code == 200
         assert created.json()["state"] == "complete"

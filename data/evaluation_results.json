@@ -15,29 +15,19 @@
             "end": 40.92
           },
           {
-            "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
-            "start": 186.01,
-            "end": 191.89
-          },
-          {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 74.47,
+            "start": 77.27,
             "end": 87.18
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 260.28,
+            "start": 262.76,
             "end": 271.93
           },
           {
-            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 763.42,
-            "end": 776.38
-          },
-          {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 318.11,
-            "end": 323.39
+            "start": 324.11,
+            "end": 331.79
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
@@ -50,11 +40,6 @@
             "end": 1008.02
           },
           {
-            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 1054.09,
-            "end": 1060.84
-          },
-          {
             "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
             "start": 115.1,
             "end": 131.72
@@ -63,40 +48,35 @@
             "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
             "start": 103.49,
             "end": 113.41
-          },
-          {
-            "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
-            "start": 64.79,
-            "end": 66.87
           }
         ],
         "propositions": [
           {
-            "text": "On Sept. 2 NASA said the two-hour launch window would open Sept. 3 at 2:17 p.m. Eastern (planned earliest opportunity Sept. 3, 2:17 p.m. ET).",
+            "text": "On Sept 2, NASA said the two\u2011hour launch window opened Sept 3 at 2:17 p.m. Eastern Time.",
             "supported": true
           },
           {
-            "text": "The Sept. 3 launch attempt was waved off after teams encountered a liquid hydrogen leak while filling the core stage.",
+            "text": "NASA waved off (scrubbed) the Sept 3 launch attempt due to a liquid hydrogen leak.",
             "supported": true
           },
           {
-            "text": "NASA stated they would not launch in launch period 25 (which ended Sept. 6) after the scrub.",
+            "text": "NASA stated it would not launch in launch period 25, which ended Sept 6.",
             "supported": true
           },
           {
-            "text": "NASA requested range support for possible late-September launch dates, specifically Sept. 23 and Sept. 27, and targeted a cryogenic demonstration for Sept. 17.",
+            "text": "After the scrub, NASA requested possible launch dates of Sept 23 and Sept 27 and targeted a Sept 17 cryo demonstration.",
             "supported": true
           },
           {
-            "text": "Assuming the cryo demo met objectives, NASA planned to set up for a launch attempt as early as Tuesday, Sept. 27, with Oct. 2 as a backup.",
+            "text": "Assuming the cryo demo met objectives, NASA planned a launch attempt as early as Sept 27 with Oct 2 as a backup.",
             "supported": true
           },
           {
-            "text": "On the night of Sept. 26 NASA moved the Artemis I rocket back to the Vehicle Assembly Building ahead of Hurricane Ian (rollback to VAB).",
+            "text": "On the night of Sept 26, Kennedy began rolling Artemis I back to the VAB because of Hurricane Ian.",
             "supported": true
           },
           {
-            "text": "Artemis I ultimately launched successfully on Nov. 16.",
+            "text": "Artemis I successfully launched on Nov 16 at 1:47 a.m..",
             "supported": true
           }
         ]
@@ -107,48 +87,43 @@
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
             "start": 77.27,
-            "end": 87.18
+            "end": 90.3
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
             "start": 561.3,
-            "end": 601.59
+            "end": 578.39
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 613.31,
-            "end": 629.67
+            "start": 607.95,
+            "end": 619.79
           },
           {
-            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 636.31,
-            "end": 642.79
-          },
-          {
-            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 678.21,
-            "end": 688.06
+            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+            "start": 150.45,
+            "end": 166.05
           }
         ],
         "propositions": [
           {
-            "text": "NASA said teams encountered a liquid hydrogen leak while filling propellant into the SLS core stage, prompting the September 3 scrub.",
+            "text": "NASA said the launch attempt was waved off because teams encountered a liquid hydrogen leak while filling propellant into the core stage.",
             "supported": true
           },
           {
-            "text": "NASA said the leak was a large leak at the 8-inch quick-disconnect (tail service mast umbilical) and began when the flow moved from slow fill to fast fill.",
+            "text": "NASA identified a large leak at the 8\u2011inch quick\u2011disconnect on the tail service mast umbilical.",
             "supported": true
           },
           {
-            "text": "NASA said there was an inadvertent over-pressurization of the hydrogen transfer line earlier (planned ~20 psi, reached about 60 psi) which could have affected the quick-disconnect soft goods/seal.",
+            "text": "NASA said the leak started when operations transitioned from slow fill to fast fill.",
             "supported": true
           },
           {
-            "text": "NASA said the operations team tried multiple times (three attempts) to resolve the leak but were unsuccessful.",
+            "text": "NASA reported an earlier inadvertent pressurization of the hydrogen transfer line up to about 60 psi (versus the planned ~20 psi) and said it might have affected the seal but that it was too early to be certain.",
             "supported": true
           },
           {
-            "text": "NASA said they declared the scrub (stood down) and proceeded to safe the vehicle and drain cryogens after the leak could not be resolved.",
+            "text": "NASA said teams planned to remove and replace the quick\u2011disconnect soft goods/seal to address the leak.",
             "supported": true
           }
         ]
@@ -157,44 +132,44 @@
         "case_id": "seal_repair_and_cryo_test",
         "surfaced_evidence": [
           {
-            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 757.65,
-            "end": 762.78
+            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+            "start": 469.22,
+            "end": 495.52
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 520.7,
-            "end": 534.22
+            "start": 496.64,
+            "end": 506.08
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 517.58,
-            "end": 518.54
+            "start": 508.72,
+            "end": 556.36
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
             "start": 557.24,
-            "end": 571.48
-          },
-          {
-            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 585.31,
-            "end": 593.87
+            "end": 585.31
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
             "start": 595.87,
-            "end": 600.83
+            "end": 604.31
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
             "start": 617.75,
-            "end": 622.47
+            "end": 634.15
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
             "start": 646.29,
-            "end": 653.53
+            "end": 666.64
+          },
+          {
+            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+            "start": 776.86,
+            "end": 801.54
           },
           {
             "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
@@ -203,80 +178,59 @@
           },
           {
             "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 259.72,
-            "end": 269.88
+            "start": 325.18,
+            "end": 365.67
           },
           {
             "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 353.03,
-            "end": 369.67
-          },
-          {
-            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 376.8,
-            "end": 386.4
+            "start": 402.83,
+            "end": 462.27
           },
           {
             "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
             "start": 543.55,
-            "end": 666.39
-          },
-          {
-            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 696.65,
-            "end": 733.02
-          },
-          {
-            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 655.67,
-            "end": 666.39
-          },
-          {
-            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 787.86,
-            "end": 801.54
-          },
-          {
-            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 732.36,
-            "end": 740.89
+            "end": 667.91
           }
         ],
         "propositions": [
           {
-            "text": "NASA removed and replaced the soft goods/seals on the 8\u2011inch fill/drain quick disconnect and the 4\u2011inch bleed quick disconnect at the tail service mast umbilical.",
+            "text": "NASA removed and replaced the soft\u2011goods seals on the 8\u2011inch fill/drain quick\u2011disconnect and the 4\u2011inch bleed quick\u2011disconnect at the TSMU.",
             "supported": true
           },
           {
-            "text": "To access those QDs teams demated the LH2 TSMU plate, inspected the seals, and conducted R&R under an environmental enclosure (described as a plastic tent with conditioned air).",
+            "text": "To access the quick disconnects they demated the LH2 TSMU plate from the flight plate, installed transportation caps and a plate cover to protect against contamination.",
             "supported": true
           },
           {
-            "text": "During inspection teams saw a witness mark/indentation on the 8\u2011inch seal consistent with a contributing factor to the leak.",
+            "text": "Workers set up an enclosure (described like a plastic tent) with conditioned air around the flight plate to protect hardware and personnel while performing the R&R on the pad.",
             "supported": true
           },
           {
-            "text": "NASA planned a pad\u2011based cryogenic demonstration (target date around September 17) to verify the repaired seals under cryogenic conditions.",
+            "text": "The plan was to complete the R&R, remake the plates, do a mini integrated verification/retreat test and then a cryogenic demonstration.",
             "supported": true
           },
           {
-            "text": "The cryogenic demonstration plan included tanking both the core stage and the interim cryogenic propulsion stage with LH2 and LO2 to test the interface.",
+            "text": "NASA set a target date (around September 17) for the cryogenic demonstration to verify the repaired seals under cryogenic conditions.",
             "supported": true
           },
           {
-            "text": "The test would use a 'kinder, gentler' loading approach: slow, steady pressure ramps on the LH2 sphere, thermal conditioning of the interface, and controlled main fuel valve sequencing to reduce pressure and thermal transients.",
+            "text": "The cryogenic demonstration was described as an objective\u2011based test that would tank the core stage and the ICPS with liquid hydrogen and liquid oxygen.",
             "supported": true
           },
           {
-            "text": "Planned activities for the demo included engine bleed/chilldown, a pre\u2011press demonstration to verify valve timing, and monitoring the core LH2 tank for leaks.",
+            "text": "The demo would include an engine bleed/chilldown and a pre\u2011press demonstration to verify valve timing and would monitor the core LH2 tank.",
             "supported": true
           },
           {
-            "text": "NASA said the demo would be objective\u2011based, would not go into terminal count, would not require range support, and its results would inform whether to stay at the pad or roll back.",
+            "text": "NASA said the demonstration would not go into terminal count and emphasized a 'kinder, gentler' loading approach.",
             "supported": true
           },
           {
-            "text": "After seal R&R they planned a retest/minimum integrated verification test (mini\u2011IVT) to confirm data flows and system behavior before the cryo demonstration.",
+            "text": "The 'kinder, gentler' approach involves slower, steady pressure ramps on the LH2 sphere, controlled main fuel valve operation, and thermal conditioning to reduce pressure and temperature shocks on the seals.",
+            "supported": true
+          },
+          {
+            "text": "NASA characterized replacement of the soft goods as the leading suspect solution and said a pad cryo test is the only way to fully validate the seals at cryogenic temperatures.",
             "supported": true
           }
         ]
@@ -286,38 +240,38 @@
         "surfaced_evidence": [
           {
             "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
-            "start": 95.02,
-            "end": 138.52
+            "start": 83.2,
+            "end": 156.92
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
             "start": 3233.65,
-            "end": 3245.21
+            "end": 3262.85
           }
         ],
         "propositions": [
           {
-            "text": "Hurricane Ian intensified and made landfall in southwest Florida as a Category 4 storm with winds up to about 155 mph.",
+            "text": "External cameras aboard the International Space Station captured Hurricane Ian south of Cuba on September 26.",
             "supported": true
           },
           {
-            "text": "On the night of September 26, teams began moving the Artemis I rocket from Launch Pad 39B back to the Vehicle Assembly Building (VAB).",
+            "text": "Space station cameras captured Hurricane Ian again on September 28 as it made landfall in southwest Florida as a Category 4 storm with winds around 155 mph.",
             "supported": true
           },
           {
-            "text": "The Space Launch System rocket and the Orion spacecraft were secured inside the VAB.",
+            "text": "On the night of September 26, Kennedy Space Center began moving the Artemis I Space Launch System rocket and Orion spacecraft from Launch Pad 39B back into the Vehicle Assembly Building.",
             "supported": true
           },
           {
-            "text": "Managers decided to roll back because of weather predictions related to Hurricane Ian.",
+            "text": "Managers decided the rollback because of weather predictions related to Hurricane Ian and to give employees time to address the needs of their families.",
             "supported": true
           },
           {
-            "text": "The rollback decision also aimed to give employees time to address the needs of their families.",
+            "text": "NASA said a decision to roll back for a hurricane is typically made about three days before impact.",
             "supported": true
           },
           {
-            "text": "NASA stated that, in the event of a hurricane, a decision to roll back to the VAB typically must be made about three days in advance.",
+            "text": "NASA said that, in the vehicle\u2019s then-current configuration, it would take about three days to roll back to the Vehicle Assembly Building.",
             "supported": true
           }
         ]
@@ -327,13 +281,13 @@
         "surfaced_evidence": [
           {
             "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
-            "start": 103.49,
-            "end": 113.41
+            "start": 64.79,
+            "end": 68.63
           },
           {
             "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
-            "start": 64.79,
-            "end": 68.63
+            "start": 103.49,
+            "end": 113.41
           },
           {
             "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
@@ -343,15 +297,15 @@
         ],
         "propositions": [
           {
-            "text": "Artemis I lifted off at 1:47 a.m. Eastern Time.",
+            "text": "Artemis I lifted off.",
             "supported": true
           },
           {
-            "text": "The Orion spacecraft was on its way to the Moon.",
+            "text": "The liftoff occurred at 1:47am as reported by NASA.",
             "supported": true
           },
           {
-            "text": "Orion completed the translunar injection burn to put it on its trajectory to the Moon.",
+            "text": "Orion successfully completed a translunar injection burn placing it on its trajectory to the Moon.",
             "supported": true
           }
         ]
@@ -383,23 +337,32 @@
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
             "start": 682.31,
             "end": 685.51
+          },
+          {
+            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+            "start": 677.83,
+            "end": 684.15
           }
         ],
         "propositions": [
           {
-            "text": "On 2022-09-03 NASA Administrator Bill Nelson said, \"We do not launch until we think it's right.\"",
+            "text": "At the September 3 post\u2011scrub news conference, NASA leadership said \"We do not launch until we think it's right.\" (m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570 167.79-172.75).",
             "supported": true
           },
           {
-            "text": "On 2022-09-03 NASA officials said \"we're not going to launch till we're ready.\"",
+            "text": "The same briefing reiterated \"we're not going to launch until it's right\" as standard operating procedure. (m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570 211.70-215.30).",
             "supported": true
           },
           {
-            "text": "On 2022-09-03 Mike Sarafin said \"we're going to fly when we're ready.\"",
+            "text": "Mike Sarafin echoed the same principle: \"we're not going to launch till we're ready\" / \"we will fly when we're ready.\" (m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570 871.68-875.84).",
             "supported": true
           },
           {
-            "text": "On 2022-09-08 NASA ground systems leadership said \"As always, we'll launch when we're ready.\"",
+            "text": "In the September 8 launch status teleconference, NASA reiterated \"As always, we'll launch when we're ready.\" (m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1 682.31-685.51).",
+            "supported": true
+          },
+          {
+            "text": "In the September 19 pre\u2011demonstration briefing, NASA again stated the policy of launching only when ready. (m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4 677.83-684.15).",
             "supported": true
           }
         ]
@@ -410,57 +373,48 @@
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
             "start": 561.3,
-            "end": 607.95
+            "end": 607.55
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 1096.47,
-            "end": 1108.15
+            "start": 1097.22,
+            "end": 1108.26
+          },
+          {
+            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+            "start": 1918.73,
+            "end": 2033.88
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 479.62,
-            "end": 517.02
+            "start": 2662.21,
+            "end": 2676.99
           },
           {
-            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
             "start": 932.88,
             "end": 942.96
-          },
-          {
-            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 2021.39,
-            "end": 2039.78
-          },
-          {
-            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 2086.64,
-            "end": 2097.68
           }
         ],
         "propositions": [
           {
-            "text": "On September 3 NASA reported an inadvertent pressurization of the hydrogen transfer line to about 60 psi during chill down (possible overpressurization).",
+            "text": "NASA reported an inadvertent overpressurization of the hydrogen transfer line during the Sept. 3 chilldown that rose to about 60 psi (exceeding their planned ~20 psi).",
             "supported": true
           },
           {
-            "text": "NASA said it was too early to tell whether that overpressurization caused the September 3 leak and that a fault\u2011tree analysis was required before concluding causation.",
+            "text": "NASA stated it was too early to tell if that inadvertent overpressurization was the cause of the Sept. 3 hydrogen leak and said a fault\u2011tree analysis was required before concluding causation.",
             "supported": true
           },
           {
-            "text": "NASA/ground teams removed and replaced the soft goods/seals on the 8\u2011inch quick\u2011disconnect and enclosed the work area on the pad for inspection and repair.",
+            "text": "NASA noted a wrong valve command occurred briefly in the sequence and emphasized that correlation does not equal causation while they investigate.",
             "supported": true
           },
           {
-            "text": "Inspectors found a witness mark/indentation on the 8\u2011inch quick\u2011disconnect seal consistent with possible foreign\u2011object debris that could have contributed to the leak.",
+            "text": "Subsequent inspections of the 8\u2011inch quick\u2011disconnect revealed a small indentation (a witness mark) in the seal; no piece of foreign object debris was recovered.",
             "supported": true
           },
           {
-            "text": "Subsequent briefings reported the indentation measured just under 0.01 inches and that hydrogen concentrations during the large leak spiked to roughly 8% (above the 4% LCC limit).",
-            "supported": true
-          },
-          {
-            "text": "NASA implemented procedural and procedural/software mitigations (a 'kinder, gentler' loading approach) and continued investigation rather than declaring the overpressurization the definitive cause.",
+            "text": "NASA did not announce a single, conclusive root cause in the archive material and therefore did not conclusively determine that the inadvertent pressurization caused the Sept. 3 leak.",
             "supported": true
           }
         ]
@@ -469,14 +423,14 @@
         "case_id": "seeded_leak_only_challenge",
         "surfaced_evidence": [
           {
-            "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
-            "start": 34.56,
-            "end": 40.92
-          },
-          {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
             "start": 77.27,
             "end": 87.18
+          },
+          {
+            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+            "start": 561.3,
+            "end": 585.91
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
@@ -485,114 +439,48 @@
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+            "start": 644.31,
+            "end": 654.63
+          },
+          {
+            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
             "start": 678.21,
-            "end": 688.7
+            "end": 688.06
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 730.36,
-            "end": 770.86
-          },
-          {
-            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 866.18,
-            "end": 883.47
+            "start": 1616.07,
+            "end": 1632.71
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
             "start": 150.45,
             "end": 166.05
-          },
-          {
-            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 310.59,
-            "end": 331.79
-          },
-          {
-            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 520.7,
-            "end": 534.22
-          },
-          {
-            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 600.99,
-            "end": 616.63
-          },
-          {
-            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 953.76,
-            "end": 967.2
-          },
-          {
-            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 247.96,
-            "end": 259.4
-          },
-          {
-            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 996.0,
-            "end": 1008.02
-          },
-          {
-            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 1008.9,
-            "end": 1013.98
-          },
-          {
-            "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
-            "start": 115.1,
-            "end": 131.72
-          },
-          {
-            "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
-            "start": 138.92,
-            "end": 146.76
-          },
-          {
-            "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
-            "start": 103.49,
-            "end": 113.41
           }
         ],
         "propositions": [
           {
-            "text": "NASA planned an earliest launch opportunity beginning September 3 (Artemis I Countdown Status Briefing).",
+            "text": "NASA waved off the September 3 Artemis I launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage.",
             "supported": true
           },
           {
-            "text": "The September 3 launch attempt was waved off after teams encountered a liquid hydrogen leak while filling propellant into the core stage (Post\u2011Scrub News Conference, 77.27\u201387.18).",
+            "text": "During chill down a hydrogen transfer line was inadvertently overpressurized (to about 60 psi).",
             "supported": true
           },
           {
-            "text": "The leak was large at the 8\u2011inch quick disconnect, started on the transition to fast fill, and repeated despite troubleshooting efforts (Post\u2011Scrub News Conference, 613.31\u2013629.67; 678.21\u2013688.70).",
+            "text": "A large hydrogen leak occurred at the 8\u2011inch quick disconnect of the LH2 umbilical when transitioning from slow fill to fast fill.",
             "supported": true
           },
           {
-            "text": "Mission managers concluded simple demate/remate had low confidence and that removal/replacement options would not preserve the ability to fly before the end of that launch period (Post\u2011Scrub News Conference, 730.36\u2013770.86).",
+            "text": "Teams attempted multiple times (three tries) to resolve/reseat the leak but were unsuccessful.",
             "supported": true
           },
           {
-            "text": "The Eastern Range has FTS battery retest/replace requirements that constrain how long the vehicle can stay on pad without a rollback (Post\u2011Scrub News Conference, 866.18\u2013883.47).",
+            "text": "Hydrogen concentrations during the leak exceeded the allowable safety limit (about four percent) by roughly two to three times.",
             "supported": true
           },
           {
-            "text": "NASA planned to replace the seals (8\u2011inch and 4\u2011inch) and to perform a cryogenic demonstration/test to verify the fixes (Sep 8 teleconference 150.45\u2013166.05; Sep 19 briefing 247.96\u2013259.40).",
-            "supported": true
-          },
-          {
-            "text": "NASA requested late\u2011September launch dates (e.g., Sept 23 and Sept 27) contingent on successful cryo testing and range decisions (Sep 8 teleconference 310.59\u2013331.79; Sep 19 briefing 996.00\u20131013.98).",
-            "supported": true
-          },
-          {
-            "text": "Rollback and associated repair/inspection work would take several weeks (Sep 8 teleconference 953.76\u2013967.20).",
-            "supported": true
-          },
-          {
-            "text": "The rocket was rolled back into the VAB on September 26 ahead of Hurricane Ian (This Week @NASA, Sep 30; 115.10\u2013131.72 and 138.92\u2013146.76).",
-            "supported": true
-          },
-          {
-            "text": "Artemis I ultimately launched in mid\u2011November (post\u2011launch news conference dated Nov 16 shows liftoff that morning, 103.49\u2013113.41).",
+            "text": "The scrub was declared (11:17 Eastern Time), the vehicle was safed, and propellants were drained following the unresolved leak.",
             "supported": true
           }
         ]
@@ -606,11 +494,6 @@
         "case_id": "source_lock_rejects_sole_weather_cause",
         "surfaced_evidence": [
           {
-            "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
-            "start": 115.1,
-            "end": 138.92
-          },
-          {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
             "start": 74.47,
             "end": 90.3
@@ -622,52 +505,78 @@
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 740.89,
-            "end": 801.54
+            "start": 730.36,
+            "end": 740.89
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 1164.14,
-            "end": 1210.31
+            "start": 763.42,
+            "end": 770.86
+          },
+          {
+            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
+            "start": 771.58,
+            "end": 776.38
+          },
+          {
+            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+            "start": 145.81,
+            "end": 166.05
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
             "start": 520.7,
+            "end": 534.22
+          },
+          {
+            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+            "start": 600.99,
             "end": 616.63
           },
           {
             "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+            "start": 259.72,
+            "end": 269.88
+          },
+          {
+            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
             "start": 932.88,
-            "end": 964.79
+            "end": 942.96
+          },
+          {
+            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+            "start": 996.0,
+            "end": 1008.02
+          },
+          {
+            "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
+            "start": 115.1,
+            "end": 138.92
           }
         ],
         "propositions": [
           {
-            "text": "Managers moved the Artemis I rocket from Launch Pad 39B back into the Vehicle Assembly Building because of Hurricane Ian (weather predictions related to the storm).",
+            "text": "A liquid hydrogen leak during tanking on September 3 caused NASA to wave off the Artemis I launch attempt.",
             "supported": true
           },
           {
-            "text": "NASA waved off the September 3 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage.",
+            "text": "The leak during the September attempt was characterized as a large leak at the 8-inch quick disconnect requiring removal and replacement of soft goods/seals.",
             "supported": true
           },
           {
-            "text": "A large hydrogen leak occurred at the 8-inch quick disconnect when transitioning from slow fill to fast fill, and it was characterized as a large leak that could not be resolved on pad that day.",
+            "text": "Teams considered repair options (replace seals at the pad or roll back to the VAB) and planned a cryogenic demonstration/test to verify the seals.",
             "supported": true
           },
           {
-            "text": "The team decided to remove and replace the soft goods/seals on the quick disconnect and to perform cryogenic testing (at the pad or in the VAB) to verify the repair.",
+            "text": "Project managers stated that the required repair options would not preserve the ability to fly before the end of the current launch period without additional actions.",
             "supported": true
           },
           {
-            "text": "NASA sought options with the Eastern Range because the flight termination system (FTS) batteries have retest/replace requirements; without a range waiver NASA would have to roll back to the VAB to meet FTS test/replacement rules.",
+            "text": "Managers rolled the Artemis I vehicle back into the Vehicle Assembly Building ahead of Hurricane Ian on/about September 26 due to weather predictions.",
             "supported": true
           },
           {
-            "text": "NASA planned a cryogenic demonstration and schedule options in mid\u2011September to address the leak and verify procedures, indicating technical work and testing were required before further launch attempts.",
-            "supported": true
-          },
-          {
-            "text": "Because the archive documents both the Hurricane Ian rollback and separate technical and range/test issues that required repair, testing, or rollback, the archive does not establish that Hurricane Ian was the sole cause of the eventual November launch.",
+            "text": "Range/flight-termination-system retest requirements and range scheduling were additional constraints affecting whether the vehicle could remain on the pad and the launch schedule.",
             "supported": true
           }
         ]
@@ -678,67 +587,44 @@
           {
             "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
             "start": 866.18,
-            "end": 883.47
-          },
-          {
-            "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
-            "start": 885.15,
-            "end": 899.45
+            "end": 914.09
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 1165.38,
-            "end": 1196.99
+            "start": 1011.75,
+            "end": 1035.36
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 3019.54,
-            "end": 3032.02
-          },
-          {
-            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 271.84,
-            "end": 281.4
+            "start": 1164.14,
+            "end": 1193.62
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
             "start": 318.11,
-            "end": 323.39
+            "end": 331.79
           },
           {
-            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 787.86,
-            "end": 801.54
-          },
-          {
-            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 669.03,
-            "end": 677.83
+            "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
+            "start": 899.45,
+            "end": 903.29
           }
         ],
         "propositions": [
           {
-            "text": "The Range imposes periodic retest requirements on the flight\u2011termination system that can force a rollback if not extended.",
+            "text": "The Eastern Range enforces retest requirements for the flight\u2011termination system that limit how long the FTS batteries can remain untested on the pad.",
             "supported": true
           },
           {
-            "text": "NASA determined the FTS retest interval was the pacing function that could require rolling back after the current launch period.",
+            "text": "Without a Range waiver/extension, NASA would have to roll the vehicle back to the Vehicle Assembly Building to retest or replace FTS batteries.",
             "supported": true
           },
           {
-            "text": "Without a Range waiver extending the retest interval, NASA would need to roll SLS back to the VAB to retest or replace FTS batteries.",
+            "text": "NASA submitted a waiver request and proposed September 23 and September 27 as planning launch dates while negotiating an extension with the Range.",
             "supported": true
           },
           {
-            "text": "NASA submitted a waiver package to the Range seeking an extension of the FTS retest requirement.",
-            "supported": true
-          },
-          {
-            "text": "NASA planned contingency cryogenic demonstrations and proposed late\u2011September launch dates (e.g., Sept. 23 and Sept. 27) contingent on Range approval to avoid rollback.",
-            "supported": true
-          },
-          {
-            "text": "NASA evaluated doing repairs at the pad (with environmental/enclosure tradeoffs) versus rolling back to the VAB to perform retest/repair.",
+            "text": "NASA planned that, if they could not meet the retest interval on pad (e.g., past the specified date), they would roll back and retest the FTS (noting a rollback after the interval such as after Sept. 6).",
             "supported": true
           }
         ]
@@ -757,23 +643,23 @@
         "surfaced_evidence": [
           {
             "video_id": "m-z-019f9fbb-56b0-7f73-b10c-cd09e26e3b71",
-            "start": 34.56,
-            "end": 40.92
+            "start": 1374.37,
+            "end": 1378.37
           },
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 451.32,
-            "end": 456.76
+            "start": 457.0,
+            "end": 464.66
           },
           {
             "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 2358.0,
-            "end": 2368.24
+            "start": 2776.54,
+            "end": 2785.91
           },
           {
             "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 996.0,
-            "end": 1008.02
+            "start": 2429.61,
+            "end": 2436.65
           },
           {
             "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
@@ -792,23 +678,23 @@
             "supported": true
           },
           {
-            "text": "The 2022-09-02 source states The two hour launch window opens tomorrow, September 3rd at 2:17pm Eastern Time, while the 2022-11-16 source states And this morning at 1:47am NASA's Space Launch System rocket and Orion spacecraft lifted off from Kennedy's historic launch pad 39B.",
+            "text": "The 2022-09-02 source gives scheduled for launch window length; the 2022-09-08 source gives planned.",
             "supported": true
           },
           {
-            "text": "On 2022-09-03 the archive introduces: Mission Management Team meeting on the 1st to review our readiness to head into this launch attempt.",
+            "text": "On 2022-09-03 the archive introduces: The launch operations team out of the Launch Control center stayed in the launch countdown following the attempt on Monday.",
             "supported": true
           },
           {
-            "text": "On 2022-09-08 the archive introduces: The 80 minutes I mentioned for the 23rd of September is 80 minutes where we'll be lit at launch.",
-            "supported": true
-          },
-          {
-            "text": "On 2022-09-19 the archive introduces: Assuming the cryo demonstration meets the objectives that were outlined by tomorrow, we will set up for a launch attempt as early as Tuesday the 27th.",
+            "text": "On 2022-09-19 the archive introduces: So there's really no concern with a 70 minute window versus a full 120 minute window.",
             "supported": true
           },
           {
             "text": "On 2022-09-30 the archive introduces: On the night of September 26, the team at our Kennedy Space center began moving our Artemis I moon rocket from launch pad 39B back to the Vehicle Assembly Building or VAB.",
+            "supported": true
+          },
+          {
+            "text": "On 2022-11-16 the archive introduces: And this morning at 1:47am NASA's Space Launch System rocket and Orion spacecraft lifted off from Kennedy's historic launch pad 39B.",
             "supported": true
           }
         ]
@@ -820,20 +706,11 @@
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
             "start": 77.27,
             "end": 87.18
-          },
-          {
-            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 607.95,
-            "end": 613.15
           }
         ],
         "propositions": [
           {
-            "text": "This answer rests on 2 timestamped moments across 1 source video, 2022-09-03.",
-            "supported": true
-          },
-          {
-            "text": "On 2022-09-03 the archive introduces: What we do know is that we saw a large leak at the 8 inch quick disconnect today.",
+            "text": "This answer rests on 1 timestamped moment across 1 source video, 2022-09-03.",
             "supported": true
           }
         ]
@@ -847,27 +724,32 @@
             "end": 166.05
           },
           {
-            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
-            "start": 479.62,
-            "end": 495.52
-          },
-          {
             "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
             "start": 259.72,
             "end": 269.88
+          },
+          {
+            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+            "start": 527.82,
+            "end": 535.98
+          },
+          {
+            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
+            "start": 965.35,
+            "end": 978.4
           }
         ],
         "propositions": [
           {
-            "text": "This answer rests on 3 timestamped moments across 2 source videos, 2022-09-08 to 2022-09-19.",
-            "supported": true
-          },
-          {
-            "text": "On 2022-09-08 the archive introduces: The repair is basically, basically to remove and replace als on the 8 inch fill and drain, quick disconnect, and then also the 4 inch bleed QD that are both at that flight to ground Interface between the LH2 tail surface mast, umbilical or TSMU and the core stage.",
+            "text": "This answer rests on 4 timestamped moments across 2 source videos, 2022-09-08 to 2022-09-19.",
             "supported": true
           },
           {
             "text": "On 2022-09-19 the archive introduces: Teams are now preparing to test the seals and demonstrate updated loading procedures under the cryogenic or super cold conditions that the systems will experience on launch day.",
+            "supported": true
+          },
+          {
+            "text": "On 2022-09-19 the archive introduces: So the team has since worked through that and also proposed to test this new loading operation as well as to confirm the integrity of the seal under cryogenic conditions.",
             "supported": true
           }
         ]
@@ -876,6 +758,16 @@
         "case_id": "hurricane_ian_rollback",
         "surfaced_evidence": [
           {
+            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+            "start": 1964.49,
+            "end": 1968.49
+          },
+          {
+            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+            "start": 1999.51,
+            "end": 2006.91
+          },
+          {
             "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
             "start": 131.72,
             "end": 138.52
@@ -883,7 +775,15 @@
         ],
         "propositions": [
           {
-            "text": "This answer rests on 1 timestamped moment across 1 source video, 2022-09-30.",
+            "text": "This answer rests on 3 timestamped moments across 2 source videos, 2022-09-08 to 2022-09-30.",
+            "supported": true
+          },
+          {
+            "text": "On 2022-09-08 the archive introduces: We might be rolling back from even say a tropical event.",
+            "supported": true
+          },
+          {
+            "text": "On 2022-09-08 the archive introduces: Whether those rollbacks are during tropical events or whether there are more benign winds, which is what we've experienced currently today.",
             "supported": true
           },
           {
@@ -899,15 +799,42 @@
             "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
             "start": 103.49,
             "end": 113.41
+          },
+          {
+            "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+            "start": 352.69,
+            "end": 366.62
+          },
+          {
+            "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+            "start": 756.68,
+            "end": 762.2
+          },
+          {
+            "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+            "start": 763.56,
+            "end": 768.92
           }
         ],
         "propositions": [
           {
-            "text": "This answer rests on 1 timestamped moment across 1 source video, 2022-11-16.",
+            "text": "This answer rests on 4 timestamped moments across 1 source video, 2022-11-16.",
             "supported": true
           },
           {
             "text": "On 2022-11-16 the archive introduces: And this morning at 1:47am NASA's Space Launch System rocket and Orion spacecraft lifted off from Kennedy's historic launch pad 39B.",
+            "supported": true
+          },
+          {
+            "text": "On 2022-11-16 the archive introduces: We do have a priority one mission in play because of their work today, we got to witness the world's most powerful rocket take the Earth by its edges and shake the wicked out of it.",
+            "supported": true
+          },
+          {
+            "text": "On 2022-11-16 the archive introduces: This evening we got to see a truly exciting launch that I think is the beginning of a really exciting mission.",
+            "supported": true
+          },
+          {
+            "text": "On 2022-11-16 the archive introduces: The LCC team just did a flawless job getting through tanking and getting to lift off.",
             "supported": true
           }
         ]
@@ -976,33 +903,15 @@
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
             "start": 601.59,
             "end": 607.55
-          },
-          {
-            "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 607.95,
-            "end": 613.15
-          },
-          {
-            "video_id": "m-z-019f9fbd-2c83-73b2-8935-2c71e6155ec4",
-            "start": 2166.88,
-            "end": 2176.56
           }
         ],
         "propositions": [
           {
-            "text": "This answer rests on 4 timestamped moments across 2 source videos, 2022-09-03 to 2022-09-19.",
+            "text": "This answer rests on 2 timestamped moments across 1 source video, 2022-09-03.",
             "supported": true
           },
           {
             "text": "On 2022-09-03 the archive introduces: It's too early to tell exactly whether that was the cause of the hydrogen leak that we had today.",
-            "supported": true
-          },
-          {
-            "text": "On 2022-09-03 the archive introduces: What we do know is that we saw a large leak at the 8 inch quick disconnect today.",
-            "supported": true
-          },
-          {
-            "text": "On 2022-09-19 the archive introduces: And so that's really a multivariate approach to something that I don't know if we'll ever know conclusively exactly how that happened, how we had successful loading operations in the first attempt.",
             "supported": true
           }
         ]
@@ -1042,22 +951,44 @@
         "surfaced_evidence": [
           {
             "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
-            "start": 77.27,
-            "end": 87.18
+            "start": 613.31,
+            "end": 619.79
+          },
+          {
+            "video_id": "m-z-019f9fbc-2924-72d1-8eb7-afc71970ccb1",
+            "start": 1999.51,
+            "end": 2006.91
           },
           {
             "video_id": "m-z-019f9fa6-c23b-7be3-8a1e-58ddc33fe8c6",
             "start": 131.72,
             "end": 138.52
+          },
+          {
+            "video_id": "m-z-019f9fbe-433d-7290-bd51-c3820d24b093",
+            "start": 2918.57,
+            "end": 2939.43
           }
         ],
         "propositions": [
           {
-            "text": "This answer rests on 2 timestamped moments across 2 source videos, 2022-09-03 to 2022-09-30.",
+            "text": "This answer rests on 4 timestamped moments across 4 source videos, 2022-09-03 to 2022-11-16.",
             "supported": true
           },
           {
-            "text": "The 2022-09-03 source states This morning, NASA waved off the Artemis 1 launch attempt after teams encountered a liquid hydrogen leak while filling propellant into the core stage of the SLS rocket, while the 2022-09-30 source adds The next morning managers decided on the rollback due to weather predictions related to Hurricane Ian.",
+            "text": "On 2022-09-03 the archive introduces: That leak started when we went from the slow fill to the fast fill.",
+            "supported": true
+          },
+          {
+            "text": "On 2022-09-08 the archive introduces: Whether those rollbacks are during tropical events or whether there are more benign winds, which is what we've experienced currently today.",
+            "supported": true
+          },
+          {
+            "text": "On 2022-09-30 the archive introduces: The next morning managers decided on the rollback due to weather predictions related to Hurricane Ian.",
+            "supported": true
+          },
+          {
+            "text": "On 2022-11-16 the archive introduces: I think that the real delay ... really was a byproduct of needing to send the Red Crew out to the pad.",
             "supported": true
           }
         ]

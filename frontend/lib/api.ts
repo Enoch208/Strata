@@ -4,6 +4,7 @@ import type {
   Health,
   Investigation,
   ReelRef,
+  SubmissionProof,
 } from "./types";
 
 const configuredBase = process.env.NEXT_PUBLIC_API_BASE_URL?.trim();
@@ -87,6 +88,10 @@ export function getHealth(): Promise<Health> {
 
 export function getArchive(): Promise<Archive> {
   return requestJson("/api/archive");
+}
+
+export function getProof(): Promise<SubmissionProof> {
+  return requestJson("/api/proof");
 }
 
 export function createInvestigation(

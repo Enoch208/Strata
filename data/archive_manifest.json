@@ -162,28 +162,6 @@
       }
     }
   ],
-  "verified_windows": [
-    {
-      "pass": "initial",
-      "video_slug": "sep03-post-scrub-news-conference",
-      "start": 86.0,
-      "end": 101.0,
-      "establishes": "NASA waived off the 3 Sep attempt after a liquid-hydrogen leak during propellant loading",
-      "does_not_establish": "That the leak, by itself, explains the eventual November launch date",
-      "verified_against": "NASA first-party timed caption track",
-      "verified_on": "2026-07-26"
-    },
-    {
-      "pass": "challenge",
-      "video_slug": "sep30-this-week-at-nasa-rollback",
-      "start": 115.0,
-      "end": 139.0,
-      "establishes": "The team moved Artemis I back to the VAB on 26-27 Sep, and managers chose rollback because of Hurricane Ian weather predictions",
-      "does_not_establish": "That Hurricane Ian was the sole cause of every delay through November",
-      "verified_against": "NASA first-party timed caption track",
-      "verified_on": "2026-07-26"
-    }
-  ],
   "index_names": {
     "claim_events": "claim_events_v1",
     "timeline_findings": "timeline_findings_v1"

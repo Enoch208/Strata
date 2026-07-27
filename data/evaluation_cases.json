@@ -180,7 +180,7 @@
   },
   {
     "case_id": "seeded_leak_only_challenge",
-    "question": "Did the September 3 hydrogen leak fully explain why Artemis I launched in November? Trace the evidence.",
+    "question": "Why was Artemis I’s September 3 launch attempt scrubbed?",
     "expected_evidence": [
       {
         "video_id": "m-z-019f9fa5-dca0-7d03-b2f4-094ed47f6570",
@@ -195,8 +195,7 @@
     ],
     "expected_min_events": 2,
     "allowed_labels": [
-      "new_information",
-      "potential_tension"
+      "new_information"
     ],
     "disallowed_unsupported_claims": [
       "The hydrogen leak fully caused the move to November.",

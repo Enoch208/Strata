@@ -108,7 +108,7 @@ function SourcesRoute() {
 }
 
 function EvidenceRoute() {
-  const { work } = useInvestigateContext();
+  const { work, archiveState } = useInvestigateContext();
   const investigation = work.investigation;
 
   if (investigation?.state !== "complete") {
@@ -139,6 +139,8 @@ function EvidenceRoute() {
       <InvestigationWorkspace
         key={investigation.investigation_id}
         investigation={investigation}
+        archive={archiveState.archive}
+        proof={archiveState.proof}
         challengeBusy={work.challengeBusy}
         challengeError={work.challengeError}
         reelState={work.reelState}

@@ -78,6 +78,7 @@ class Investigation(BaseModel):
     query: str
     state: InvestigationState
     created_at: datetime
+    initial_queries: list[str] = Field(default_factory=list)
     summary_sentences: list[SourcedSentence] = Field(default_factory=list)
     findings: list[TimelineFinding] = Field(default_factory=list)
     relations: list[ClaimRelation] = Field(default_factory=list)

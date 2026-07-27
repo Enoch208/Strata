@@ -26,7 +26,9 @@ from .manifest import ArchiveManifest, load_manifest
 from .retrieval.challenge_filter import (
     classify_outcome,
     rank_candidates,
+    reject_redundant_reasons,
     reject_reused_events,
+    select_relevant_candidates,
 )
 from .retrieval.counter_queries import generate_counter_queries
 from .retrieval.hydrate import HydrationResult, hydrate_hits
@@ -190,6 +192,7 @@ class InvestigationEngine:
         try:
             adapter = self._adapter_factory(manifest)
             investigation.state = InvestigationState.retrieving
+            investigation.initial_queries = _query_variants(investigation.query)
             hits = self._search(
                 adapter,
                 investigation.query,
@@ -197,11 +200,6 @@ class InvestigationEngine:
             )
             hydrated = hydrate_hits(hits)
             events = dedupe_events(hydrated.events)
-            events = _apply_seeded_initial_fixture(
-                events,
-                manifest,
-                investigation.query,
-            )
 
             if not events:
                 return self._mark_insufficient(
@@ -295,18 +293,16 @@ class InvestigationEngine:
             investigation.findings,
             investigation.events,
         )
-        if _is_seeded_query(investigation.query):
-            window = manifest.verified_window("challenge")
-            if window is not None:
-                queries[-1] = (
-                    "Find a different or additional reason omitted by the current "
-                    f"answer. Search for footage establishing: {window.establishes}"
-                )
 
         combined = HydrationResult()
         rejected: list[RejectedCandidate] = []
         for query_index, query in enumerate(queries):
-            hits = self._search(adapter, query, manifest.index_names.claim_events)
+            hits = self._search(
+                adapter,
+                query,
+                manifest.index_names.claim_events,
+                expand=False,
+            )
             hydrated = hydrate_hits(hits)
             _merge_hydration(combined, hydrated)
             rejected.extend(
@@ -322,16 +318,17 @@ class InvestigationEngine:
         )
         candidates, reused = reject_reused_events(candidates, initial_event_ids)
         rejected.extend(reused)
+        candidates, redundant = reject_redundant_reasons(
+            candidates,
+            investigation.events,
+        )
+        rejected.extend(redundant)
+        candidates, low_relevance = select_relevant_candidates(candidates)
+        rejected.extend(low_relevance)
 
         candidate_events = dedupe_events(
             [candidate.event for candidate in candidates]
         )
-        if _is_seeded_query(investigation.query):
-            candidate_events, fixture_rejections = _apply_seeded_challenge_fixture(
-                candidate_events,
-                manifest,
-            )
-            rejected.extend(fixture_rejections)
         candidate_ids = {event.event_id for event in candidate_events}
         candidate_hits = {
             event_id: hit
@@ -391,30 +388,6 @@ class InvestigationEngine:
         ]
         challenge_video_ids = _video_ids(accepted_candidate_events)
 
-        if (
-            _is_seeded_query(investigation.query)
-            and accepted
-            and not any(
-                video_id not in set(initial_video_ids)
-                for video_id in challenge_video_ids
-            )
-        ):
-            rejected.extend(
-                RejectedCandidate(
-                    event_id=event.event_id,
-                    reason=(
-                        "seeded challenge requires evidence from a source video "
-                        "unused by the initial answer"
-                    ),
-                )
-                for event in accepted_candidate_events
-            )
-            accepted = []
-            accepted_relations = []
-            accepted_candidate_ids = set()
-            accepted_candidate_events = []
-            challenge_video_ids = []
-
         outcome = classify_outcome(
             accepted,
             [relation.relation_type for relation in accepted_relations],
@@ -428,6 +401,7 @@ class InvestigationEngine:
         result = ChallengeResult(
             challenge_id=self._id_factory("challenge"),
             prompt=instruction.strip() or "Challenge this conclusion",
+            initial_queries=investigation.initial_queries,
             counter_queries=queries,
             accepted_finding_ids=[finding.finding_id for finding in accepted],
             rejected_candidates=_unique_rejections(rejected),
@@ -557,9 +531,14 @@ class InvestigationEngine:
         )
 
     def _search(
-        self, adapter: VideoDBAdapter, query: str, index_name: str
+        self,
+        adapter: VideoDBAdapter,
+        query: str,
+        index_name: str,
+        *,
+        expand: bool = True,
     ) -> list[Any]:
-        variants = _query_variants(query)
+        variants = _query_variants(query) if expand else [query]
         claim_hits: list[Any] = []
         for variant_index, search_query in enumerate(variants):
             result = adapter.semantic_search(
@@ -754,15 +733,6 @@ def _is_missing_index_error(error: Exception) -> bool:
     )
 
 
-def _is_seeded_query(query: str) -> bool:
-    lowered = query.lower()
-    return (
-        "hydrogen" in lowered
-        and "leak" in lowered
-        and "november" in lowered
-    )
-
-
 def _filter_low_relevance_hits(query: str, hits: list[Any]) -> list[Any]:
     """Drop weak semantic matches and reject uncovered query-specific terms."""
     if not hits:
@@ -886,28 +856,18 @@ def _expand_query(query: str) -> str:
 
 
 def _retrieval_expansions(query: str) -> list[str]:
-    """Return focused archive-language searches for common claim formulations."""
+    """Return compact semantic synonyms without encoding source records."""
     lowered = query.lower()
     expansions: list[str] = []
-    if ("hydrogen" in lowered or "scrub" in lowered) and any(
-        term in lowered for term in ("september 3", "scrub", "cause", "explain")
-    ):
+    if "hydrogen" in lowered or "scrub" in lowered:
         expansions.append(
-            "NASA waved off the September 3 launch attempt after teams detected a "
-            "liquid hydrogen leak while loading the rocket."
-        )
-        expansions.append(
-            "We saw a large leak at the 8 inch quick disconnect. The leak started "
-            "when we went from slow fill to fast fill."
+            "launch attempt scrubbed liquid hydrogen leak propellant loading "
+            "quick disconnect"
         )
     if "seal" in lowered and any(term in lowered for term in ("repair", "test")):
         expansions.append(
-            "The repair is to remove and replace seals on the 8 inch fill and drain "
-            "quick disconnect and the 4 inch bleed quick disconnect."
-        )
-        expansions.append(
-            "Test the new seals and updated loading procedures under cryogenic "
-            "conditions in a cryogenic demonstration."
+            "repair replace seals quick disconnect cryogenic demonstration "
+            "loading procedure test"
         )
     if "ready" in lowered and any(
         term in lowered for term in ("consistent", "consistently")
@@ -918,48 +878,22 @@ def _retrieval_expansions(query: str) -> list[str]:
     if "pressurization" in lowered and any(
         term in lowered for term in ("conclusive", "conclusively", "cause")
     ):
-        expansions.append(
-            "It is too early to tell exactly whether that was the cause of the "
-            "hydrogen leak that we had today."
-        )
-        expansions.append(
-            "That is really a multivariate approach to something that I do not "
-            "know if we will ever know conclusively exactly how that happened, "
-            "how we had successful loading operations in the first attempt."
-        )
+        expansions.append("uncertain inconclusive multivariate leak cause")
     if "launch date" in lowered and "change" in lowered:
-        expansions.extend(
-            (
-                "The two hour launch window opens tomorrow, September 3 at "
-                "2:17pm Eastern Time.",
-                "Assuming the cryogenic demonstration meets its objectives, "
-                "we will set up for a launch attempt as early as Tuesday the 27th.",
-                "This morning at 1:47am NASA's Space Launch System rocket and "
-                "Orion spacecraft lifted off from launch pad 39B.",
-            )
-        )
+        expansions.append("scheduled launch attempt window changed liftoff")
     if "final launch status" in lowered or (
-        "november 16" in lowered
+        "final" in lowered
         and any(term in lowered for term in ("launch", "liftoff", "status"))
     ):
-        expansions.append(
-            "This morning at 1:47am NASA's Space Launch System rocket and "
-            "Orion spacecraft lifted off from launch pad 39B."
-        )
+        expansions.append("successful launch liftoff final status")
     if "hurricane" in lowered and any(
         term in lowered for term in ("rollback", "weather", "sole")
     ):
-        expansions.append(
-            "The next morning managers decided on the rollback due to "
-            "weather predictions related to Hurricane Ian."
-        )
+        expansions.append("weather hurricane rollback vehicle assembly building")
     if "sole" in lowered and any(
         term in lowered for term in ("hurricane", "weather")
     ):
-        expansions.append(
-            "NASA waved off the September 3 launch attempt after teams "
-            "encountered a liquid hydrogen leak while loading the rocket."
-        )
+        expansions.append("other technical cause leak testing range delay")
     return expansions
 
 
@@ -996,8 +930,7 @@ def _merge_search_hits(hits: list[Any]) -> list[Any]:
 
 
 def _source_date_constraint(query: str) -> str | None:
-    lowered = query.lower()
-    if "report on" not in lowered and "reported on" not in lowered:
+    if _is_temporal_comparison(query):
         return None
     parsed = normalize_date(query, default_year=2022)
     return parsed.isoformat() if parsed else None
@@ -1111,81 +1044,3 @@ def _stem(token: str) -> str:
                 stem = stem[:-1]
             return stem
     return token
-
-
-def _apply_seeded_initial_fixture(
-    events: list[ClaimEvent],
-    manifest: ArchiveManifest,
-    query: str,
-) -> list[ClaimEvent]:
-    """Keep the seeded first pass source-separated from its challenge fixture.
-
-    The PRD pins this judge-facing interaction: the first pass establishes the
-    3 September scrub, while the separate challenge must discover the unused
-    30 September rollback source. This policy filters real retrieved records;
-    it never inserts a claim or timestamp that retrieval did not return.
-    """
-    if not _is_seeded_query(query):
-        return events
-    window = manifest.verified_window("initial")
-    if window is None:
-        return events
-    source = manifest.by_slug(window.video_slug)
-    if source is None or not source.video_id:
-        return []
-    return [
-        event
-        for event in events
-        if event.video_id == source.video_id
-        and _overlaps(
-            event.start,
-            event.end,
-            window.start,
-            window.end,
-        )
-    ]
-
-
-def _apply_seeded_challenge_fixture(
-    events: list[ClaimEvent],
-    manifest: ArchiveManifest,
-) -> tuple[list[ClaimEvent], list[RejectedCandidate]]:
-    """Source-lock the seeded counter-pass to its verified unused window."""
-    window = manifest.verified_window("challenge")
-    if window is None:
-        return events, []
-    source = manifest.by_slug(window.video_slug)
-    if source is None or not source.video_id:
-        return [], [
-            RejectedCandidate(
-                event_id=event.event_id,
-                reason="the seeded challenge source is unavailable in the manifest",
-            )
-            for event in events
-        ]
-
-    accepted: list[ClaimEvent] = []
-    rejected: list[RejectedCandidate] = []
-    for event in events:
-        if event.video_id == source.video_id and _overlaps(
-            event.start,
-            event.end,
-            window.start,
-            window.end,
-        ) and (
-            str(event.claim_type) == "delay_reason"
-            or str(event.status) == "rolled_back"
-        ):
-            accepted.append(event)
-        else:
-            rejected.append(
-                RejectedCandidate(
-                    event_id=event.event_id,
-                    reason=(
-                        "seeded challenge requires evidence from a source video "
-                        "unused by the initial answer and within the verified "
-                        "30 September window"
-                    ),
-                )
-            )
-    return accepted, rejected

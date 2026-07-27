@@ -10,6 +10,7 @@ The outcome is derived from the accepted relations, never asserted by a model.
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 from ..schemas.claim_event import ClaimEvent
@@ -26,6 +27,7 @@ _QUALIFYING_RELATIONS = frozenset(
 
 #: How much a novel source is boosted when ranking challenge candidates.
 NOVEL_SOURCE_BOOST = 0.35
+CHALLENGE_SCORE_GAP = 0.06
 
 
 @dataclass(frozen=True)
@@ -86,6 +88,83 @@ def reject_reused_events(
     return kept, rejected
 
 
+def reject_redundant_reasons(
+    candidates: list[ScoredCandidate],
+    initial_events: list[ClaimEvent],
+) -> tuple[list[ScoredCandidate], list[RejectedCandidate]]:
+    """Reject a second clip that merely restates an already accepted reason.
+
+    Counter-retrieval is looking for an omitted cause, limit, or correction.
+    A different timestamp repeating the same normalized reason is useful
+    corroboration, but it is not counter-evidence.
+    """
+    initial_reason_tokens: dict[str, set[str]] = {}
+    for event in initial_events:
+        if str(event.claim_type) != "delay_reason":
+            continue
+        tokens = _reason_tokens(event.normalized_value or event.reason or "")
+        if tokens:
+            initial_reason_tokens.setdefault(event.subject.strip().lower(), set()).update(
+                tokens
+            )
+
+    kept: list[ScoredCandidate] = []
+    rejected: list[RejectedCandidate] = []
+    for candidate in candidates:
+        event = candidate.event
+        known = initial_reason_tokens.get(event.subject.strip().lower(), set())
+        candidate_text = " ".join(
+            value
+            for value in (
+                event.normalized_value,
+                event.reason,
+                event.claim_text,
+            )
+            if value
+        )
+        if known and known & _reason_tokens(candidate_text):
+            rejected.append(
+                RejectedCandidate(
+                    event_id=event.event_id,
+                    reason="restates a delay reason already accepted in the initial answer",
+                )
+            )
+            continue
+        kept.append(candidate)
+    return kept, rejected
+
+
+def select_relevant_candidates(
+    candidates: list[ScoredCandidate],
+) -> tuple[list[ScoredCandidate], list[RejectedCandidate]]:
+    """Keep the strongest challenge relevance band after novelty boosting."""
+    if not candidates:
+        return [], []
+    best = max(candidate.score for candidate in candidates)
+    kept: list[ScoredCandidate] = []
+    rejected: list[RejectedCandidate] = []
+    for candidate in candidates:
+        if candidate.score >= best - CHALLENGE_SCORE_GAP:
+            kept.append(candidate)
+        else:
+            rejected.append(
+                RejectedCandidate(
+                    event_id=candidate.event.event_id,
+                    reason="below the strongest counter-evidence relevance band",
+                )
+            )
+    return kept, rejected
+
+
+def _reason_tokens(value: str) -> set[str]:
+    ignored = {"cause", "delay", "reason", "launch", "artemis", "attempt"}
+    return {
+        token
+        for token in re.findall(r"[a-z0-9]+", value.lower().replace("_", " "))
+        if len(token) >= 4 and token not in ignored
+    }
+
+
 def classify_outcome(
     accepted_findings: list[TimelineFinding],
     relation_types: list[RelationType],
@@ -127,7 +206,7 @@ def has_novel_source(
 ) -> bool:
     """True when at least one accepted challenge event comes from an unused video.
 
-    This is the seeded fixture's pass/fail condition (PRD CTR-07): a challenge
-    that only recycles first-pass footage fails the demo even if it reads well.
+    The frozen evaluation uses this as a pass/fail condition: a challenge that
+    only recycles first-pass footage fails source-novelty even if it reads well.
     """
     return any(event.video_id not in initial_video_ids for event in accepted_events)

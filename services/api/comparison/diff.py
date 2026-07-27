@@ -163,7 +163,7 @@ def _compare_pair(
 
     # Reasons and explanations are not mutually exclusive structured states.
     # A second reason can qualify the first without replacing it, which is the
-    # central distinction in the seeded Artemis challenge. Treat differing
+    # central distinction in multi-cause investigations. Treat differing
     # reason tokens conservatively even when extraction normalized both.
     if earlier.claim_type is ClaimType.delay_reason:
         if earlier_value == later_value:
@@ -180,7 +180,7 @@ def _compare_pair(
             )
         return _build(
             pair_id,
-            FindingLabel.potential_tension,
+            FindingLabel.new_information,
             RelationType.contextualizes,
             f"A later source adds context to the reason for {subject}",
             f"The {earlier.source_date} source states {earlier.claim_text.rstrip('.')}, "

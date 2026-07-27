@@ -1,9 +1,10 @@
 import type {
   ChallengeResult,
   Finding,
+  Shot,
   SourcedSentence,
 } from "@/lib/types";
-import { formatDate, outcomeTone, words } from "@/lib/format";
+import { formatDate, formatWindow, outcomeTone, words } from "@/lib/format";
 import { Icon } from "./icon";
 
 type Props = {
@@ -11,6 +12,7 @@ type Props = {
   busy: boolean;
   sentences: SourcedSentence[];
   findings: Finding[];
+  shots: Shot[];
   error: string | null;
   onRetry: () => void;
 };
@@ -20,6 +22,7 @@ export function ChallengePanel({
   busy,
   sentences,
   findings,
+  shots,
   error,
   onRetry,
 }: Props) {
@@ -70,6 +73,13 @@ export function ChallengePanel({
   );
   const accepted = findings.filter((finding) =>
     challenge.accepted_finding_ids.includes(finding.finding_id),
+  );
+  const initial = new Set(challenge.initial_accepted_video_ids);
+  const overlap = challenge.challenge_accepted_video_ids.filter((id) =>
+    initial.has(id),
+  ).length;
+  const novelShots = shots.filter((shot) =>
+    challenge.novel_accepted_video_ids.includes(shot.video_id),
   );
 
   return (
@@ -123,7 +133,10 @@ export function ChallengePanel({
                 <Icon name="archive" className="size-4" />
               </span>
               <div>
-                <p className="text-sm font-medium text-white">New source reached</p>
+                <p className="text-sm font-medium text-white">
+                  {challenge.novel_accepted_video_ids.length} new source
+                  {challenge.novel_accepted_video_ids.length === 1 ? "" : "s"} discovered
+                </p>
                 <p className="mt-1 text-xs text-white/40">
                   The challenge accepted footage absent from the first pass.
                 </p>
@@ -136,31 +149,74 @@ export function ChallengePanel({
                 </code>
               ))}
             </div>
+            {novelShots.map((shot) => (
+              <a
+                key={shot.event_id}
+                href={shot.player_url ?? shot.stream_url ?? shot.source_url}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 flex items-center justify-between rounded-lg border border-emerald-300/15 bg-black/20 px-3 py-2 text-[10px] text-emerald-100/70"
+              >
+                <span>
+                  {formatDate(shot.source_date)} · {shot.video_title}
+                </span>
+                <strong>{formatWindow(shot.start, shot.end)}</strong>
+              </a>
+            ))}
           </div>
         </>
       )}
 
-      <details className="audit-details mt-5">
-        <summary>Inspect source sets and counter-queries</summary>
-        <div className="mt-4 grid gap-4 lg:grid-cols-3">
-          <SourceSet title="Initial pass" ids={challenge.initial_accepted_video_ids} />
+      <div className="mt-5 grid gap-3 sm:grid-cols-3">
+        <AuditMetric
+          label="Initial sources"
+          value={`${challenge.initial_accepted_video_ids.length} video${challenge.initial_accepted_video_ids.length === 1 ? "" : "s"}`}
+        />
+        <AuditMetric
+          label="Challenge sources"
+          value={`${challenge.novel_accepted_video_ids.length} new video${challenge.novel_accepted_video_ids.length === 1 ? "" : "s"}`}
+        />
+        <AuditMetric label="Source overlap" value={String(overlap)} />
+      </div>
+
+      <div className="audit-details mt-5 rounded-xl border border-white/10 bg-black/15 p-4">
+        <p className="text-xs font-medium text-white/70">Challenge retrieval audit</p>
+        <div className="mt-4 grid gap-5 lg:grid-cols-2">
+          <QuerySet title="Initial search queries" queries={challenge.initial_queries} />
+          <QuerySet title="Challenge counter-queries" queries={challenge.counter_queries} />
           <SourceSet
-            title="Challenge pass"
+            title="Initial accepted video IDs"
+            ids={challenge.initial_accepted_video_ids}
+          />
+          <SourceSet
+            title="Challenge accepted video IDs"
             ids={challenge.challenge_accepted_video_ids}
           />
-          <div>
-            <p className="detail-label">Counter-queries</p>
-            <ol className="mt-2 space-y-2 text-xs leading-5 text-white/45">
-              {challenge.counter_queries.map((query, index) => (
-                <li key={`${query}-${index}`}>{query}</li>
-              ))}
-            </ol>
+          <div className="lg:col-span-2">
+            <p className="detail-label">Rejected challenge candidates</p>
+            {challenge.rejected_candidates.length ? (
+              <div className="mt-2 space-y-2">
+                {challenge.rejected_candidates.map((candidate, index) => (
+                  <div
+                    key={`${candidate.event_id}-${index}`}
+                    className="grid gap-1 rounded-lg border border-white/5 bg-white/[0.02] p-2 text-[10px] sm:grid-cols-[minmax(120px,.35fr)_1fr]"
+                  >
+                    <code className="break-all text-white/45">{candidate.event_id}</code>
+                    <span className="text-white/35">{candidate.reason}</span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="mt-2 text-[10px] text-white/35">
+                No rejected candidates in this pass.
+              </p>
+            )}
           </div>
         </div>
         <p className="mt-4 text-[10px] text-white/30">
           Searched {formatDate(challenge.searched_at.slice(0, 10))}
         </p>
-      </details>
+      </div>
     </section>
   );
 }
@@ -176,6 +232,31 @@ function SourceSet({ title, ids }: { title: string; ids: string[] }) {
           </code>
         ))}
       </div>
+    </div>
+  );
+}
+
+function QuerySet({ title, queries }: { title: string; queries: string[] }) {
+  return (
+    <div>
+      <p className="detail-label">{title}</p>
+      <ol className="mt-2 space-y-2 text-[10px] leading-5 text-white/45">
+        {queries.map((query, index) => (
+          <li key={`${query}-${index}`}>
+            <span className="mr-2 text-white/20">{index + 1}.</span>
+            {query}
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+function AuditMetric({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-xl border border-white/10 bg-white/[0.025] p-3">
+      <p className="detail-label">{label}</p>
+      <strong className="mt-2 block text-lg font-light text-white/85">{value}</strong>
     </div>
   );
 }

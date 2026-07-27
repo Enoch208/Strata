@@ -1,12 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { getArchive, getHealth } from "@/lib/api";
-import type { Archive, Health } from "@/lib/types";
+import { getArchive, getHealth, getProof } from "@/lib/api";
+import type { Archive, Health, SubmissionProof } from "@/lib/types";
 
 export function useArchive() {
   const [archive, setArchive] = useState<Archive | null>(null);
   const [health, setHealth] = useState<Health | null>(null);
+  const [proof, setProof] = useState<SubmissionProof | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -31,13 +32,16 @@ export function useArchive() {
           caught instanceof Error ? caught.message : "Archive unavailable.",
         );
       });
-    await Promise.allSettled([archiveRequest, healthRequest]);
+    const proofRequest = getProof()
+      .then(setProof)
+      .catch(() => setProof(null));
+    await Promise.allSettled([archiveRequest, healthRequest, proofRequest]);
     setLoading(false);
   }, []);
 
   useEffect(() => {
     let active = true;
-    let pending = 2;
+    let pending = 3;
     const finish = () => {
       pending -= 1;
       if (active && pending === 0) setLoading(false);
@@ -69,6 +73,15 @@ export function useArchive() {
       })
       .finally(finish);
 
+    getProof()
+      .then((nextProof) => {
+        if (active) setProof(nextProof);
+      })
+      .catch(() => {
+        if (active) setProof(null);
+      })
+      .finally(finish);
+
     return () => {
       active = false;
     };
@@ -79,5 +92,5 @@ export function useArchive() {
     health?.videodb === "connected" &&
     health.archive_indexed;
 
-  return { archive, health, loading, error, ready, load };
+  return { archive, health, proof, loading, error, ready, load };
 }

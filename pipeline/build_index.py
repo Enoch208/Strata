@@ -208,27 +208,15 @@ def _timeline_events(
 
     The custom claim index retains every validated record. The aggregate
     finding index is narrower: it materializes comparisons about the locked
-    archive subject, plus explicit corrections and the manually verified
-    fixture windows. This keeps evidence-gated stream verification bounded
+    archive subject plus explicit corrections. This keeps evidence-gated
+    stream verification bounded
     while every underlying claim remains searchable.
     """
-    verified: list[tuple[str, float, float]] = []
-    for window in manifest.verified_windows:
-        video = manifest.by_slug(window.video_slug)
-        if video and video.video_id:
-            verified.append((video.video_id, window.start, window.end))
-
     return [
         event
         for event in events
         if event.subject.strip().lower() == "artemis i launch"
         or str(event.claim_type) == "correction"
-        or any(
-            event.video_id == video_id
-            and event.start < end
-            and start < event.end
-            for video_id, start, end in verified
-        )
     ]
 
 

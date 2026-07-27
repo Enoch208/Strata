@@ -36,6 +36,7 @@ class ChallengeResult(BaseModel):
     challenge_id: str
     schema_version: str = CHALLENGE_SCHEMA_VERSION
     prompt: str = "Challenge this conclusion"
+    initial_queries: list[str] = Field(default_factory=list)
     counter_queries: list[str] = Field(min_length=3, max_length=5)
     accepted_finding_ids: list[str] = Field(default_factory=list)
     rejected_candidates: list[RejectedCandidate] = Field(default_factory=list)

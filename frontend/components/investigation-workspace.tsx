@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import type { Investigation, ReelState, SourcedSentence } from "@/lib/types";
+import type {
+  Archive,
+  Investigation,
+  ReelState,
+  SourcedSentence,
+  SubmissionProof,
+} from "@/lib/types";
 import { eventFor, shotFor } from "@/lib/format";
 import { packetUrl } from "@/lib/api";
 import { ChallengePanel } from "./challenge-panel";
@@ -12,9 +18,12 @@ import { Icon } from "./icon";
 import { ReelPanel } from "./reel-panel";
 import { SourceDetails } from "./source-details";
 import { SummaryPanel } from "./summary-panel";
+import { SubmissionProofPanel } from "./submission-proof-panel";
 
 type Props = {
   investigation: Investigation;
+  archive: Archive | null;
+  proof: SubmissionProof | null;
   challengeBusy: boolean;
   challengeError: string | null;
   reelState: ReelState;
@@ -25,6 +34,8 @@ type Props = {
 
 export function InvestigationWorkspace({
   investigation,
+  archive,
+  proof,
   challengeBusy,
   challengeError,
   reelState,
@@ -107,8 +118,15 @@ export function InvestigationWorkspace({
         busy={challengeBusy}
         sentences={investigation.summary_sentences}
         findings={investigation.findings}
+        shots={investigation.shots}
         error={challengeError}
         onRetry={onChallenge}
+      />
+
+      <SubmissionProofPanel
+        archive={archive}
+        proof={proof}
+        investigation={investigation}
       />
 
       <section className="editor-shell animate-on-scroll">

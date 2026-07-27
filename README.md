@@ -6,7 +6,7 @@
 
 [![Live](https://img.shields.io/badge/live-strata--amber--one.vercel.app-2563eb?logo=vercel&logoColor=white)](https://strata-amber-one.vercel.app)
 [![API](https://img.shields.io/badge/API-healthy-10b981?logo=fastapi&logoColor=white)](https://strata-api-eight.vercel.app/api/health)
-[![Tests](https://img.shields.io/badge/tests-212%20passing-10b981)](#verification)
+[![Tests](https://img.shields.io/badge/tests-216%20passing-10b981)](#verification)
 [![Readiness](https://img.shields.io/badge/readiness-7%2F7%20checks-10b981)](#proof--what-is-live)
 [![Next.js](https://img.shields.io/badge/Next.js-16.2-111827?logo=nextdotjs)](frontend)
 [![VideoDB](https://img.shields.io/badge/media-VideoDB-2563eb)](https://videodb.io)
@@ -55,9 +55,9 @@ https://github.com/user-attachments/assets/778dedf7-2aad-4319-b051-e24045c79b5b
 
 ![Strata investigation workspace showing the indexed Artemis I archive](assets/investigation-workspace.png)
 
-Try the seeded investigation:
+Try the headline investigation:
 
-> **Did the September 3 hydrogen leak fully explain why Artemis I launched in November? Trace the evidence.**
+> **Why was Artemis I’s September 3 launch attempt scrubbed?**
 
 That question demonstrates the complete product loop:
 
@@ -71,8 +71,8 @@ That question demonstrates the complete product loop:
 
 - **Real archive:** six official NASA videos, 16,904 seconds of footage, and 1,130 extracted claim events.
 - **Agentic loop:** retrieve, compare, source-lock, challenge with unused footage, and compile a playable reel.
-- **Measured result:** 94.4% relevant-event recall versus 83.3% for the naive baseline, with zero unsupported claims in both adjudicated arms.
-- **Verified delivery:** 212 backend tests, a passing Next.js production build, and 7/7 submission-readiness checks.
+- **Measured result:** 66.7% relevant-event recall versus 77.8% for the naive baseline, with zero unsupported claims in both freshly adjudicated arms.
+- **Verified delivery:** 216 backend tests, a passing Next.js production build, and 7/7 submission-readiness checks.
 
 | Live surface | URL |
 | --- | --- |
@@ -98,7 +98,7 @@ This repository does not substitute canned investigation responses when live dat
 - **The reel is generated.** VideoDB's editor compiles selected source windows into a chronological playable stream.
 - **The challenge is a second pass.** It runs new counter-queries, boosts unused videos, and applies the same evidence gate as the first answer.
 - **The evaluation is frozen and adjudicated.** Twelve questions compare a naive all-transcripts prompt with Strata's indexed retrieval, diff, gate, and source-lock pipeline.
-- **The repository is verified.** `212` backend tests pass, the frontend lints and builds, and all `7/7` submission-readiness checks pass.
+- **The repository is verified.** `216` backend tests pass, the frontend lints and builds, and all `7/7` submission-readiness checks pass.
 
 Run the readiness gate yourself:
 
@@ -112,7 +112,7 @@ Expected result:
 [PASS] VideoDB credential configured
 [PASS] six-source manifest
 [PASS] all videos indexed
-[PASS] Phase 1 windows pinned
+[PASS] evaluation-only challenge windows
 [PASS] 12 frozen evaluation cases
 [PASS] two-arm real evaluation
 [PASS] repository README
@@ -387,10 +387,15 @@ Strata includes a frozen, two-arm comparative evaluation rather than relying onl
 
 | System | Relevant-event retrieval recall ↑ | Unsupported-claim rate ↓ |
 | --- | ---: | ---: |
-| Naive: all transcripts → one prompt | 15 / 18 (**83.3%**) | 0 / 63 (**0.0%**) |
-| Strata: indexed retrieval + diff + source lock | 17 / 18 (**94.4%**) | 0 / 32 (**0.0%**) |
+| Naive: all transcripts → one prompt | 14 / 18 (**77.8%**) | 0 / 57 (**0.0%**) |
+| Strata: indexed retrieval + diff + source lock | 12 / 18 (**66.7%**) | 0 / 37 (**0.0%**) |
 
-Strata recovered two additional gold evidence windows—an **11.1 percentage-point increase in relevant-event recall**—while preserving a zero unsupported-claim rate in the adjudicated run.
+The all-transcripts baseline recovered two more gold windows in this fresh run.
+Strata reports that result without qualification: its added value in the current
+build is not a recall win, but playable citations, deterministic temporal
+comparison, a separately audited challenge retrieval pass, source novelty, and
+sentence-level source locking. Both arms preserved a zero unsupported-claim
+rate in the adjudicated run.
 
 These figures are generated from the committed frozen cases and [`data/evaluation_results.json`](data/evaluation_results.json); they are not estimates.
 
@@ -472,7 +477,7 @@ curl -X POST "https://strata-api-eight.vercel.app/api/investigations" \
   -H "Content-Type: application/json" \
   -d '{
     "archive_id": "artemis-i-2022",
-    "query": "Did the September 3 hydrogen leak fully explain why Artemis I launched in November? Trace the evidence."
+    "query": "Why was Artemis I’s September 3 launch attempt scrubbed?"
   }'
 ```
 
@@ -537,7 +542,7 @@ Strata/
 │   ├── claim_events.json             # extracted typed evidence
 │   ├── evaluation_cases.json         # 12 frozen questions
 │   └── evaluation_results.json       # adjudicated two-arm results
-├── tests/                            # 212 backend tests
+├── tests/                            # 216 backend tests
 ├── assets/                           # README production screenshots
 ├── requirements.txt
 └── README.md
@@ -639,12 +644,13 @@ The Phase 1 path proves the two critical sources before processing the full six-
 ./.venv/bin/python -m pipeline.build_index
 ```
 
-The pinned windows are:
+The evaluation-only gold windows are:
 
-- **3 September:** `01:26–01:41` — liquid-hydrogen leak and launch scrub.
+- **3 September:** `01:17–01:27` — liquid-hydrogen leak and launch scrub.
 - **30 September:** `01:55–02:19` — Hurricane Ian forecast and rollback.
 
-Confirm that the windows belong to different VideoDB `video_id` values, then run the same pipeline without `--phase1` for all six videos.
+They live in `data/evaluation_cases.json`, not in the production archive
+manifest or investigation engine.
 
 The understand stage can fall back to bounded, timestamped records from the real VideoDB transcript when an analyzer produces oversized speech scenes that cannot be embedded. Pipeline stages fail visibly on missing credentials or media errors and do not write invented substitutes.
 
@@ -654,7 +660,7 @@ The understand stage can fall back to bounded, timestamped records from the real
 
 The verified repository state is:
 
-- `212` backend tests passing;
+- `216` backend tests passing;
 - frontend ESLint passing;
 - Next.js production build passing across all seven routes;
 - `7/7` readiness checks passing;

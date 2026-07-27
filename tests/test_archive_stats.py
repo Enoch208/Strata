@@ -82,13 +82,10 @@ class TestManifestDerivation:
 
         assert manifest.indexed_duration_seconds == 600
 
-    def test_verified_windows_are_pinned(self, manifest: ArchiveManifest) -> None:
-        initial = manifest.verified_window("initial")
-        challenge = manifest.verified_window("challenge")
-
-        assert initial is not None and (initial.start, initial.end) == (86.0, 101.0)
-        assert challenge is not None and (challenge.start, challenge.end) == (115.0, 139.0)
-        assert initial.video_slug != challenge.video_slug
+    def test_manifest_contains_no_evaluation_windows(
+        self, manifest: ArchiveManifest
+    ) -> None:
+        assert "verified_windows" not in manifest.model_dump(mode="json")
 
     def test_nasa_landing_pages_have_direct_ingest_assets(
         self, manifest: ArchiveManifest

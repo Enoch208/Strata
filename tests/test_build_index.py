@@ -8,11 +8,8 @@ from services.api.schemas.finding import TimelineFinding
 from .factories import make_event
 
 
-def test_timeline_materialization_keeps_subject_corrections_and_verified_windows() -> None:
+def test_timeline_materialization_keeps_subject_and_corrections() -> None:
     manifest = load_manifest().model_copy(deep=True)
-    initial = manifest.verified_window("initial")
-    source = manifest.by_slug(initial.video_slug) if initial else None
-    assert initial is not None and source is not None and source.video_id
 
     central = make_event("central", subject="Artemis I launch")
     correction = make_event(
@@ -20,24 +17,16 @@ def test_timeline_materialization_keeps_subject_corrections_and_verified_windows
         subject="flight termination batteries",
         claim_type=ClaimType.correction,
     )
-    verified = make_event(
-        "verified",
-        video_id=source.video_id,
-        start=initial.start,
-        end=initial.end,
-        subject="hydrogen leak",
-    )
     peripheral = make_event("peripheral", subject="press conference logistics")
 
     selected = _timeline_events(
         manifest,
-        [central, correction, verified, peripheral],
+        [central, correction, peripheral],
     )
 
     assert [event.event_id for event in selected] == [
         "central",
         "correction",
-        "verified",
     ]
 
 
